@@ -13,9 +13,9 @@
   --text: #111827;
   --text2: #6b7280;
   --text3: #9ca3af;
-  --accent: #4f46e5;
-  --accent2: #6366f1;
-  --accent-bg: #eef2ff;
+  --accent: #0e7a52;
+  --accent2: #14946a;
+  --accent-bg: #e7f5ee;
   --green: #059669;
   --green-bg: #ecfdf5;
   --green-border: #d1fae5;
@@ -44,7 +44,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 .logo-name { font-size: 17px; font-weight: 900; color: var(--accent); letter-spacing: -0.5px; }
 .logo-tag { font-size: 10px; color: var(--text3); margin-top: 1px; text-transform: uppercase; letter-spacing: 0.08em; }
 
-.company-card { margin: 12px 12px 4px; background: var(--accent-bg); border: 1px solid #c7d2fe; border-radius: 10px; padding: 12px 14px; }
+.company-card { margin: 12px 12px 4px; background: var(--accent-bg); border: 1px solid #bfe6d2; border-radius: 10px; padding: 12px 14px; }
 .company-card .co-name { font-size: 13px; font-weight: 700; color: var(--text); }
 .company-card .co-sub { font-size: 11px; color: var(--text2); margin-top: 2px; }
 .level-row { display: flex; align-items: center; gap: 8px; margin-top: 8px; }
@@ -89,7 +89,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 /* ── BUTTONS ── */
 .btn { padding: 8px 16px; border-radius: 8px; font-size: 12px; font-weight: 700; cursor: pointer; border: none; transition: all 0.15s; display: inline-flex; align-items: center; gap: 5px; }
 .btn-primary { background: var(--accent); color: #fff; }
-.btn-primary:hover { background: #4338ca; }
+.btn-primary:hover { background: #0c6344; }
 .btn-gold { background: #b45309; color: #fff; }
 .btn-gold:hover { background: #92400e; }
 .btn-outline { background: transparent; color: var(--accent); border: 1.5px solid var(--accent); }
@@ -208,7 +208,7 @@ tr:hover td { background: var(--bg3); }
 .form-group { margin-bottom: 13px; }
 .form-label { font-size: 10px; font-weight: 700; color: var(--text2); margin-bottom: 5px; display: block; text-transform: uppercase; letter-spacing: 0.07em; }
 .form-input { width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 9px 12px; color: var(--text); font-size: 13px; }
-.form-input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(79,70,229,0.08); }
+.form-input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(14,122,82,0.08); }
 .form-select { width: 100%; background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 9px 12px; color: var(--text); font-size: 13px; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .search-bar { display: flex; gap: 8px; margin-bottom: 16px; }
@@ -217,7 +217,7 @@ tr:hover td { background: var(--bg3); }
 
 /* ── TENDER CARDS ── */
 .tender-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 11px; padding: 16px; margin-bottom: 12px; transition: all 0.14s; }
-.tender-card:hover { box-shadow: 0 2px 14px rgba(0,0,0,0.08); border-color: #c7d2fe; }
+.tender-card:hover { box-shadow: 0 2px 14px rgba(0,0,0,0.08); border-color: #bfe6d2; }
 .tender-card.locked { opacity: 0.72; border-style: dashed; }
 .tender-card.locked:hover { border-color: var(--amber); opacity: 0.9; }
 .tender-card.saved { border-color: var(--gold); }
@@ -271,6 +271,23 @@ tr:hover td { background: var(--bg3); }
 .roi-cell { text-align: center; }
 .roi-cell .rv { font-size: 18px; font-weight: 900; color: var(--text); }
 .roi-cell .rl { font-size: 9px; color: var(--text2); text-transform: uppercase; letter-spacing: 0.07em; margin-top: 2px; }
+</style>
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+<style id="ba-reskin-dash">
+:root{--accent:#0e7a52;--accent2:#14946a;--accent-bg:#e7f5ee;}
+body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
+.topbar-title,.card-title,h1,h2,h3{font-family:"Clash Display","General Sans",sans-serif}
+/* V1 ink-navy sidebar on a light app */
+.sidebar{background:#0d1b2b!important;border-right:1px solid rgba(255,255,255,.08)!important;color:#aeb9c9!important}
+.logo{border-bottom:1px solid rgba(255,255,255,.08)!important}
+.logo-name{color:#fff!important}.logo-tag{color:#8493a8!important}
+.nav-item{color:#aeb9c9!important}
+.nav-item:hover{background:rgba(255,255,255,.06)!important;color:#fff!important}
+.nav-item.active{background:rgba(14,122,82,.20)!important;color:#34d399!important}
+.nav-item.tender-item.active{background:rgba(180,131,9,.20)!important;color:#f3c269!important}
+.sidebar-footer{border-top:1px solid rgba(255,255,255,.08)!important}
+.sidebar [class*="section"],.sidebar [class*="heading"],.sidebar [class*="label"]:not(.nav-label){color:#6f7e93!important}
 </style>
 </head>
 <body>
