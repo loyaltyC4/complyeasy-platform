@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ComplyEasy — Set Up Your Account</title>
+<style>
+:root {
+  --accent: #4f46e5; --accent2: #6366f1; --accent-light: #eef2ff;
+  --green: #059669; --green-light: #d1fae5;
+  --amber: #d97706; --amber-light: #fef3c7;
+  --ink: #0d0f1a; --ink2: #374151; --ink3: #6b7280;
+  --bg: #f8f9fc; --bg2: #ffffff; --border: #e2e6f0;
+  --red: #dc2626;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--ink);min-height:100vh;display:flex;flex-direction:column}
+a{color:inherit;text-decoration:none}
+
+/* ── TOP BAR ── */
+.topbar{background:var(--bg2);border-bottom:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.logo{font-size:18px;font-weight:900;color:var(--accent);letter-spacing:-0.5px}
+.topbar-right{font-size:13px;color:var(--ink3)}
+.topbar-right a{color:var(--accent);font-weight:600}
+
+/* ── PROGRESS BAR ── */
+.progress-shell{background:var(--bg2);border-bottom:1px solid var(--border);padding:18px 0 0}
+.progress-inner{max-width:680px;margin:0 auto;padding:0 24px}
+.steps-row{display:flex;align-items:center;gap:0;margin-bottom:16px}
+.step{display:flex;align-items:center;flex:1;position:relative}
+.step:last-child{flex:none}
+.step-circle{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;flex-shrink:0;border:2px solid var(--border);background:var(--bg2);color:var(--ink3);transition:all 0.3s;position:relative;z-index:1}
+.step.done .step-circle{background:var(--accent);border-color:var(--accent);color:#fff}
+.step.active .step-circle{background:var(--bg2);border-color:var(--accent);color:var(--accent);box-shadow:0 0 0 4px rgba(79,70,229,0.12)}
+.step-label{font-size:11px;font-weight:600;color:var(--ink3);margin-top:6px;white-space:nowrap}
+.step.active .step-label{color:var(--accent);font-weight:700}
+.step.done .step-label{color:var(--green)}
+.step-line{flex:1;height:2px;background:var(--border);margin:0 4px;margin-bottom:22px;transition:background 0.3s}
+.step.done .step-line{background:var(--accent)}
+.step-wrap{display:flex;flex-direction:column;align-items:center}
+.progress-bar{height:3px;background:var(--border);border-radius:2px;margin-bottom:-1px;overflow:hidden}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:2px;transition:width 0.4s ease}
+
+/* ── CONTENT ── */
+.content{flex:1;display:flex;align-items:flex-start;justify-content:center;padding:40px 24px 60px}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:36px;width:100%;max-width:640px;box-shadow:0 4px 24px rgba(0,0,0,0.06)}
+.screen{display:none}
+.screen.active{display:block;animation:fadeUp 0.2s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+.screen-eyebrow{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:0.12em;color:var(--accent);margin-bottom:8px}
+.screen-title{font-size:22px;font-weight:900;color:var(--ink);letter-spacing:-0.02em;line-height:1.2;margin-bottom:6px}
+.screen-sub{font-size:14px;color:var(--ink3);line-height:1.6;margin-bottom:28px}
+
+/* ── FORM ELEMENTS ── */
+.form-group{margin-bottom:20px}
+.form-label{display:block;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:0.07em;color:var(--ink2);margin-bottom:7px}
+.form-sub{font-size:11px;color:var(--ink3);margin-top:4px}
+.form-input{width:100%;background:var(--bg);border:1.5px solid var(--border);border-radius:9px;padding:11px 14px;color:var(--ink);font-size:14px;transition:border-color 0.15s}
+.form-input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(79,70,229,0.09)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+
+/* ── RADIO CARDS ── */
+.radio-grid{display:grid;gap:10px}
+.radio-grid.g2{grid-template-columns:repeat(2,1fr)}
+.radio-grid.g3{grid-template-columns:repeat(3,1fr)}
+.radio-grid.g4{grid-template-columns:repeat(2,1fr)}
+.radio-card{border:1.5px solid var(--border);border-radius:10px;padding:12px 14px;cursor:pointer;transition:all 0.15s;display:flex;align-items:center;gap:10px;background:var(--bg2)}
+.radio-card:hover{border-color:var(--accent);background:var(--accent-light)}
+.radio-card.selected{border-color:var(--accent);background:var(--accent-light)}
+.rc-icon{font-size:18px;flex-shrink:0}
+.rc-label{font-size:13px;font-weight:700;color:var(--ink)}
+.rc-sub{font-size:11px;color:var(--ink3);margin-top:1px}
+.rc-check{margin-left:auto;width:18px;height:18px;border-radius:50%;border:2px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 0.15s}
+.radio-card.selected .rc-check{background:var(--accent);border-color:var(--accent);color:#fff;font-size:11px}
+
+/* Checkbox multi-select */
+.checkbox-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.check-chip{border:1.5px solid var(--border);border-radius:8px;padding:9px 12px;cursor:pointer;transition:all 0.14s;font-size:12px;font-weight:600;color:var(--ink2);text-align:center;background:var(--bg2)}
+.check-chip:hover{border-color:var(--accent);color:var(--accent)}
+.check-chip.selected{border-color:var(--accent);background:var(--accent-light);color:var(--accent)}
+
+/* Date input */
+.date-row{display:flex;gap:10px;align-items:flex-end}
+.date-row .form-group{flex:1;margin-bottom:0}
+
+/* ── VALUE CHIP ── */
+.insight-box{background:var(--accent-light);border:1px solid #c7d2fe;border-radius:10px;padding:13px 16px;margin-top:16px;font-size:12px;color:var(--accent);display:flex;align-items:flex-start;gap:10px}
+.insight-box .ib-icon{font-size:16px;flex-shrink:0}
+
+/* ── CONDITIONAL ── */
+.cond-group{display:none}
+.cond-group.visible{display:block}
+
+/* ── FOOTER NAV ── */
+.screen-footer{display:flex;align-items:center;justify-content:space-between;margin-top:28px;padding-top:20px;border-top:1px solid var(--border)}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:11px 24px;border-radius:9px;font-size:14px;font-weight:700;cursor:pointer;border:none;transition:all 0.15s}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:#4338ca;transform:translateY(-1px);box-shadow:0 4px 14px rgba(79,70,229,0.28)}
+.btn-ghost{background:transparent;color:var(--ink3);border:1.5px solid var(--border)}
+.btn-ghost:hover{background:var(--bg);color:var(--ink)}
+.btn-lg{padding:14px 32px;font-size:15px;border-radius:10px}
+.btn-green{background:var(--green);color:#fff}
+.btn-green:hover{background:#047857}
+.skip-link{font-size:13px;color:var(--ink3);cursor:pointer}
+.skip-link:hover{color:var(--accent)}
+
+/* ── FINAL SCREEN ── */
+.setup-list{list-style:none;margin:20px 0}
+.setup-list li{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--border);font-size:13px;color:var(--ink2)}
+.setup-list li:last-child{border-bottom:none}
+.setup-icon{font-size:16px;width:24px;text-align:center}
+.spinner{display:inline-block;width:16px;height:16px;border:2px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin 0.7s linear infinite;flex-shrink:0}
+@keyframes spin{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="logo">ComplyEasy</div>
+  <div class="topbar-right">Already have an account? <a href="dashboard.html">Log in →</a></div>
+</div>
+
+<!-- PROGRESS -->
+<div class="progress-shell">
+  <div class="progress-inner">
+    <div class="steps-row">
+      <div class="step-wrap"><div class="step-circle active" id="sc1">1</div><div class="step-label">Your Company</div></div>
+      <div class="step-line" id="sl1"></div>
+      <div class="step-wrap"><div class="step-circle" id="sc2">2</div><div class="step-label">B-BBEE Status</div></div>
+      <div class="step-line" id="sl2"></div>
+      <div class="step-wrap"><div class="step-circle" id="sc3">3</div><div class="step-label">Tender Intelligence</div></div>
+      <div class="step-line" id="sl3"></div>
+      <div class="step-wrap"><div class="step-circle" id="sc4">4</div><div class="step-label">Your Team</div></div>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:12%"></div></div>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+<div class="card">
+
+  <!-- ══ SCREEN 1: Company Basics ══ -->
+  <div class="screen active" id="screen-1">
+    <div class="screen-eyebrow">Step 1 of 4</div>
+    <div class="screen-title">Tell us about your company</div>
+    <div class="screen-sub">This determines which B-BBEE scorecard applies to you — QSE and Generic companies use entirely different element weights.</div>
+
+    <div class="form-group">
+      <label class="form-label">Company Name</label>
+      <input class="form-input" type="text" id="company-name" placeholder="e.g. Ntaba Engineering (Pty) Ltd" oninput="save('company_name',this.value)">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Annual Turnover</label>
+      <div class="form-sub" style="margin-bottom:10px">This determines whether you're a QSE (R10M–R50M) or Generic entity (R50M+) — they use completely different scorecards</div>
+      <div class="radio-grid g2">
+        <div class="radio-card" onclick="selectSingle(this,'turnover','sub10M')"><span class="rc-icon">🌱</span><div><div class="rc-label">Under R10M</div><div class="rc-sub">Exempt Micro Enterprise</div></div><div class="rc-check"></div></div>
+        <div class="radio-card" onclick="selectSingle(this,'turnover','qse')"><span class="rc-icon">🏢</span><div><div class="rc-label">R10M – R50M</div><div class="rc-sub">QSE — 5 elements</div></div><div class="rc-check"></div></div>
+        <div class="radio-card" onclick="selectSingle(this,'turnover','generic_s')"><span class="rc-icon">🏗</span><div><div class="rc-label">R50M – R200M</div><div class="rc-sub">Generic — all elements</div></div><div class="rc-check"></div></div>
+        <div class="radio-card" onclick="selectSingle(this,'turnover','generic_l')"><span class="rc-icon">🏭</span><div><div class="rc-label">Over R200M</div><div class="rc-sub">Large Generic entity</div></div><div class="rc-check"></div></div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Industry / Sector</label>
+      <div class="form-sub" style="margin-bottom:10px">Sets your sector code — Construction Charter, ICT Code, or Generic Codes each have different element weightings</div>
+      <div class="radio-grid" style="grid-template-columns:repeat(2,1fr)">
+        <div class="radio-card" onclick="selectSingle(this,'sector','construction')"><span class="rc-icon">🏗</span><div><div class="rc-label">Construction & Civil Eng</div><div class="rc-sub">Construction Sector Charter</div></div><div class="rc-check"></div></div>
+        <div class="radio-card" onclick="selectSingle(this,'sector','engineering')"><span class="rc-icon">⚙️</span><div><div class="rc-label">Engineering & Manufacturing</div><div class="rc-sub">Generic Codes</div></div><div class="rc-check"></div></div>
+        <div class="radio-card" onclick="selectSingle(this,'sector','ict')"><span class="rc-icon">💻</span><div><div class="rc-label">ICT & Technology</div><div class="rc-sub">ICT Sector Code</div></div><div class="rc-check"></div></div>
+        <div class="radio-card" onclick="selectSingle(this,'sector','financial')"><span class="rc-icon">🏦</span><div><div class="rc-label">Financial Services</div><div class="rc-sub">Financial Sector Code</div></div><div class="rc-check"></div></div>
+        <div class="radio-card" onclick="selectSingle(this,'sector','consulting')"><span class="rc-icon">💼</span><div><div class="rc-label">Professional Services</div><div class="rc-sub">Generic Codes</div></div><div class="rc-check"></div></div>
+        <div class="radio-card" onclick="selectSingle(this,'sector','healthcare')"><span class="rc-icon">🏥</span><div><div class="rc-label">Healthcare</div><div class="rc-sub">Generic Codes</div></div><div class="rc-check"></div></div>
+        <div class="radio-card" onclick="selectSingle(this,'sector','logistics')"><span class="rc-icon">🚚</span><div><div class="rc-label">Logistics & Supply Chain</div><div class="rc-sub">Generic Codes</div></div><div class="rc-check"></div></div>
+        <div class="radio-card" onclick="selectSingle(this,'sector','other')"><span class="rc-icon">🏢</span><div><div class="rc-label">Other</div><div class="rc-sub">Generic Codes apply</div></div><div class="rc-check"></div></div>
+      </div>
+    </div>
+
+    <div class="screen-footer">
+      <div class="skip-link" onclick="goto(2)">Skip for now →</div>
+      <button class="btn btn-primary btn-lg" onclick="goto(2)">Continue →</button>
+    </div>
+  </div>
+
+  <!-- ══ SCREEN 2: B-BBEE Status ══ -->
+  <div class="screen" id="screen-2">
+    <div class="screen-eyebrow">Step 2 of 4</div>
+    <div class="screen-title">Your current B-BBEE status</div>
+    <div class="screen-sub">This seeds your live scorecard and activates your certificate countdown alert — the most critical feature we offer.</div>
+
+    <div class="form-group">
+      <label class="form-label">Do you have a current B-BBEE certificate?</label>
+      <div class="radio-grid g2">
+        <div class="radio-card" onclick="selectSingle(this,'has_cert','yes');showEl('cert-details')"><span class="rc-icon">✅</span><div><div class="rc-label">Yes, I have one</div><div class="rc-sub">I know my level and expiry</div></div><div class="rc-check"></div></div>
+        <div class="radio-card" onclick="selectSingle(this,'has_cert','expired');hideEl('cert-details')"><span class="rc-icon">⚠️</span><div><div class="rc-label">Mine has expired</div><div class="rc-sub">Need to renew</div></div><div class="rc-check"></div></div>
+        <div class="radio-card" onclick="selectSingle(this,'has_cert','no');hideEl('cert-details')"><span class="rc-icon">🆕</span><div><div class="rc-label">No, never had one</div><div class="rc-sub">First time getting verified</div></div><div class="rc-check"></div></div>
+        <div class="radio-card" onclick="selectSingle(this,'has_cert','unsure');hideEl('cert-details')"><span class="rc-icon">❓</span><div><div class="rc-label">Not sure</div><div class="rc-sub">I'll find out later</div></div><div class="rc-check"></div></div>
+      </div>
+    </div>
+
+    <div class="cond-group" id="cert-details">
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Current B-BBEE Level</label>
+          <select class="form-input" onchange="save('current_level',this.value)">
+            <option value="">Select level...</option>
+            <option>Level 1</option><option>Level 2</option><option>Level 3</option>
+            <option selected>Level 4</option><option>Level 5</option>
+            <option>Level 6</option><option>Level 7</option><option>Level 8</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Certificate Expiry Date</label>
+          <input class="form-input" type="date" id="cert-expiry" onchange="save('cert_expiry',this.value);updateExpiryInsight(this.value)">
+        </div>
+      </div>
+      <div class="insight-box" id="expiry-insight" style="display:none">
+        <span class="ib-icon">⏰</span>
+        <span id="expiry-text"></span>
+      </div>
+    </div>
+
+    <div class="form-group" style="margin-top:20px">
+      <label class="form-label">Approximate Black Ownership %</label>
+      <div class="form-sub" style="margin-bottom:10px">Your Ownership element is worth 25 points — the quickest to calculate</div>
+      <div class="radio-grid g2">
+        <div class="radio-card" onclick="selectSingle(this,'ownership','under25')"><span class="rc-icon">📊</span><div><div class="rc-label">Under 25%</div><div class="rc-sub">Non-compliant ownership</div></div><div class="rc-check"></div></div>
+        <div class="radio-card" onclick="selectSingle(this,'ownership','25to50')"><span class="rc-icon">📊</span><div><div class="rc-label">25% – 50%</div><div class="rc-sub">Partial compliance</div></div><div class="rc-check"></div></div>
+        <div class="radio-card" onclick="selectSingle(this,'ownership','51to75')"><span class="rc-icon">📈</span><div><div class="rc-label">51% – 75%</div><div class="rc-sub">Black-owned</div></div><div class="rc-check"></div></div>
+        <div class="radio-card" onclick="selectSingle(this,'ownership','over75')"><span class="rc-icon">🏆</span><div><div class="rc-label">Over 75%</div><div class="rc-sub">Black-majority owned</div></div><div class="rc-check"></div></div>
+      </div>
+    </div>
+
+    <div class="screen-footer">
+      <button class="btn btn-ghost" onclick="goto(1)">← Back</button>
+      <button class="btn btn-primary btn-lg" onclick="goto(3)">Continue →</button>
+    </div>
+  </div>
+
+  <!-- ══ SCREEN 3: Tender Intelligence ══ -->
+  <div class="screen" id="screen-3">
+    <div class="screen-eyebrow">Step 3 of 4</div>
+    <div class="screen-title">Set up your tender feed</div>
+    <div class="screen-sub">We filter 4,200+ daily tenders to only what's relevant to you. These two questions do that immediately — no wading through irrelevant results.</div>
+
+    <div class="form-group">
+      <label class="form-label">Which provinces do you operate in? <span style="font-weight:400;color:var(--ink3)">(select all that apply)</span></label>
+      <div class="checkbox-grid">
+        <div class="check-chip" onclick="toggleChip(this,'provinces','gauteng')">Gauteng</div>
+        <div class="check-chip" onclick="toggleChip(this,'provinces','western_cape')">Western Cape</div>
+        <div class="check-chip" onclick="toggleChip(this,'provinces','kwazulunatal')">KwaZulu-Natal</div>
+        <div class="check-chip" onclick="toggleChip(this,'provinces','eastern_cape')">Eastern Cape</div>
+        <div class="check-chip" onclick="toggleChip(this,'provinces','limpopo')">Limpopo</div>
+        <div class="check-chip" onclick="toggleChip(this,'provinces','mpumalanga')">Mpumalanga</div>
+        <div class="check-chip" onclick="toggleChip(this,'provinces','free_state')">Free State</div>
+        <div class="check-chip" onclick="toggleChip(this,'provinces','north_west')">North West</div>
+        <div class="check-chip" onclick="toggleChip(this,'provinces','northern_cape')">Northern Cape</div>
+      </div>
+    </div>
+
+    <div class="form-group" style="margin-top:24px">
+      <label class="form-label">What types of contracts do you bid for? <span style="font-weight:400;color:var(--ink3)">(select all that apply)</span></label>
+      <div class="checkbox-grid">
+        <div class="check-chip" onclick="toggleChip(this,'contract_types','construction')">🏗 Construction & Civil</div>
+        <div class="check-chip" onclick="toggleChip(this,'contract_types','engineering')">⚙️ Engineering</div>
+        <div class="check-chip" onclick="toggleChip(this,'contract_types','it')">💻 IT & Systems</div>
+        <div class="check-chip" onclick="toggleChip(this,'contract_types','consulting')">💼 Professional Services</div>
+        <div class="check-chip" onclick="toggleChip(this,'contract_types','supply')">📦 Supply & Delivery</div>
+        <div class="check-chip" onclick="toggleChip(this,'contract_types','maintenance')">🔧 Maintenance & Repairs</div>
+        <div class="check-chip" onclick="toggleChip(this,'contract_types','healthcare')">🏥 Healthcare Services</div>
+        <div class="check-chip" onclick="toggleChip(this,'contract_types','cleaning')">🧹 Facilities & Cleaning</div>
+        <div class="check-chip" onclick="toggleChip(this,'contract_types','other')">Other</div>
+      </div>
+    </div>
+
+    <div class="insight-box">
+      <span class="ib-icon">💡</span>
+      <span>Based on your selections, we'll pre-configure your tender alerts and filter the 4,200+ daily tenders down to results that match. You can adjust these at any time in <strong>Tender Alerts</strong>.</span>
+    </div>
+
+    <div class="screen-footer">
+      <button class="btn btn-ghost" onclick="goto(2)">← Back</button>
+      <button class="btn btn-primary btn-lg" onclick="goto(4)">Continue →</button>
+    </div>
+  </div>
+
+  <!-- ══ SCREEN 4: Team & Tools ══ -->
+  <div class="screen" id="screen-4">
+    <div class="screen-eyebrow">Step 4 of 4</div>
+    <div class="screen-title">Your team and systems</div>
+    <div class="screen-sub">Two questions that unlock your Skills Development score and Employment Equity module immediately.</div>
+
+    <div class="form-group">
+      <label class="form-label">How many employees do you have?</label>
+      <div class="form-sub" style="margin-bottom:10px">The Employment Equity Act applies from 50 employees. Below that, your EE module is hidden so the dashboard stays clean.</div>
+      <div class="radio-grid g2">
+        <div class="radio-card" onclick="selectSingle(this,'employees','1-10')"><span class="rc-icon">👤</span><div><div class="rc-label">1 – 10</div><div class="rc-sub">Micro / sole trader</div></div><div class="rc-check"></div></div>
+        <div class="radio-card" onclick="selectSingle(this,'employees','11-49')"><span class="rc-icon">👥</span><div><div class="rc-label">11 – 49</div><div class="rc-sub">Small team · EE exempt</div></div><div class="rc-check"></div></div>
+        <div class="radio-card" onclick="selectSingle(this,'employees','50-149')"><span class="rc-icon">🏢</span><div><div class="rc-label">50 – 149</div><div class="rc-sub">EE Act applies · EE module active</div></div><div class="rc-check"></div></div>
+        <div class="radio-card" onclick="selectSingle(this,'employees','150+')"><span class="rc-icon">🏭</span><div><div class="rc-label">150 +</div><div class="rc-sub">EE Act + sectoral targets</div></div><div class="rc-check"></div></div>
+      </div>
+    </div>
+
+    <div class="form-group" style="margin-top:24px">
+      <label class="form-label">Which payroll system do you use?</label>
+      <div class="form-sub" style="margin-bottom:10px">Direct integration auto-imports workforce demographics and learneable payroll — the two inputs your Skills Development score needs</div>
+      <div class="radio-grid g2">
+        <div class="radio-card" onclick="selectSingle(this,'payroll','simplepay')"><span class="rc-icon">💳</span><div><div class="rc-label">SimplePay</div><div class="rc-sub">One-click sync available</div></div><div class="rc-check"></div></div>
+        <div class="radio-card" onclick="selectSingle(this,'payroll','sage')"><span class="rc-icon">💳</span><div><div class="rc-label">Sage Payroll / Sage 300</div><div class="rc-sub">One-click sync available</div></div><div class="rc-check"></div></div>
+        <div class="radio-card" onclick="selectSingle(this,'payroll','payspace')"><span class="rc-icon">💳</span><div><div class="rc-label">PaySpace</div><div class="rc-sub">One-click sync available</div></div><div class="rc-check"></div></div>
+        <div class="radio-card" onclick="selectSingle(this,'payroll','vip')"><span class="rc-icon">💳</span><div><div class="rc-label">VIP Payroll</div><div class="rc-sub">CSV import</div></div><div class="rc-check"></div></div>
+        <div class="radio-card" onclick="selectSingle(this,'payroll','excel')"><span class="rc-icon">📊</span><div><div class="rc-label">Manual / Excel</div><div class="rc-sub">CSV template provided</div></div><div class="rc-check"></div></div>
+        <div class="radio-card" onclick="selectSingle(this,'payroll','other')"><span class="rc-icon">🔧</span><div><div class="rc-label">Other</div></div><div class="rc-check"></div></div>
+      </div>
+    </div>
+
+    <div class="screen-footer">
+      <button class="btn btn-ghost" onclick="goto(3)">← Back</button>
+      <button class="btn btn-green btn-lg" onclick="finishOnboarding()">Set Up My Dashboard →</button>
+    </div>
+  </div>
+
+  <!-- ══ SCREEN 5: Setup Loading ══ -->
+  <div class="screen" id="screen-5">
+    <div style="text-align:center;padding:10px 0 24px">
+      <div style="font-size:36px;margin-bottom:14px">⚡</div>
+      <div class="screen-title" style="text-align:center">Setting up your dashboard...</div>
+      <div class="screen-sub" style="text-align:center;margin-bottom:24px">Configuring your scorecard, tender feed, and compliance alerts based on your answers.</div>
+    </div>
+    <ul class="setup-list">
+      <li id="sl-scorecard"><div class="spinner" id="sp1"></div> Configuring your B-BBEE scorecard engine</li>
+      <li id="sl-tenders"><div class="spinner" id="sp2" style="opacity:0.3"></div> Filtering 4,200+ tenders to your profile</li>
+      <li id="sl-alerts"><div class="spinner" id="sp3" style="opacity:0.3"></div> Setting up certificate and deadline alerts</li>
+      <li id="sl-payroll"><div class="spinner" id="sp4" style="opacity:0.3"></div> Connecting payroll integration</li>
+      <li id="sl-popia"><div class="spinner" id="sp5" style="opacity:0.3"></div> Activating POPIA consent management</li>
+    </ul>
+    <div class="progress-bar" style="height:6px;margin-top:24px;border-radius:3px">
+      <div class="progress-fill" id="setup-bar" style="width:0%;height:100%"></div>
+    </div>
+    <div style="text-align:center;margin-top:10px;font-size:12px;color:var(--ink3)" id="setup-msg">Initialising...</div>
+  </div>
+
+</div><!-- /card -->
+</div><!-- /content -->
+
+<script>
+// ── State ──
+const state = {};
+
+function save(key, val) { state[key] = val; }
+
+function goto(n) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById('screen-' + n).classList.add('active');
+  updateProgress(n);
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+function updateProgress(step) {
+  const pct = {1:12, 2:37, 3:62, 4:87, 5:100};
+  document.getElementById('progress-fill').style.width = (pct[step] || 12) + '%';
+  for (let i = 1; i <= 4; i++) {
+    const c = document.getElementById('sc' + i);
+    const l = document.getElementById('sl' + i);
+    if (i < step) {
+      c.style.background = 'var(--accent)';
+      c.style.borderColor = 'var(--accent)';
+      c.style.color = '#fff';
+      c.textContent = '✓';
+      if (l) l.style.background = 'var(--accent)';
+    } else if (i === step) {
+      c.style.background = 'var(--bg2)';
+      c.style.borderColor = 'var(--accent)';
+      c.style.color = 'var(--accent)';
+      c.style.boxShadow = '0 0 0 4px rgba(79,70,229,0.12)';
+    } else {
+      c.style.background = 'var(--bg2)';
+      c.style.borderColor = 'var(--border)';
+      c.style.color = 'var(--ink3)';
+      c.style.boxShadow = 'none';
+    }
+  }
+}
+
+function selectSingle(el, group, val) {
+  el.closest('.radio-grid').querySelectorAll('.radio-card').forEach(c => {
+    c.classList.remove('selected');
+    c.querySelector('.rc-check').textContent = '';
+  });
+  el.classList.add('selected');
+  el.querySelector('.rc-check').textContent = '✓';
+  state[group] = val;
+}
+
+function toggleChip(el, group, val) {
+  el.classList.toggle('selected');
+  if (!state[group]) state[group] = [];
+  if (el.classList.contains('selected')) {
+    if (!state[group].includes(val)) state[group].push(val);
+  } else {
+    state[group] = state[group].filter(v => v !== val);
+  }
+}
+
+function showEl(id) { document.getElementById(id).classList.add('visible'); }
+function hideEl(id) { document.getElementById(id).classList.remove('visible'); }
+
+function updateExpiryInsight(val) {
+  if (!val) return;
+  const exp = new Date(val);
+  const today = new Date();
+  const days = Math.round((exp - today) / 86400000);
+  const box = document.getElementById('expiry-insight');
+  const txt = document.getElementById('expiry-text');
+  box.style.display = 'flex';
+  if (days < 0) {
+    txt.innerHTML = '<strong>Your certificate has expired.</strong> You cannot currently bid on any government tender. Booking a SANAS verifier is your first priority.';
+    box.style.background = '#fef2f2'; box.style.borderColor = '#fca5a5'; box.style.color = 'var(--red)';
+  } else if (days <= 60) {
+    txt.innerHTML = '<strong>' + days + ' days until expiry.</strong> SANAS verifiers need 3–4 weeks notice. We\'ll set this as your #1 alert and find verifiers near you.';
+    box.style.background = 'var(--amber-light)'; box.style.borderColor = '#fcd34d'; box.style.color = 'var(--amber)';
+  } else {
+    txt.innerHTML = '<strong>' + days + ' days until expiry.</strong> You\'re in good shape. We\'ll alert you at 90, 60, 30, and 14 days.';
+    box.style.background = 'var(--green-light)'; box.style.borderColor = '#6ee7b7'; box.style.color = 'var(--green)';
+  }
+}
+
+function finishOnboarding() {
+  // Save to localStorage
+  localStorage.setItem('ce_onboarding', JSON.stringify(state));
+  goto(5);
+  runSetupAnimation();
+}
+
+function runSetupAnimation() {
+  const steps = [
+    {id:'sp1', label:'sl-scorecard', done:'✅ B-BBEE scorecard configured', delay:800},
+    {id:'sp2', label:'sl-tenders',   done:'✅ Tender feed filtered to your profile', delay:1600},
+    {id:'sp3', label:'sl-alerts',    done:'✅ Certificate & deadline alerts active', delay:2400},
+    {id:'sp4', label:'sl-payroll',   done:'✅ Payroll integration ready', delay:3200},
+    {id:'sp5', label:'sl-popia',     done:'✅ POPIA consent management active', delay:4000},
+  ];
+  const messages = ['Initialising...','Calibrating scorecard...','Building tender feed...','Setting up alerts...','Almost ready...'];
+  const bar = document.getElementById('setup-bar');
+  const msg = document.getElementById('setup-msg');
+
+  steps.forEach((s, i) => {
+    setTimeout(() => {
+      // Activate next spinner
+      if (steps[i+1]) document.getElementById(steps[i+1].id).style.opacity = '1';
+      // Mark current done
+      const li = document.getElementById(s.label);
+      li.innerHTML = '<span style="font-size:16px">✅</span> ' + s.done.replace('✅ ','');
+      bar.style.width = ((i+1)/steps.length * 100) + '%';
+      msg.textContent = messages[i+1] || 'Done!';
+    }, s.delay);
+  });
+
+  // Redirect to dashboard
+  setTimeout(() => {
+    msg.innerHTML = '<strong style="color:var(--green)">Your dashboard is ready!</strong>';
+    setTimeout(() => { window.location.href = 'dashboard.html'; }, 800);
+  }, 4600);
+}
+</script>
+</body>
+</html>
