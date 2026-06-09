@@ -10,12 +10,12 @@
   --bg2: #ffffff;
   --bg3: #f1f3f8;
   --border: #e2e6f0;
-  --text: #111827;
+  --text: #112646;
   --text2: #6b7280;
   --text3: #9ca3af;
-  --accent: #0e7a52;
-  --accent2: #14946a;
-  --accent-bg: #e7f5ee;
+  --accent: #2f5fe0;
+  --accent2: #4f7cf0;
+  --accent-bg: #eef2fb;
   --green: #059669;
   --green-bg: #ecfdf5;
   --green-border: #d1fae5;
@@ -44,7 +44,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 .logo-name { font-size: 17px; font-weight: 900; color: var(--accent); letter-spacing: -0.5px; }
 .logo-tag { font-size: 10px; color: var(--text3); margin-top: 1px; text-transform: uppercase; letter-spacing: 0.08em; }
 
-.company-card { margin: 12px 12px 4px; background: var(--accent-bg); border: 1px solid #bfe6d2; border-radius: 10px; padding: 12px 14px; }
+.company-card { margin: 12px 12px 4px; background: var(--accent-bg); border: 1px solid #cdd9f6; border-radius: 10px; padding: 12px 14px; }
 .company-card .co-name { font-size: 13px; font-weight: 700; color: var(--text); }
 .company-card .co-sub { font-size: 11px; color: var(--text2); margin-top: 2px; }
 .level-row { display: flex; align-items: center; gap: 8px; margin-top: 8px; }
@@ -89,7 +89,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 /* ── BUTTONS ── */
 .btn { padding: 8px 16px; border-radius: 8px; font-size: 12px; font-weight: 700; cursor: pointer; border: none; transition: all 0.15s; display: inline-flex; align-items: center; gap: 5px; }
 .btn-primary { background: var(--accent); color: #fff; }
-.btn-primary:hover { background: #0c6344; }
+.btn-primary:hover { background: #4338ca; }
 .btn-gold { background: #b45309; color: #fff; }
 .btn-gold:hover { background: #92400e; }
 .btn-outline { background: transparent; color: var(--accent); border: 1.5px solid var(--accent); }
@@ -208,7 +208,7 @@ tr:hover td { background: var(--bg3); }
 .form-group { margin-bottom: 13px; }
 .form-label { font-size: 10px; font-weight: 700; color: var(--text2); margin-bottom: 5px; display: block; text-transform: uppercase; letter-spacing: 0.07em; }
 .form-input { width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 9px 12px; color: var(--text); font-size: 13px; }
-.form-input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(14,122,82,0.08); }
+.form-input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(47,95,224,0.08); }
 .form-select { width: 100%; background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 9px 12px; color: var(--text); font-size: 13px; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .search-bar { display: flex; gap: 8px; margin-bottom: 16px; }
@@ -217,7 +217,7 @@ tr:hover td { background: var(--bg3); }
 
 /* ── TENDER CARDS ── */
 .tender-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 11px; padding: 16px; margin-bottom: 12px; transition: all 0.14s; }
-.tender-card:hover { box-shadow: 0 2px 14px rgba(0,0,0,0.08); border-color: #bfe6d2; }
+.tender-card:hover { box-shadow: 0 2px 14px rgba(0,0,0,0.08); border-color: #cdd9f6; }
 .tender-card.locked { opacity: 0.72; border-style: dashed; }
 .tender-card.locked:hover { border-color: var(--amber); opacity: 0.9; }
 .tender-card.saved { border-color: var(--gold); }
@@ -272,29 +272,34 @@ tr:hover td { background: var(--bg3); }
 .roi-cell .rv { font-size: 18px; font-weight: 900; color: var(--text); }
 .roi-cell .rl { font-size: 9px; color: var(--text2); text-transform: uppercase; letter-spacing: 0.07em; margin-top: 2px; }
 </style>
-<link rel="preconnect" href="https://api.fontshare.com">
-<link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
-<style id="ba-reskin-dash">
-:root{--accent:#0e7a52;--accent2:#14946a;--accent-bg:#e7f5ee;}
-body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
-.topbar-title,.card-title,h1,h2,h3{font-family:"Clash Display","General Sans",sans-serif}
-/* V1 ink-navy sidebar on a light app */
-.sidebar{background:#0d1b2b!important;border-right:1px solid rgba(255,255,255,.08)!important;color:#aeb9c9!important}
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet"><script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+<style id="ce-reskin">
+:root{--mono:"IBM Plex Mono",ui-monospace,monospace;--navy:#112646}
+body{font-family:"Open Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif!important}
+h1,h2,h3,.logo-name,.topbar-title,.card-title,.page-title{font-family:"Montserrat","Open Sans",sans-serif!important;letter-spacing:-.01em}
+.nav-badge,.topbar-sub,.kpi-label,.stat-label,.metric-label{font-family:var(--mono)!important;letter-spacing:.03em}
+i[class^="ph"],i[class*=" ph-"]{vertical-align:-2px;line-height:1}
+.logo .logo-mark{flex:none}
+.logo{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.logo .logo-mark{width:30px;height:30px}
+.logo-name{color:#fff!important;font-weight:800;font-size:1.05rem}.logo-name span{color:#60a5fa}
+.logo-tag{flex-basis:100%;color:#8493a8!important;font-family:var(--mono)!important}
+.sidebar{background:var(--navy)!important;border-right:1px solid rgba(255,255,255,.08)!important;color:#aeb9c9!important}
 .logo{border-bottom:1px solid rgba(255,255,255,.08)!important}
-.logo-name{color:#fff!important}.logo-tag{color:#8493a8!important}
-.nav-item{color:#aeb9c9!important}
+.nav-item{color:#aeb9c9!important;font-weight:500}
 .nav-item:hover{background:rgba(255,255,255,.06)!important;color:#fff!important}
-.nav-item.active{background:rgba(14,122,82,.20)!important;color:#34d399!important}
-.nav-item.tender-item.active{background:rgba(180,131,9,.20)!important;color:#f3c269!important}
+.nav-item.active,.nav-item.tender-item.active{background:rgba(47,95,224,.22)!important;color:#fff!important}
+.nav-icon i{font-size:17px}
 .sidebar-footer{border-top:1px solid rgba(255,255,255,.08)!important}
-.sidebar [class*="section"],.sidebar [class*="heading"],.sidebar [class*="label"]:not(.nav-label){color:#6f7e93!important}
+.sidebar [class*="section"],.sidebar [class*="label"]:not(.nav-label){color:#6f7e93!important}
+.topbar{background:#fff!important}
 </style>
 </head>
 <body>
 
 <!-- ════════ SIDEBAR ════════ -->
 <aside class="sidebar">
-  <div class="logo">
+  <div class="logo"><svg class="logo-mark" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="36" height="36" rx="9" fill="#112646"/><path d="M8.5 18.6 L14.5 24.6 L26 12.2" stroke="#fff" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M21.4 12.2 L26 12.2 L26 16.8" stroke="#2f5fe0" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
     <div class="logo-name">ComplyEasy</div>
     <div class="logo-tag">Compliance + Tender Intelligence</div>
   </div>
@@ -304,42 +309,42 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
     <div class="co-sub">QSE · Generic Code · R28M turnover</div>
     <div class="level-row">
       <div class="level-badge">Level 4</div>
-      <div class="tender-value-chip">💰 R18.2M eligible</div>
+      <div class="tender-value-chip"><i class="ph-bold ph-currency-circle-dollar"></i> R18.2M eligible</div>
     </div>
     <div class="score-bar"><div class="score-fill" style="width:68.5%"></div></div>
   </div>
 
   <div class="nav-label">Overview</div>
-  <div class="nav-item active" onclick="nav('home',this)"><span class="nav-icon">🏠</span>Home<span class="nav-badge nb-red">5</span></div>
-  <div class="nav-item" onclick="nav('today',this)"><span class="nav-icon">✅</span>Today's Tasks<span class="nav-badge nb-red">3</span></div>
+  <div class="nav-item active" onclick="nav('home',this)"><span class="nav-icon"><i class="ph-bold ph-house"></i></span>Home<span class="nav-badge nb-red">5</span></div>
+  <div class="nav-item" onclick="nav('today',this)"><span class="nav-icon"><i class="ph-bold ph-check-circle"></i></span>Today's Tasks<span class="nav-badge nb-red">3</span></div>
 
-  <div class="nav-label">🏆 Tender Intelligence</div>
-  <div class="nav-item tender-item" onclick="nav('tenders',this)"><span class="nav-icon">🏆</span>My Tenders<span class="nav-badge nb-gold">14</span></div>
-  <div class="nav-item tender-item" onclick="nav('tender-search',this)"><span class="nav-icon">🔍</span>Tender Search</div>
-  <div class="nav-item tender-item" onclick="nav('tender-saved',this)"><span class="nav-icon">🔖</span>Saved Tenders<span class="nav-badge nb-blue">3</span></div>
-  <div class="nav-item tender-item" onclick="nav('tender-alerts',this)"><span class="nav-icon">🔔</span>Tender Alerts</div>
-  <div class="nav-item tender-item" onclick="nav('bid-prep',this)"><span class="nav-icon">📝</span>Bid Preparation<span class="nav-badge nb-blue">2</span></div>
+  <div class="nav-label"><i class="ph-bold ph-trophy"></i> Tender Intelligence</div>
+  <div class="nav-item tender-item" onclick="nav('tenders',this)"><span class="nav-icon"><i class="ph-bold ph-trophy"></i></span>My Tenders<span class="nav-badge nb-gold">14</span></div>
+  <div class="nav-item tender-item" onclick="nav('tender-search',this)"><span class="nav-icon"><i class="ph-bold ph-magnifying-glass"></i></span>Tender Search</div>
+  <div class="nav-item tender-item" onclick="nav('tender-saved',this)"><span class="nav-icon"><i class="ph-bold ph-bookmark-simple"></i></span>Saved Tenders<span class="nav-badge nb-blue">3</span></div>
+  <div class="nav-item tender-item" onclick="nav('tender-alerts',this)"><span class="nav-icon"><i class="ph-bold ph-bell"></i></span>Tender Alerts</div>
+  <div class="nav-item tender-item" onclick="nav('bid-prep',this)"><span class="nav-icon"><i class="ph-bold ph-note-pencil"></i></span>Bid Preparation<span class="nav-badge nb-blue">2</span></div>
 
-  <div class="nav-label">⚖️ B-BBEE Scorecard</div>
-  <div class="nav-item" onclick="nav('scorecard',this)"><span class="nav-icon">⚖️</span>My Scorecard<span class="nav-badge nb-amber">!</span></div>
-  <div class="nav-item" onclick="nav('ownership',this)"><span class="nav-icon">🏢</span>Ownership<span class="nav-badge nb-green">✓</span></div>
-  <div class="nav-item" onclick="nav('management',this)"><span class="nav-icon">👥</span>Management Control</div>
-  <div class="nav-item" onclick="nav('skills',this)"><span class="nav-icon">🎓</span>Skills Development<span class="nav-badge nb-red">!</span></div>
-  <div class="nav-item" onclick="nav('esd',this)"><span class="nav-icon">🤝</span>ESD & Suppliers</div>
-  <div class="nav-item" onclick="nav('sed',this)"><span class="nav-icon">🌍</span>SED / CSI<span class="nav-badge nb-green">✓</span></div>
+  <div class="nav-label"><i class="ph-bold ph-scales"></i> B-BBEE Scorecard</div>
+  <div class="nav-item" onclick="nav('scorecard',this)"><span class="nav-icon"><i class="ph-bold ph-scales"></i></span>My Scorecard<span class="nav-badge nb-amber">!</span></div>
+  <div class="nav-item" onclick="nav('ownership',this)"><span class="nav-icon"><i class="ph-bold ph-buildings"></i></span>Ownership<span class="nav-badge nb-green">✓</span></div>
+  <div class="nav-item" onclick="nav('management',this)"><span class="nav-icon"><i class="ph-bold ph-users-three"></i></span>Management Control</div>
+  <div class="nav-item" onclick="nav('skills',this)"><span class="nav-icon"><i class="ph-bold ph-graduation-cap"></i></span>Skills Development<span class="nav-badge nb-red">!</span></div>
+  <div class="nav-item" onclick="nav('esd',this)"><span class="nav-icon"><i class="ph-bold ph-handshake"></i></span>ESD & Suppliers</div>
+  <div class="nav-item" onclick="nav('sed',this)"><span class="nav-icon"><i class="ph-bold ph-globe-hemisphere-west"></i></span>SED / CSI<span class="nav-badge nb-green">✓</span></div>
 
-  <div class="nav-label">📋 Other Compliance</div>
-  <div class="nav-item" onclick="nav('ee',this)"><span class="nav-icon">👔</span>Employment Equity<span class="nav-badge nb-amber">!</span></div>
-  <div class="nav-item" onclick="nav('popia',this)"><span class="nav-icon">🔐</span>POPIA<span class="nav-badge nb-amber">3</span></div>
-  <div class="nav-item" onclick="nav('csd',this)"><span class="nav-icon">🏛</span>CSD & Tax Clearance<span class="nav-badge nb-red">!</span></div>
-  <div class="nav-item" onclick="nav('documents',this)"><span class="nav-icon">📁</span>Documents<span class="nav-badge nb-red">6</span></div>
-  <div class="nav-item" onclick="nav('suppliers',this)"><span class="nav-icon">🏭</span>Suppliers</div>
+  <div class="nav-label"><i class="ph-bold ph-clipboard-text"></i> Other Compliance</div>
+  <div class="nav-item" onclick="nav('ee',this)"><span class="nav-icon"><i class="ph-bold ph-briefcase"></i></span>Employment Equity<span class="nav-badge nb-amber">!</span></div>
+  <div class="nav-item" onclick="nav('popia',this)"><span class="nav-icon"><i class="ph-bold ph-lock-key"></i></span>POPIA<span class="nav-badge nb-amber">3</span></div>
+  <div class="nav-item" onclick="nav('csd',this)"><span class="nav-icon"><i class="ph-bold ph-bank"></i></span>CSD & Tax Clearance<span class="nav-badge nb-red">!</span></div>
+  <div class="nav-item" onclick="nav('documents',this)"><span class="nav-icon"><i class="ph-bold ph-folder"></i></span>Documents<span class="nav-badge nb-red">6</span></div>
+  <div class="nav-item" onclick="nav('suppliers',this)"><span class="nav-icon"><i class="ph-bold ph-factory"></i></span>Suppliers</div>
 
-  <div class="nav-label">🛠 Tools</div>
-  <div class="nav-item" onclick="nav('simulator',this)"><span class="nav-icon">🧮</span>Score Simulator</div>
-  <div class="nav-item" onclick="nav('verification',this)"><span class="nav-icon">📦</span>Verification Pack<span class="nav-badge nb-amber">73%</span></div>
-  <div class="nav-item" onclick="nav('verifiers',this)"><span class="nav-icon">🔍</span>SANAS Verifiers</div>
-  <div class="nav-item" onclick="nav('reports',this)"><span class="nav-icon">📊</span>Reports</div>
+  <div class="nav-label"><i class="ph-bold ph-wrench"></i> Tools</div>
+  <div class="nav-item" onclick="nav('simulator',this)"><span class="nav-icon"><i class="ph-bold ph-calculator"></i></span>Score Simulator</div>
+  <div class="nav-item" onclick="nav('verification',this)"><span class="nav-icon"><i class="ph-bold ph-package"></i></span>Verification Pack<span class="nav-badge nb-amber">73%</span></div>
+  <div class="nav-item" onclick="nav('verifiers',this)"><span class="nav-icon"><i class="ph-bold ph-magnifying-glass"></i></span>SANAS Verifiers</div>
+  <div class="nav-item" onclick="nav('reports',this)"><span class="nav-icon"><i class="ph-bold ph-chart-bar"></i></span>Reports</div>
 
   <div class="sidebar-footer">
     <div class="user-row">
@@ -359,9 +364,9 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
       <div class="topbar-title" id="page-title">Home</div>
     </div>
     <div class="topbar-right">
-      <button class="btn btn-ghost btn-sm" onclick="nav('csd',null)">🏛 CSD Status</button>
-      <button class="btn btn-ghost btn-sm">📥 Import Payroll</button>
-      <button class="btn btn-gold btn-sm">🏆 Find Tenders</button>
+      <button class="btn btn-ghost btn-sm" onclick="nav('csd',null)"><i class="ph-bold ph-bank"></i> CSD Status</button>
+      <button class="btn btn-ghost btn-sm"><i class="ph-bold ph-download-simple"></i> Import Payroll</button>
+      <button class="btn btn-gold btn-sm"><i class="ph-bold ph-trophy"></i> Find Tenders</button>
       <button class="btn btn-primary btn-sm">+ Add Document</button>
     </div>
   </div>
@@ -371,7 +376,7 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
     <!-- ══════════════ HOME ══════════════ -->
     <div class="page active" id="page-home">
       <div class="banner b-red">
-        <div class="b-icon">🚨</div>
+        <div class="b-icon"><i class="ph-bold ph-warning-octagon"></i></div>
         <div class="b-body">
           <div class="b-title">B-BBEE Certificate expires in 47 days — you'll lose tender eligibility</div>
           <div class="b-desc">Your Level 4 certificate expires 14 August 2026. Once it expires you are disqualified from all government and corporate tenders. Book a SANAS verifier today — they need 3–4 weeks notice.</div>
@@ -390,7 +395,7 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
         <!-- LEFT: Tender Opportunities -->
         <div class="card">
           <div class="card-header">
-            <div class="card-title">🏆 Open Tenders You Qualify For Now</div>
+            <div class="card-title"><i class="ph-bold ph-trophy"></i> Open Tenders You Qualify For Now</div>
             <button class="btn btn-ghost btn-sm" onclick="nav('tenders',null)">View All 14 →</button>
           </div>
           <div class="tender-card">
@@ -435,7 +440,7 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
           </div>
           <!-- LOCKED TENDERS -->
           <div class="section-label" style="margin-top:16px">
-            🔒 Locked — Upgrade to Level 3 to unlock
+            <i class="ph-bold ph-lock-simple"></i> Locked — Upgrade to Level 3 to unlock
             <span class="pill p-amber sl-badge">+7.5 pts needed</span>
           </div>
           <div class="tender-card locked">
@@ -450,7 +455,7 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
                 <div class="tc-closes">Closes 30 Jul 2026</div>
               </div>
             </div>
-            <div class="tc-lock-msg">🔒 Requires Level 3 minimum. You need +7.5 pts. <span class="tc-unlock-cta" onclick="nav('simulator',null)">See how to unlock →</span></div>
+            <div class="tc-lock-msg"><i class="ph-bold ph-lock-simple"></i> Requires Level 3 minimum. You need +7.5 pts. <span class="tc-unlock-cta" onclick="nav('simulator',null)">See how to unlock →</span></div>
           </div>
           <div class="tender-card locked">
             <div class="tc-header">
@@ -464,14 +469,14 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
                 <div class="tc-closes">Closes 5 Aug 2026</div>
               </div>
             </div>
-            <div class="tc-lock-msg">🔒 Requires Level 3 minimum. <span class="tc-unlock-cta" onclick="nav('simulator',null)">Simulate Level 3 →</span></div>
+            <div class="tc-lock-msg"><i class="ph-bold ph-lock-simple"></i> Requires Level 3 minimum. <span class="tc-unlock-cta" onclick="nav('simulator',null)">Simulate Level 3 →</span></div>
           </div>
         </div>
 
         <!-- RIGHT: Actions & Score -->
         <div style="display:flex;flex-direction:column;gap:14px">
           <div class="roi-box">
-            <div class="roi-title">💰 Level 3 Upgrade — ROI</div>
+            <div class="roi-title"><i class="ph-bold ph-currency-circle-dollar"></i> Level 3 Upgrade — ROI</div>
             <div class="roi-grid">
               <div class="roi-cell"><div class="rv">R112k</div><div class="rl">Cost to reach L3</div></div>
               <div class="roi-cell"><div class="rv">R2.4M</div><div class="rl">Tenders unlocked</div></div>
@@ -504,35 +509,35 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
 
     <!-- ══════════════ TODAY'S TASKS ══════════════ -->
     <div class="page" id="page-today">
-      <div class="banner b-blue"><div class="b-icon">☀️</div><div class="b-body"><div class="b-title">Good morning, Thabo. 5 tasks need your attention today.</div><div class="b-desc">2 are compliance-critical, 1 is a tender deadline, 2 are this week.</div></div></div>
+      <div class="banner b-blue"><div class="b-icon"><i class="ph-bold ph-sun"></i></div><div class="b-body"><div class="b-title">Good morning, Thabo. 5 tasks need your attention today.</div><div class="b-desc">2 are compliance-critical, 1 is a tender deadline, 2 are this week.</div></div></div>
 
-      <div class="section-label" style="color:var(--red)">🚨 Do Today — Compliance Critical</div>
+      <div class="section-label" style="color:var(--red)"><i class="ph-bold ph-warning-octagon"></i> Do Today — Compliance Critical</div>
       <div class="task-card t-urgent">
-        <div class="tc-icon ti-red">📅</div>
+        <div class="tc-icon ti-red"><i class="ph-bold ph-calendar-dots"></i></div>
         <div class="tc-body"><div class="tc-title">Book B-BBEE Verification Appointment</div><div class="tc-desc">Your certificate expires 14 Aug 2026 — 47 days away. SANAS verifiers need 3–4 weeks. We've found 3 accredited agencies near you.</div><div class="tc-meta"><span class="pill p-red">47 days to expiry</span><span class="pill p-accent">B-BBEE</span></div></div>
         <div class="tc-right"><button class="btn btn-primary btn-sm">Find Verifier</button></div>
       </div>
       <div class="task-card t-urgent">
-        <div class="tc-icon ti-red">📝</div>
+        <div class="tc-icon ti-red"><i class="ph-bold ph-note-pencil"></i></div>
         <div class="tc-body"><div class="tc-title">Complete WSP / ATR — Due in 22 Days</div><div class="tc-desc">Workplace Skills Plan must be submitted to your SETA by 30 June 2026. Late submission forfeits your R28,000 mandatory grant. Sections A–C done, D & E missing.</div><div class="tc-meta"><span class="pill p-red">22 days</span><span class="pill p-accent">Skills Dev</span></div></div>
         <div class="tc-right"><button class="btn btn-primary btn-sm" onclick="nav('skills',null)">Continue</button></div>
       </div>
 
-      <div class="section-label" style="color:var(--gold)">🏆 Tender Deadline This Week</div>
+      <div class="section-label" style="color:var(--gold)"><i class="ph-bold ph-trophy"></i> Tender Deadline This Week</div>
       <div class="task-card t-gold">
-        <div class="tc-icon ti-gold">🏆</div>
+        <div class="tc-icon ti-gold"><i class="ph-bold ph-trophy"></i></div>
         <div class="tc-body"><div class="tc-title">Rand Water Tender — Prepare Bid Documents</div><div class="tc-desc">General Construction Works (R980,000). You qualify at Level 4. Tender closes 20 Jul 2026 — 42 days. Start bid preparation now to meet document requirements. Your verification pack is 73% ready.</div><div class="tc-meta"><span class="pill p-gold">R980,000</span><span class="pill p-green">You qualify now</span><span class="pill p-amber">42 days</span></div></div>
         <div class="tc-right"><button class="btn btn-gold btn-sm">View Tender</button></div>
       </div>
 
-      <div class="section-label" style="color:var(--amber)">⚠️ Important — This Week</div>
+      <div class="section-label" style="color:var(--amber)"><i class="ph-bold ph-warning"></i> Important — This Week</div>
       <div class="task-card t-warn">
-        <div class="tc-icon ti-amber">🏭</div>
+        <div class="tc-icon ti-amber"><i class="ph-bold ph-factory"></i></div>
         <div class="tc-body"><div class="tc-title">Request Supplier Certificate Renewals (3 suppliers)</div><div class="tc-desc">Maseko Steel (18 Jun), Dlamini Logistics (22 Jun), TechBridge Solutions (28 Jun). Expired supplier certs reduce your ESD score and exclude you from procurement tenders requiring B-BBEE-compliant supply chains.</div><div class="tc-meta"><span class="pill p-red">3 expiring this month</span><span class="pill p-accent">ESD</span></div></div>
         <div class="tc-right"><button class="btn btn-outline btn-sm" onclick="nav('suppliers',null)">Send Requests</button></div>
       </div>
       <div class="task-card t-warn">
-        <div class="tc-icon ti-amber">✍️</div>
+        <div class="tc-icon ti-amber"><i class="ph-bold ph-signature"></i></div>
         <div class="tc-body"><div class="tc-title">Get POPIA Consent from 3 Employees</div><div class="tc-desc">Lindiwe Dube, Marcus Pietersen, Ayanda Khumalo. Their data can't be used in your B-BBEE scorecard without signed consent — this slightly reduces your score until resolved.</div><div class="tc-meta"><span class="pill p-amber">3 unsigned</span><span class="pill p-accent">POPIA</span></div></div>
         <div class="tc-right"><button class="btn btn-outline btn-sm" onclick="nav('popia',null)">Resend Forms</button></div>
       </div>
@@ -541,7 +546,7 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
     <!-- ══════════════ MY TENDERS ══════════════ -->
     <div class="page" id="page-tenders">
       <div class="banner b-gold">
-        <div class="b-icon">🏆</div>
+        <div class="b-icon"><i class="ph-bold ph-trophy"></i></div>
         <div class="b-body">
           <div class="b-title">You qualify for 14 open tenders worth R18.2M today. 5 more (R2.4M) unlock at Level 3.</div>
           <div class="b-desc">These are matched to your B-BBEE Level 4, sector (Generic/Construction), and location (Gauteng). Updated daily from the National Treasury eTenders portal and SOE procurement systems.</div>
@@ -557,8 +562,8 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
       </div>
 
       <div class="tab-bar">
-        <div class="tab-btn active" onclick="swTab(this,'t-eligible')">✅ Eligible Now (14)</div>
-        <div class="tab-btn" onclick="swTab(this,'t-locked')">🔒 Locked — Level 3 (5)</div>
+        <div class="tab-btn active" onclick="swTab(this,'t-eligible')"><i class="ph-bold ph-check-circle"></i> Eligible Now (14)</div>
+        <div class="tab-btn" onclick="swTab(this,'t-locked')"><i class="ph-bold ph-lock-simple"></i> Locked — Level 3 (5)</div>
         <div class="tab-btn" onclick="swTab(this,'t-closing')">⏰ Closing Soon</div>
       </div>
 
@@ -581,8 +586,8 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
             <span class="pill p-grey">Gauteng</span>
             <span class="pill p-amber">42 days</span>
             <div style="margin-left:auto;display:flex;gap:6px">
-              <button class="btn btn-ghost btn-sm">🔖 Save</button>
-              <button class="btn btn-ghost btn-sm">📥 Download Spec</button>
+              <button class="btn btn-ghost btn-sm"><i class="ph-bold ph-bookmark-simple"></i> Save</button>
+              <button class="btn btn-ghost btn-sm"><i class="ph-bold ph-download-simple"></i> Download Spec</button>
               <button class="btn btn-primary btn-sm">View Full Tender →</button>
             </div>
           </div>
@@ -605,7 +610,7 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
             <span class="pill p-grey">Engineering</span>
             <span class="pill p-grey">Mpumalanga</span>
             <div style="margin-left:auto;display:flex;gap:6px">
-              <button class="btn btn-ghost btn-sm">🔖 Save</button>
+              <button class="btn btn-ghost btn-sm"><i class="ph-bold ph-bookmark-simple"></i> Save</button>
               <button class="btn btn-primary btn-sm">View Full Tender →</button>
             </div>
           </div>
@@ -628,7 +633,7 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
             <span class="pill p-grey">Infrastructure</span>
             <span class="pill p-grey">Tshwane</span>
             <div style="margin-left:auto;display:flex;gap:6px">
-              <button class="btn btn-ghost btn-sm">🔖 Save</button>
+              <button class="btn btn-ghost btn-sm"><i class="ph-bold ph-bookmark-simple"></i> Save</button>
               <button class="btn btn-primary btn-sm">View Full Tender →</button>
             </div>
           </div>
@@ -641,7 +646,7 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
 
       <div class="tab-content" id="t-locked">
         <div class="banner b-amber" style="margin-bottom:16px">
-          <div class="b-icon">🔒</div>
+          <div class="b-icon"><i class="ph-bold ph-lock-simple"></i></div>
           <div class="b-body">
             <div class="b-title">These 5 tenders (R2.4M) require Level 3. You need 7.5 more points.</div>
             <div class="b-desc">Spend R85,000 more on ESD and enroll 2 learnerships to reach Level 3. That R112,600 investment unlocks R2.4M in additional tender opportunities — a 21× return.</div>
@@ -658,7 +663,7 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
             </div>
             <div class="tc-tender-right"><div class="tc-value">R1,800,000</div><div class="tc-closes">Closes 30 Jul 2026</div></div>
           </div>
-          <div class="tc-lock-msg">🔒 Requires Level 3. You are Level 4. Need +7.5 pts. <span class="tc-unlock-cta" onclick="nav('simulator',null)">Show me how to unlock →</span></div>
+          <div class="tc-lock-msg"><i class="ph-bold ph-lock-simple"></i> Requires Level 3. You are Level 4. Need +7.5 pts. <span class="tc-unlock-cta" onclick="nav('simulator',null)">Show me how to unlock →</span></div>
         </div>
 
         <div class="tender-card locked">
@@ -670,7 +675,7 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
             </div>
             <div class="tc-tender-right"><div class="tc-value">R620,000</div><div class="tc-closes">Closes 5 Aug 2026</div></div>
           </div>
-          <div class="tc-lock-msg">🔒 Requires Level 3. <span class="tc-unlock-cta" onclick="nav('simulator',null)">Simulate Level 3 →</span></div>
+          <div class="tc-lock-msg"><i class="ph-bold ph-lock-simple"></i> Requires Level 3. <span class="tc-unlock-cta" onclick="nav('simulator',null)">Simulate Level 3 →</span></div>
         </div>
       </div>
 
@@ -681,9 +686,9 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
             <thead><tr><th>Tender</th><th>Org</th><th>Value</th><th>Closes</th><th>Your Status</th></tr></thead>
             <tbody>
               <tr><td><strong>General Construction — Rand Water</strong></td><td>Rand Water</td><td><strong>R980k</strong></td><td><span style="color:var(--amber)">20 Jul</span></td><td><span class="pill p-green">Eligible ✓</span></td></tr>
-              <tr><td><strong>Structural Steel — Transnet</strong></td><td>Transnet</td><td><strong>R1.8M</strong></td><td><span style="color:var(--amber)">30 Jul</span></td><td><span class="pill p-amber">🔒 Need Level 3</span></td></tr>
+              <tr><td><strong>Structural Steel — Transnet</strong></td><td>Transnet</td><td><strong>R1.8M</strong></td><td><span style="color:var(--amber)">30 Jul</span></td><td><span class="pill p-amber"><i class="ph-bold ph-lock-simple"></i> Need Level 3</span></td></tr>
               <tr><td><strong>Steel Fabrication — Eskom</strong></td><td>Eskom</td><td><strong>R2.1M</strong></td><td>5 Aug</td><td><span class="pill p-green">Eligible ✓</span></td></tr>
-              <tr><td><strong>Municipal Eng — Ekurhuleni</strong></td><td>Ekurhuleni</td><td><strong>R620k</strong></td><td>5 Aug</td><td><span class="pill p-amber">🔒 Need Level 3</span></td></tr>
+              <tr><td><strong>Municipal Eng — Ekurhuleni</strong></td><td>Ekurhuleni</td><td><strong>R620k</strong></td><td>5 Aug</td><td><span class="pill p-amber"><i class="ph-bold ph-lock-simple"></i> Need Level 3</span></td></tr>
             </tbody>
           </table>
         </div>
@@ -693,7 +698,7 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
     <!-- ══════════════ TENDER SEARCH ══════════════ -->
     <div class="page" id="page-tender-search">
       <div class="banner b-teal">
-        <div class="b-icon">🔍</div>
+        <div class="b-icon"><i class="ph-bold ph-magnifying-glass"></i></div>
         <div class="b-body">
           <div class="b-title">Search 4,200+ open tenders across government, SOEs, and municipalities</div>
           <div class="b-desc">Powered by National Treasury eTenders (OCDS API), provincial portals, and SOE procurement systems. Updated daily. Your B-BBEE level is pre-applied as a filter — results show what you can actually bid on.</div>
@@ -703,7 +708,7 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
       <div class="card" style="margin-bottom:16px">
         <div class="search-bar">
           <input class="search-input" type="text" placeholder="Search by keyword, organisation, or reference number...">
-          <button class="btn btn-primary">🔍 Search</button>
+          <button class="btn btn-primary"><i class="ph-bold ph-magnifying-glass"></i> Search</button>
         </div>
         <div class="grid g4" style="gap:10px">
           <div class="form-group" style="margin-bottom:0"><label class="form-label">B-BBEE Eligibility</label><select class="form-select"><option>My Level (Level 4 & below)</option><option>Level 1</option><option>Level 2</option><option>Level 3</option><option>Any Level</option></select></div>
@@ -727,7 +732,7 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
         </div>
         <div class="tc-footer">
           <span class="pill p-green">✓ You Qualify</span><span class="pill p-grey">Construction</span><span class="pill p-grey">Gauteng</span><span class="pill p-amber">42 days</span>
-          <div style="margin-left:auto;display:flex;gap:6px"><button class="btn btn-ghost btn-sm">🔖 Save</button><button class="btn btn-primary btn-sm">View →</button></div>
+          <div style="margin-left:auto;display:flex;gap:6px"><button class="btn btn-ghost btn-sm"><i class="ph-bold ph-bookmark-simple"></i> Save</button><button class="btn btn-primary btn-sm">View →</button></div>
         </div>
       </div>
 
@@ -742,7 +747,7 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
         </div>
         <div class="tc-footer">
           <span class="pill p-green">✓ You Qualify</span><span class="pill p-grey">IT Services</span><span class="pill p-grey">Pretoria</span><span class="pill p-red">37 days</span>
-          <div style="margin-left:auto;display:flex;gap:6px"><button class="btn btn-ghost btn-sm">🔖 Save</button><button class="btn btn-primary btn-sm">View →</button></div>
+          <div style="margin-left:auto;display:flex;gap:6px"><button class="btn btn-ghost btn-sm"><i class="ph-bold ph-bookmark-simple"></i> Save</button><button class="btn btn-primary btn-sm">View →</button></div>
         </div>
       </div>
 
@@ -755,7 +760,7 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
           </div>
           <div class="tc-tender-right"><div class="tc-value">R6,800,000</div><div class="tc-closes">Closes 30 Aug 2026</div></div>
         </div>
-        <div class="tc-lock-msg">🔒 Requires Level 2. You are Level 4. This tender requires significant ownership transformation. <span class="tc-unlock-cta">Learn more</span></div>
+        <div class="tc-lock-msg"><i class="ph-bold ph-lock-simple"></i> Requires Level 2. You are Level 4. This tender requires significant ownership transformation. <span class="tc-unlock-cta">Learn more</span></div>
       </div>
 
       <div style="text-align:center;padding:16px;border:1px dashed var(--border);border-radius:10px;color:var(--text2);font-size:12px;background:var(--bg2)">
@@ -766,7 +771,7 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
 
     <!-- ══════════════ SAVED TENDERS ══════════════ -->
     <div class="page" id="page-tender-saved">
-      <div class="card-title" style="font-size:15px;margin-bottom:16px">🔖 Saved Tenders</div>
+      <div class="card-title" style="font-size:15px;margin-bottom:16px"><i class="ph-bold ph-bookmark-simple"></i> Saved Tenders</div>
       <div class="grid g3" style="margin-bottom:16px">
         <div class="kpi"><div class="kpi-label">Saved</div><div class="kpi-value">3</div></div>
         <div class="kpi"><div class="kpi-label">Total Value</div><div class="kpi-value gold">R5.4M</div></div>
@@ -778,7 +783,7 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
           <div class="tc-info"><div class="tc-tender-title">General Construction Works — Rand Water</div><div class="tc-org">Rand Water · R980,000 · Closes 20 Jul 2026</div></div>
           <div class="tc-tender-right"><div class="tc-value">R980,000</div></div>
         </div>
-        <div class="tc-footer"><span class="pill p-green">✓ Eligible</span><span class="pill p-amber">42 days</span><div style="margin-left:auto;display:flex;gap:6px"><button class="btn btn-ghost btn-sm">🗑 Remove</button><button class="btn btn-primary btn-sm">View →</button></div></div>
+        <div class="tc-footer"><span class="pill p-green">✓ Eligible</span><span class="pill p-amber">42 days</span><div style="margin-left:auto;display:flex;gap:6px"><button class="btn btn-ghost btn-sm"><i class="ph-bold ph-trash"></i> Remove</button><button class="btn btn-primary btn-sm">View →</button></div></div>
       </div>
       <div class="tender-card saved">
         <div class="tc-header">
@@ -786,7 +791,7 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
           <div class="tc-info"><div class="tc-tender-title">IT Infrastructure Upgrade — SITA</div><div class="tc-org">SITA · R350,000 · Closes 15 Jul 2026</div></div>
           <div class="tc-tender-right"><div class="tc-value">R350,000</div></div>
         </div>
-        <div class="tc-footer"><span class="pill p-green">✓ Eligible</span><span class="pill p-red">37 days</span><div style="margin-left:auto;display:flex;gap:6px"><button class="btn btn-ghost btn-sm">🗑 Remove</button><button class="btn btn-primary btn-sm">View →</button></div></div>
+        <div class="tc-footer"><span class="pill p-green">✓ Eligible</span><span class="pill p-red">37 days</span><div style="margin-left:auto;display:flex;gap:6px"><button class="btn btn-ghost btn-sm"><i class="ph-bold ph-trash"></i> Remove</button><button class="btn btn-primary btn-sm">View →</button></div></div>
       </div>
       <div class="tender-card saved" style="border-color:var(--amber)">
         <div class="tc-header">
@@ -794,13 +799,13 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
           <div class="tc-info"><div class="tc-tender-title">Structural Steel Works — Transnet</div><div class="tc-org">Transnet · R1,800,000 · Closes 30 Jul 2026 · <strong style="color:var(--amber)">Locked at Level 4</strong></div></div>
           <div class="tc-tender-right"><div class="tc-value">R1,800,000</div></div>
         </div>
-        <div class="tc-lock-msg">🔒 Need Level 3 to bid. <span class="tc-unlock-cta" onclick="nav('simulator',null)">Simulate upgrade →</span></div>
+        <div class="tc-lock-msg"><i class="ph-bold ph-lock-simple"></i> Need Level 3 to bid. <span class="tc-unlock-cta" onclick="nav('simulator',null)">Simulate upgrade →</span></div>
       </div>
     </div>
 
     <!-- ══════════════ TENDER ALERTS ══════════════ -->
     <div class="page" id="page-tender-alerts">
-      <div class="card-title" style="font-size:15px;margin-bottom:4px">🔔 Tender Alerts</div>
+      <div class="card-title" style="font-size:15px;margin-bottom:4px"><i class="ph-bold ph-bell"></i> Tender Alerts</div>
       <div style="font-size:12px;color:var(--text2);margin-bottom:18px">Set up alerts and we'll notify you when new tenders matching your profile are published.</div>
 
       <div class="grid g2" style="margin-bottom:16px">
@@ -826,7 +831,7 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
 
     <!-- ══════════════ SCORECARD ══════════════ -->
     <div class="page" id="page-scorecard">
-      <div class="banner b-blue"><div class="b-icon">💡</div><div class="b-body"><div class="b-title">Level 4 → Level 3 needs 7.5 more points. Level 3 unlocks R2.4M in additional tenders.</div><div class="b-desc">Focus on ESD spend and adding learnerships for the fastest, most affordable path.</div></div><div class="b-action"><button class="btn btn-primary btn-sm" onclick="nav('simulator',null)">Simulate →</button></div></div>
+      <div class="banner b-blue"><div class="b-icon"><i class="ph-bold ph-lightbulb"></i></div><div class="b-body"><div class="b-title">Level 4 → Level 3 needs 7.5 more points. Level 3 unlocks R2.4M in additional tenders.</div><div class="b-desc">Focus on ESD spend and adding learnerships for the fastest, most affordable path.</div></div><div class="b-action"><button class="btn btn-primary btn-sm" onclick="nav('simulator',null)">Simulate →</button></div></div>
       <div class="grid g4" style="margin-bottom:16px">
         <div class="kpi"><div class="kpi-label">Score</div><div class="kpi-value">68.5</div><div class="kpi-meta">/ 109 possible points</div></div>
         <div class="kpi"><div class="kpi-label">Level</div><div class="kpi-value green">4</div></div>
@@ -838,11 +843,11 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
         <table>
           <thead><tr><th>Element</th><th>Score</th><th>Max</th><th>%</th><th>Status</th><th>Quick Tip</th></tr></thead>
           <tbody>
-            <tr><td><strong>🏢 Ownership</strong></td><td>18.0</td><td>25</td><td>72%</td><td><span class="pill p-green">Good</span></td><td style="font-size:11px;color:var(--text2)">+1.8 pts: increase black women ownership to 30%</td></tr>
-            <tr><td><strong>👥 Management Control</strong></td><td>12.0</td><td>19</td><td>63%</td><td><span class="pill p-amber">Improve</span></td><td style="font-size:11px;color:var(--text2)">+2.4 pts: promote 1 black female to senior mgmt</td></tr>
-            <tr><td><strong>🎓 Skills Development</strong></td><td>12.0</td><td>20</td><td>60%</td><td><span class="pill p-red">⚠ Risk</span></td><td style="font-size:11px;color:var(--text2)">Sub-min at risk — spend R27,600 more urgently</td></tr>
-            <tr><td><strong>🤝 ESD & Procurement</strong></td><td>22.0</td><td>40</td><td>55%</td><td><span class="pill p-amber">Improve</span></td><td style="font-size:11px;color:var(--text2)">Biggest opportunity: +R85k ESD = +3.2 pts</td></tr>
-            <tr><td><strong>🌍 SED / CSI</strong></td><td>4.5</td><td>5</td><td>90%</td><td><span class="pill p-green">Almost ✓</span></td><td style="font-size:11px;color:var(--text2)">Get Ubuntu Skills Centre confirmation letter</td></tr>
+            <tr><td><strong><i class="ph-bold ph-buildings"></i> Ownership</strong></td><td>18.0</td><td>25</td><td>72%</td><td><span class="pill p-green">Good</span></td><td style="font-size:11px;color:var(--text2)">+1.8 pts: increase black women ownership to 30%</td></tr>
+            <tr><td><strong><i class="ph-bold ph-users-three"></i> Management Control</strong></td><td>12.0</td><td>19</td><td>63%</td><td><span class="pill p-amber">Improve</span></td><td style="font-size:11px;color:var(--text2)">+2.4 pts: promote 1 black female to senior mgmt</td></tr>
+            <tr><td><strong><i class="ph-bold ph-graduation-cap"></i> Skills Development</strong></td><td>12.0</td><td>20</td><td>60%</td><td><span class="pill p-red"><i class="ph-bold ph-warning"></i> Risk</span></td><td style="font-size:11px;color:var(--text2)">Sub-min at risk — spend R27,600 more urgently</td></tr>
+            <tr><td><strong><i class="ph-bold ph-handshake"></i> ESD & Procurement</strong></td><td>22.0</td><td>40</td><td>55%</td><td><span class="pill p-amber">Improve</span></td><td style="font-size:11px;color:var(--text2)">Biggest opportunity: +R85k ESD = +3.2 pts</td></tr>
+            <tr><td><strong><i class="ph-bold ph-globe-hemisphere-west"></i> SED / CSI</strong></td><td>4.5</td><td>5</td><td>90%</td><td><span class="pill p-green">Almost ✓</span></td><td style="font-size:11px;color:var(--text2)">Get Ubuntu Skills Centre confirmation letter</td></tr>
             <tr style="background:var(--bg3)"><td><strong>TOTAL</strong></td><td><strong>68.5</strong></td><td>109</td><td>63%</td><td><span class="pill p-accent">Level 4</span></td><td style="font-size:11px;color:var(--green);font-weight:700">+7.5 pts → Level 3 → +R2.4M tenders</td></tr>
           </tbody>
         </table>
@@ -851,7 +856,7 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
 
     <!-- ══════════════ OWNERSHIP ══════════════ -->
     <div class="page" id="page-ownership">
-      <div class="banner b-green"><div class="b-icon">✅</div><div class="b-body"><div class="b-title">Ownership is in good shape. 18/25 points. All declarations signed.</div><div class="b-desc">One improvement: increase black women ownership from 24% to 30% to earn +1.8 bonus points.</div></div></div>
+      <div class="banner b-green"><div class="b-icon"><i class="ph-bold ph-check-circle"></i></div><div class="b-body"><div class="b-title">Ownership is in good shape. 18/25 points. All declarations signed.</div><div class="b-desc">One improvement: increase black women ownership from 24% to 30% to earn +1.8 bonus points.</div></div></div>
       <div class="grid g4" style="margin-bottom:16px">
         <div class="kpi"><div class="kpi-label">Black Ownership</div><div class="kpi-value green">51%</div></div>
         <div class="kpi"><div class="kpi-label">Black Women</div><div class="kpi-value amber">24%</div><div class="kpi-meta">30% earns bonus</div></div>
@@ -873,7 +878,7 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
 
     <!-- ══════════════ SKILLS ══════════════ -->
     <div class="page" id="page-skills">
-      <div class="banner b-red"><div class="b-icon">🚨</div><div class="b-body"><div class="b-title">Sub-minimum at risk. Spend R27,600 more on qualifying training before year-end.</div><div class="b-desc">Current: 1.3% of learneable payroll (R182,400). Required: 1.5% (R210,000). If missed, you forfeit ALL 20 Skills Development points — dropping from Level 4 to Level 6. This would also cost you tender eligibility.</div></div></div>
+      <div class="banner b-red"><div class="b-icon"><i class="ph-bold ph-warning-octagon"></i></div><div class="b-body"><div class="b-title">Sub-minimum at risk. Spend R27,600 more on qualifying training before year-end.</div><div class="b-desc">Current: 1.3% of learneable payroll (R182,400). Required: 1.5% (R210,000). If missed, you forfeit ALL 20 Skills Development points — dropping from Level 4 to Level 6. This would also cost you tender eligibility.</div></div></div>
       <div class="grid g4" style="margin-bottom:16px">
         <div class="kpi"><div class="kpi-label">Training Spend</div><div class="kpi-value amber">R182,400</div><div class="kpi-meta">1.3% of payroll</div></div>
         <div class="kpi"><div class="kpi-label">Still Needed</div><div class="kpi-value red">R27,600</div><div class="kpi-meta">To hit sub-minimum</div></div>
@@ -924,7 +929,7 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
 
     <!-- ══════════════ ESD ══════════════ -->
     <div class="page" id="page-esd">
-      <div class="banner b-amber"><div class="b-icon">💰</div><div class="b-body"><div class="b-title">ESD is your biggest lever — 40 points and the fastest path to Level 3.</div><div class="b-desc">R85,000 more in ESD contributions = +3.2 points = Level 3 = R2.4M more in tender eligibility. That is a 28× return on the R85k investment.</div></div><div class="b-action"><button class="btn btn-gold btn-sm" onclick="nav('simulator',null)">Simulate →</button></div></div>
+      <div class="banner b-amber"><div class="b-icon"><i class="ph-bold ph-currency-circle-dollar"></i></div><div class="b-body"><div class="b-title">ESD is your biggest lever — 40 points and the fastest path to Level 3.</div><div class="b-desc">R85,000 more in ESD contributions = +3.2 points = Level 3 = R2.4M more in tender eligibility. That is a 28× return on the R85k investment.</div></div><div class="b-action"><button class="btn btn-gold btn-sm" onclick="nav('simulator',null)">Simulate →</button></div></div>
       <div class="grid g4" style="margin-bottom:16px">
         <div class="kpi"><div class="kpi-label">Total Procurement</div><div class="kpi-value">R8.4M</div></div>
         <div class="kpi"><div class="kpi-label">B-BBEE Qualifying</div><div class="kpi-value amber">62%</div><div class="kpi-meta">Target: 80%</div></div>
@@ -933,7 +938,7 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
       </div>
       <div class="card">
         <div class="card-header"><div class="card-title">Supplier Database</div><button class="btn btn-primary btn-sm">+ Add Supplier</button></div>
-        <div class="banner b-teal" style="margin-bottom:12px"><div class="b-icon">🔗</div><div class="b-body"><div class="b-title">Supplier Self-Service Portal</div><div class="b-desc">Share <strong>complianceos.co.za/supplier/ntaba-engineering</strong> — suppliers onboard themselves and upload certificates directly.</div></div><button class="btn btn-ghost btn-sm b-action">Copy Link</button></div>
+        <div class="banner b-teal" style="margin-bottom:12px"><div class="b-icon"><i class="ph-bold ph-link"></i></div><div class="b-body"><div class="b-title">Supplier Self-Service Portal</div><div class="b-desc">Share <strong>complianceos.co.za/supplier/ntaba-engineering</strong> — suppliers onboard themselves and upload certificates directly.</div></div><button class="btn btn-ghost btn-sm b-action">Copy Link</button></div>
         <table><thead><tr><th>Supplier</th><th>Level</th><th>YTD Spend</th><th>Cert Expiry</th><th>Status</th></tr></thead>
           <tbody>
             <tr><td><strong>Maseko Steel (Pty) Ltd</strong><div class="td-sub">100% Black-owned</div></td><td><span class="pill p-green">Level 1</span></td><td>R1,240,000</td><td style="color:var(--red)"><strong>18 Jun 2026</strong></td><td><span class="pill p-red">Expiring!</span></td></tr>
@@ -946,7 +951,7 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
 
     <!-- ══════════════ SED ══════════════ -->
     <div class="page" id="page-sed">
-      <div class="banner b-green"><div class="b-icon">🌟</div><div class="b-body"><div class="b-title">SED is 90% done. Get Ubuntu Skills Centre's confirmation letter for a perfect score.</div></div></div>
+      <div class="banner b-green"><div class="b-icon"><i class="ph-bold ph-star"></i></div><div class="b-body"><div class="b-title">SED is 90% done. Get Ubuntu Skills Centre's confirmation letter for a perfect score.</div></div></div>
       <div class="card">
         <div class="card-header"><div class="card-title">CSI / SED Beneficiaries</div><button class="btn btn-primary btn-sm">+ Add CSI Spend</button></div>
         <table><thead><tr><th>Beneficiary</th><th>Amount</th><th>Date</th><th>Confirmation</th></tr></thead>
@@ -963,7 +968,7 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
 
     <!-- ══════════════ EE ══════════════ -->
     <div class="page" id="page-ee">
-      <div class="banner b-amber"><div class="b-icon">📋</div><div class="b-body"><div class="b-title">EE Report 55% done. Due 1 October 2026 — 115 days. Fine for non-submission: up to R1.5M.</div></div></div>
+      <div class="banner b-amber"><div class="b-icon"><i class="ph-bold ph-clipboard-text"></i></div><div class="b-body"><div class="b-title">EE Report 55% done. Due 1 October 2026 — 115 days. Fine for non-submission: up to R1.5M.</div></div></div>
       <div class="card">
         <div class="card-title">Report Progress</div>
         <div class="chk"><div class="chk-box c-done">✓</div><div class="chk-text"><div class="chk-title">EE1: Workforce Profile — Complete</div></div><span class="pill p-green">Done</span></div>
@@ -978,7 +983,7 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
 
     <!-- ══════════════ POPIA ══════════════ -->
     <div class="page" id="page-popia">
-      <div class="banner b-blue"><div class="b-icon">🔐</div><div class="b-body"><div class="b-title">3 employees haven't signed POPIA consent. Their data is excluded from your scorecard.</div></div></div>
+      <div class="banner b-blue"><div class="b-icon"><i class="ph-bold ph-lock-key"></i></div><div class="b-body"><div class="b-title">3 employees haven't signed POPIA consent. Their data is excluded from your scorecard.</div></div></div>
       <div class="grid g3" style="margin-bottom:16px">
         <div class="kpi"><div class="kpi-label">Consent Signed</div><div class="kpi-value green">145/148</div></div>
         <div class="kpi"><div class="kpi-label">DPA</div><div class="kpi-value green">Signed ✓</div></div>
@@ -1025,7 +1030,7 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
       </div>
       <div class="card">
         <div class="card-header"><div class="card-title">Suppliers</div><button class="btn btn-primary btn-sm">+ Add Supplier</button></div>
-        <div class="banner b-teal" style="margin-bottom:12px"><div class="b-icon">🔗</div><div class="b-body"><div class="b-title">Self-Service Portal</div><div class="b-desc">Share <strong>complianceos.co.za/supplier/ntaba-engineering</strong> — suppliers upload their own certificates.</div></div></div>
+        <div class="banner b-teal" style="margin-bottom:12px"><div class="b-icon"><i class="ph-bold ph-link"></i></div><div class="b-body"><div class="b-title">Self-Service Portal</div><div class="b-desc">Share <strong>complianceos.co.za/supplier/ntaba-engineering</strong> — suppliers upload their own certificates.</div></div></div>
         <table><thead><tr><th>Supplier</th><th>B-BBEE Level</th><th>YTD Spend</th><th>Cert Expiry</th><th>Status</th></tr></thead>
           <tbody>
             <tr><td><strong>Maseko Steel</strong><div class="td-sub">100% Black-owned</div></td><td><span class="pill p-green">Level 1</span></td><td>R1,240,000</td><td style="color:var(--red)">18 Jun 2026</td><td><span class="pill p-red">Expiring!</span></td></tr>
@@ -1039,7 +1044,7 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
 
     <!-- ══════════════ SIMULATOR ══════════════ -->
     <div class="page" id="page-simulator">
-      <div class="card-title" style="font-size:15px;margin-bottom:4px">🧮 Score Simulator</div>
+      <div class="card-title" style="font-size:15px;margin-bottom:4px"><i class="ph-bold ph-calculator"></i> Score Simulator</div>
       <div style="font-size:12px;color:var(--text2);margin-bottom:18px">Move the sliders to see what it takes to reach Level 3 — and what tenders that unlocks.</div>
       <div class="grid g12">
         <div class="card">
@@ -1071,7 +1076,7 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
             <div style="font-size:11px;color:var(--green);margin-top:4px" id="sim-change">↑ +7.7 pts from baseline</div>
           </div>
           <div class="roi-box">
-            <div class="roi-title">💰 Business Impact at Level 3</div>
+            <div class="roi-title"><i class="ph-bold ph-currency-circle-dollar"></i> Business Impact at Level 3</div>
             <div class="roi-grid">
               <div class="roi-cell"><div class="rv">R2.4M</div><div class="rl">Tenders unlocked</div></div>
               <div class="roi-cell"><div class="rv">21×</div><div class="rl">ROI on spend</div></div>
@@ -1089,9 +1094,9 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
 
     <!-- ══════════════ VERIFICATION ══════════════ -->
     <div class="page" id="page-verification">
-      <div class="banner b-amber"><div class="b-icon">📦</div><div class="b-body"><div class="b-title">Verification pack is 73% ready. Fix 6 items, then generate your pack.</div><div class="b-desc">A complete verification pack means your SANAS verifier can start work immediately — reducing delays and ensuring you get your renewed certificate before the current one expires.</div></div></div>
+      <div class="banner b-amber"><div class="b-icon"><i class="ph-bold ph-package"></i></div><div class="b-body"><div class="b-title">Verification pack is 73% ready. Fix 6 items, then generate your pack.</div><div class="b-desc">A complete verification pack means your SANAS verifier can start work immediately — reducing delays and ensuring you get your renewed certificate before the current one expires.</div></div></div>
       <div class="card">
-        <div class="card-header"><div class="card-title">Checklist</div><button class="btn btn-primary btn-sm">📦 Generate Pack</button></div>
+        <div class="card-header"><div class="card-title">Checklist</div><button class="btn btn-primary btn-sm"><i class="ph-bold ph-package"></i> Generate Pack</button></div>
         <div class="chk"><div class="chk-box c-done">✓</div><div class="chk-text"><div class="chk-title">Ownership — All 4 declarations signed</div></div><span class="pill p-green">Ready</span></div>
         <div class="chk"><div class="chk-box c-done">✓</div><div class="chk-text"><div class="chk-title">Management Control — Demographics & org chart</div></div><span class="pill p-green">Ready</span></div>
         <div class="chk"><div class="chk-box c-warn">!</div><div class="chk-text"><div class="chk-title">Skills Development — 2 training certs missing</div></div><span class="pill p-amber">Incomplete</span></div>
@@ -1099,15 +1104,15 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
         <div class="chk"><div class="chk-box c-warn">!</div><div class="chk-text"><div class="chk-title">SED — 1 confirmation letter still pending</div></div><span class="pill p-amber">Nearly Ready</span></div>
         <div class="chk"><div class="chk-box c-urgent">✗</div><div class="chk-text"><div class="chk-title">POPIA — 3 unsigned consent forms (blocking)</div></div><span class="pill p-red">Blocking</span></div>
         <div style="margin-top:14px;display:flex;gap:8px">
-          <button class="btn btn-primary" style="flex:2">📦 Generate Verification Pack (PDF)</button>
-          <button class="btn btn-ghost" style="flex:1">📅 Find SANAS Verifier</button>
+          <button class="btn btn-primary" style="flex:2"><i class="ph-bold ph-package"></i> Generate Verification Pack (PDF)</button>
+          <button class="btn btn-ghost" style="flex:1"><i class="ph-bold ph-calendar-dots"></i> Find SANAS Verifier</button>
         </div>
       </div>
     </div>
 
     <!-- ══════════════ REPORTS ══════════════ -->
     <div class="page" id="page-reports">
-      <div class="card-title" style="font-size:15px;margin-bottom:16px">📊 Reports</div>
+      <div class="card-title" style="font-size:15px;margin-bottom:16px"><i class="ph-bold ph-chart-bar"></i> Reports</div>
       <div class="grid g3">
         <div class="card"><div class="card-title">B-BBEE Scorecard PDF</div><div style="font-size:12px;color:var(--text2);margin-bottom:14px">Full scorecard with element breakdown and improvement recommendations.</div><button class="btn btn-primary" style="width:100%">Generate PDF</button></div>
         <div class="card"><div class="card-title">Tender Eligibility Report</div><div style="font-size:12px;color:var(--text2);margin-bottom:14px">Summary of current tender eligibility, locked tenders, and what's needed to unlock them.</div><button class="btn btn-gold" style="width:100%">Generate PDF</button></div>
@@ -1122,7 +1127,7 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
     <!-- ══════════════ CSD & TAX CLEARANCE ══════════════ -->
     <div class="page" id="page-csd">
       <div class="banner b-amber">
-        <div class="b-icon">⚠️</div>
+        <div class="b-icon"><i class="ph-bold ph-warning"></i></div>
         <div class="b-body">
           <div class="b-title">Tax clearance expires in 89 days — required for every government tender, regardless of B-BBEE level</div>
           <div class="b-desc">A lapsed SARS Tax Clearance (Good Standing) or inactive CSD registration disqualifies you from every bid automatically. These are checked before your B-BBEE certificate is even looked at.</div>
@@ -1182,7 +1187,7 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
     <!-- ══════════════ BID PREPARATION ══════════════ -->
     <div class="page" id="page-bid-prep">
       <div class="banner b-blue">
-        <div class="b-icon">📝</div>
+        <div class="b-icon"><i class="ph-bold ph-note-pencil"></i></div>
         <div class="b-body">
           <div class="b-title">2 active bids in preparation. Closest deadline: 37 days (SITA).</div>
           <div class="b-desc">Every government tender requires the same mandatory SBD forms. ComplyEasy pre-fills them with your company data and checks your documents against each tender's requirements.</div>
@@ -1219,7 +1224,7 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
           </div>
           <div>
             <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.08em;color:var(--text3);margin-bottom:9px">Your Company Documents</div>
-            <div class="chk"><div class="chk-box c-warn">!</div><div class="chk-text"><div class="chk-title">B-BBEE Certificate Level 4</div><div class="chk-sub" style="color:var(--red)">⚠ Cert expires 14 Aug — before this tender closes! Book verifier now.</div></div><button class="btn btn-ghost btn-sm" style="margin-left:auto" onclick="nav('verifiers',null)">Book →</button></div>
+            <div class="chk"><div class="chk-box c-warn">!</div><div class="chk-text"><div class="chk-title">B-BBEE Certificate Level 4</div><div class="chk-sub" style="color:var(--red)"><i class="ph-bold ph-warning"></i> Cert expires 14 Aug — before this tender closes! Book verifier now.</div></div><button class="btn btn-ghost btn-sm" style="margin-left:auto" onclick="nav('verifiers',null)">Book →</button></div>
             <div class="chk"><div class="chk-box c-done">✓</div><div class="chk-text"><div class="chk-title">SARS Tax Clearance</div><div class="chk-sub">PIN: 9284761203847 · Valid</div></div><span class="pill p-green" style="margin-left:auto">Ready</span></div>
             <div class="chk"><div class="chk-box c-done">✓</div><div class="chk-text"><div class="chk-title">CSD Registration Printout</div><div class="chk-sub">MAAA0123456789 · Active</div></div><span class="pill p-green" style="margin-left:auto">Ready</span></div>
             <div class="chk"><div class="chk-box c-done">✓</div><div class="chk-text"><div class="chk-title">CIPC Registration Certificate</div></div><span class="pill p-green" style="margin-left:auto">Ready</span></div>
@@ -1228,11 +1233,11 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
           </div>
         </div>
         <div class="banner b-blue" style="margin-top:12px;padding:11px 14px">
-          <div class="b-icon" style="font-size:16px">📊</div>
+          <div class="b-icon" style="font-size:16px"><i class="ph-bold ph-chart-bar"></i></div>
           <div class="b-body"><div class="b-title" style="font-size:12px">Your preference points for this tender: 4/20 (90/10 system)</div><div class="b-desc" style="font-size:11px">At Level 4 you earn 4 preference points. A Level 1 competitor earns 20. Reaching Level 3 gives you 6 points. <span style="color:var(--accent);font-weight:700;cursor:pointer" onclick="nav('simulator',null)">Simulate the impact →</span></div></div>
         </div>
         <div style="margin-top:12px;display:flex;gap:8px">
-          <button class="btn btn-primary" style="flex:2">📦 Download Complete Bid Pack</button>
+          <button class="btn btn-primary" style="flex:2"><i class="ph-bold ph-package"></i> Download Complete Bid Pack</button>
           <button class="btn btn-ghost" style="flex:1">View Full Tender Spec</button>
         </div>
       </div>
@@ -1251,7 +1256,7 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
           </div>
         </div>
         <div class="banner b-red" style="margin-top:8px">
-          <div class="b-icon">🚨</div>
+          <div class="b-icon"><i class="ph-bold ph-warning-octagon"></i></div>
           <div class="b-body"><div class="b-title">37 days and only 45% of documents ready. Start bid preparation now.</div><div class="b-desc">6 of 11 required documents are missing or incomplete. Click to see what's needed.</div></div>
           <button class="btn btn-primary b-action btn-sm">Start Prep →</button>
         </div>
@@ -1259,7 +1264,7 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
 
       <!-- Empty state -->
       <div class="card" style="border:2px dashed var(--border);background:var(--bg);text-align:center;padding:28px">
-        <div style="font-size:24px;margin-bottom:8px">📝</div>
+        <div style="font-size:24px;margin-bottom:8px"><i class="ph-bold ph-note-pencil"></i></div>
         <div style="font-size:14px;font-weight:700;color:var(--text2);margin-bottom:6px">Start preparing a new bid</div>
         <div style="font-size:12px;color:var(--text3);margin-bottom:14px">Save a tender and click "Prepare Bid" to get the full checklist, pre-filled SBD forms, and your document pack.</div>
         <button class="btn btn-outline" onclick="nav('tender-saved',null)">View Saved Tenders →</button>
@@ -1295,7 +1300,7 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
       <div style="display:flex;flex-direction:column;gap:14px">
         <div class="card" style="border-left:4px solid var(--green)">
           <div style="display:flex;align-items:flex-start;gap:16px">
-            <div style="width:48px;height:48px;background:var(--green-bg);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">🏆</div>
+            <div style="width:48px;height:48px;background:var(--green-bg);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0"><i class="ph-bold ph-trophy"></i></div>
             <div style="flex:1">
               <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
                 <div style="font-size:14px;font-weight:800">Mthembu Verification Services (Pty) Ltd</div>
@@ -1312,15 +1317,15 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
               <div style="font-size:11px;color:var(--text2)">Fastest turnaround in Gauteng for QSE verifications. Accepts digital verification packs — no on-site document review needed if pack is complete. Recommended for your 47-day deadline.</div>
             </div>
             <div style="display:flex;flex-direction:column;gap:7px;flex-shrink:0;min-width:130px">
-              <button class="btn btn-primary btn-sm">📧 Request Quote</button>
-              <button class="btn btn-ghost btn-sm">📞 011 784 3291</button>
-              <button class="btn btn-ghost btn-sm" onclick="nav('verification',null)">📦 Prepare My Pack</button>
+              <button class="btn btn-primary btn-sm"><i class="ph-bold ph-envelope-simple"></i> Request Quote</button>
+              <button class="btn btn-ghost btn-sm"><i class="ph-bold ph-phone"></i> 011 784 3291</button>
+              <button class="btn btn-ghost btn-sm" onclick="nav('verification',null)"><i class="ph-bold ph-package"></i> Prepare My Pack</button>
             </div>
           </div>
         </div>
         <div class="card">
           <div style="display:flex;align-items:flex-start;gap:16px">
-            <div style="width:48px;height:48px;background:var(--accent-bg);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">🏛</div>
+            <div style="width:48px;height:48px;background:var(--accent-bg);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0"><i class="ph-bold ph-bank"></i></div>
             <div style="flex:1">
               <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
                 <div style="font-size:14px;font-weight:800">Ntombi Compliance Verification cc</div>
@@ -1335,14 +1340,14 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
               <div style="font-size:11px;color:var(--text2)">Competitive pricing. Strong in ICT sector code. Desk-based reviews for complete packs — faster if your verification pack is complete before booking.</div>
             </div>
             <div style="display:flex;flex-direction:column;gap:7px;flex-shrink:0;min-width:130px">
-              <button class="btn btn-outline btn-sm">📧 Request Quote</button>
-              <button class="btn btn-ghost btn-sm">📞 010 213 4450</button>
+              <button class="btn btn-outline btn-sm"><i class="ph-bold ph-envelope-simple"></i> Request Quote</button>
+              <button class="btn btn-ghost btn-sm"><i class="ph-bold ph-phone"></i> 010 213 4450</button>
             </div>
           </div>
         </div>
         <div class="card">
           <div style="display:flex;align-items:flex-start;gap:16px">
-            <div style="width:48px;height:48px;background:var(--gold-bg);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">⚖️</div>
+            <div style="width:48px;height:48px;background:var(--gold-bg);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0"><i class="ph-bold ph-scales"></i></div>
             <div style="flex:1">
               <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
                 <div style="font-size:14px;font-weight:800">Thuthuka BEE Ratings (Pty) Ltd</div>
@@ -1358,8 +1363,8 @@ body{font-family:"General Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Robo
               <div style="font-size:11px;color:var(--text2)">Deep expertise in Construction Sector Charter. Higher cost but preferred for complex ownership structures and ESD-heavy verifications.</div>
             </div>
             <div style="display:flex;flex-direction:column;gap:7px;flex-shrink:0;min-width:130px">
-              <button class="btn btn-outline btn-sm">📧 Request Quote</button>
-              <button class="btn btn-ghost btn-sm">📞 011 447 8823</button>
+              <button class="btn btn-outline btn-sm"><i class="ph-bold ph-envelope-simple"></i> Request Quote</button>
+              <button class="btn btn-ghost btn-sm"><i class="ph-bold ph-phone"></i> 011 447 8823</button>
             </div>
           </div>
         </div>
