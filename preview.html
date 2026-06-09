@@ -294,56 +294,55 @@ footer{background:var(--navy);color:#9fb0c4;padding:64px 0 34px}
 }
 @media(max-width:600px){section{padding:60px 0}.hero{padding:72px 0}.stats-inner{flex-direction:column;gap:18px}.logo-strip{gap:26px}.footer-grid{grid-template-columns:1fr}}
 
-/* ===== Aitenders-2 + contemporary industrial-corporate sleek ===== */
-:root{--radius:10px;--radius-lg:14px;--mono:"IBM Plex Mono",ui-monospace,monospace}
-.btn{border-radius:9px;transition:transform .18s var(--ease),background .18s,color .18s,border-color .18s,box-shadow .18s}
-.btn-xl{border-radius:10px}
+/* ===== Aitenders-2 + industrial-corporate sleek (image-free) ===== */
+:root{--radius:10px;--radius-lg:14px;--mono:"IBM Plex Mono",ui-monospace,monospace;--console:#0f1f3a}
+.btn{border-radius:9px}.btn-xl{border-radius:10px}
 .btn-primary{background:var(--navy)!important;border-color:var(--navy)!important;color:#fff!important;box-shadow:0 6px 18px rgba(17,38,70,.18)!important}
-.btn-primary:hover{background:#1c3a63!important}
-.nav-cta.btn-primary{background:var(--navy)!important}
+.btn-primary:hover{background:#1c3a63!important}.nav-cta.btn-primary{background:var(--navy)!important}
 .plan-cta{border-color:var(--navy)!important;color:var(--navy)!important}
 .popular .plan-cta,.plan-cta:hover{background:var(--navy)!important;border-color:var(--navy)!important;color:#fff!important}
 .popular .plan-cta:hover{background:#1c3a63!important}
 .pricing-card.popular{border-color:var(--navy)!important;box-shadow:0 0 0 3px rgba(17,38,70,.08)!important}
 .popular-badge{background:var(--navy)!important}
-.cta-section{background:linear-gradient(135deg,#112646,#0b1830)!important}
-.cta-section .btn-primary{background:#fff!important;color:#112646!important}
+.cta-section{background:linear-gradient(135deg,#112646,#0b1830)!important}.cta-section .btn-primary{background:#fff!important;color:#112646!important}
 .hero-eyebrow{background:var(--accent-light)!important;border-color:#cdd9f6!important;color:var(--accent)!important}
 .hero h1 .highlight{color:var(--accent)!important}
-/* mono technical labels + numerals (industrial feel) */
 .section-eyebrow,.pain-eyebrow,.hero-eyebrow,.plan-name,.stat-label,.trust-label,.lang-speakers,.feature-badge{font-family:var(--mono)!important;letter-spacing:.04em}
 .stat-num,.plan-price{font-family:var(--mono)!important;letter-spacing:-.02em}
-/* professional icon chips (replace emojis) */
 .feature-icon{display:inline-flex;align-items:center;justify-content:center;width:50px;height:50px;border-radius:12px;background:var(--accent-light);color:var(--accent);margin-bottom:16px}
-.feature-icon i{font-size:1.45rem}
-.feature-card{border-top:2px solid transparent}.feature-card:hover{border-top-color:var(--accent)}
-.pillar-icon i{font-size:1.7rem;color:var(--accent)}
-.pillar-icon.green-bg i{color:#0e9f6e}.pillar-icon.gold-bg i{color:var(--gold)}
-.trust-badge i{color:var(--accent);font-size:15px}
-.pain-card h4 i{color:var(--red);margin-right:7px}
-.tl-icon i{color:#34d399;font-size:1.05rem}
-.tpc-value i,.tc-label i,.hero-float-chip i{font-size:14px}
-.faq-q i,.cta-section h2 i{display:none}
-/* ===== sleek hero data card (money/tenders-led) ===== */
-.hero-preview{position:absolute;left:-26px;bottom:24px;width:340px;max-width:90%;background:var(--navy);border:1px solid rgba(255,255,255,.10);border-radius:14px;padding:18px 18px 16px;box-shadow:0 26px 64px rgba(17,38,70,.45);z-index:2;color:#fff}
-.hp-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
-.hp-k{font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:#94a3b8}
-.hp-level{font-family:var(--mono);font-size:1.9rem;font-weight:600;color:#fff;line-height:1;display:flex;align-items:center;gap:8px;margin-top:3px}
-.hp-trend{font-family:var(--font-b);font-size:.6rem;font-weight:700;color:#34d399;background:rgba(52,211,153,.14);border:1px solid rgba(52,211,153,.3);border-radius:20px;padding:3px 8px;display:inline-flex;align-items:center;gap:4px}
-.hp-live{font-family:var(--mono);font-size:.58rem;letter-spacing:.08em;color:#9fb0c4;display:flex;align-items:center;gap:6px}
-.hp-live .dot{width:7px;height:7px;border-radius:50%;background:#34d399;box-shadow:0 0 0 0 rgba(52,211,153,.6);animation:hp-pulse 2s infinite}
+.feature-icon i{font-size:1.45rem}.feature-card{border-top:2px solid transparent}.feature-card:hover{border-top-color:var(--accent)}
+.pillar-icon i{font-size:1.7rem;color:var(--accent)}.pillar-icon.green-bg i{color:#0e9f6e}.pillar-icon.gold-bg i{color:var(--gold)}
+.trust-badge i{color:var(--accent);font-size:15px}.pain-card h4 i{color:var(--red);margin-right:7px}
+.tl-icon i{color:#34d399;font-size:1.05rem}.tpc-value i,.tc-label i{font-size:14px}
+/* hero ROI line */
+.hero-roi{display:inline-flex;align-items:center;gap:8px;font-size:.84rem;font-weight:600;color:var(--ink2);background:#fff;border:1px solid var(--line-2);border-radius:9px;padding:9px 13px;margin-bottom:22px}
+.hero-roi i{color:var(--accent);font-size:16px}.hero-roi b{color:var(--ink)}
+/* ===== CSS LIVE CONSOLE (no images) ===== */
+.hero-visual{position:relative}
+.console{background:var(--console);border:1px solid rgba(255,255,255,.10);border-radius:16px;box-shadow:0 30px 70px rgba(17,38,70,.30);overflow:hidden;max-width:430px;margin-left:auto}
+.console-bar{display:flex;align-items:center;gap:10px;padding:11px 14px;background:rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.08)}
+.console-bar .dots{display:flex;gap:5px}.console-bar .dots i{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.22);display:block}
+.console-title{font-family:var(--mono);font-size:.6rem;letter-spacing:.05em;color:#9fb0c4;text-transform:uppercase}
+.hp-live{font-family:var(--mono);font-size:.58rem;letter-spacing:.08em;color:#9fb0c4;display:flex;align-items:center;gap:6px;margin-left:auto}
+.hp-live .dot{width:7px;height:7px;border-radius:50%;background:#34d399;animation:hp-pulse 2s infinite}
 @keyframes hp-pulse{0%{box-shadow:0 0 0 0 rgba(52,211,153,.5)}70%{box-shadow:0 0 0 7px rgba(52,211,153,0)}100%{box-shadow:0 0 0 0 rgba(52,211,153,0)}}
-.hp-money{background:linear-gradient(135deg,rgba(47,95,224,.16),rgba(47,95,224,.05));border:1px solid rgba(47,95,224,.3);border-radius:11px;padding:13px 14px;margin-bottom:12px}
-.hp-val{font-family:var(--mono);font-size:2rem;font-weight:600;color:#fff;line-height:1;margin:4px 0 3px}
-.hp-sub{font-size:.66rem;color:#9fb0c4}
-.hp-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px}
-.hp-stats>div{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:9px;padding:9px 8px;text-align:center}
-.hp-stats .n{font-family:var(--mono);font-size:1.05rem;font-weight:600;color:#fff}
-.hp-stats .l{font-family:var(--mono);font-size:.52rem;letter-spacing:.06em;text-transform:uppercase;color:#94a3b8;margin-top:2px}
-.hp-bar{height:6px;background:rgba(255,255,255,.1);border-radius:4px;overflow:hidden}
-.hp-bar-fill{height:100%;background:linear-gradient(90deg,#2f5fe0,#60a5fa);border-radius:4px}
-.hp-barlabel{font-family:var(--mono);font-size:.58rem;letter-spacing:.04em;color:#9fb0c4;margin-top:7px}
-@media(max-width:960px){.hero-preview{position:static;width:100%;max-width:none;margin-top:16px}}
+.console-body{padding:18px}
+.console-gauge{display:flex;align-items:center;gap:18px;margin-bottom:14px}
+.gauge{width:108px;height:108px;border-radius:50%;background:conic-gradient(#2f5fe0 calc(var(--p,63)*1%),rgba(255,255,255,.12) 0);display:grid;place-items:center;flex:none}
+.gauge-center{width:80px;height:80px;border-radius:50%;background:var(--console);display:grid;place-items:center;text-align:center}
+.g-lvl{font-family:var(--mono);font-size:2rem;font-weight:600;color:#fff;line-height:1}.g-k{font-family:var(--mono);font-size:.5rem;letter-spacing:.12em;color:#94a3b8}
+.gauge-meta .hp-trend{font-family:var(--font-b);font-size:.66rem;font-weight:700;color:#34d399;background:rgba(52,211,153,.14);border:1px solid rgba(52,211,153,.3);border-radius:20px;padding:4px 9px;display:inline-flex;align-items:center;gap:5px}
+.gauge-meta .g-pts{font-family:var(--mono);font-size:.7rem;color:#9fb0c4;margin-top:9px}
+.hp-money{background:linear-gradient(135deg,rgba(47,95,224,.18),rgba(47,95,224,.05));border:1px solid rgba(47,95,224,.32);border-radius:11px;padding:13px 14px;margin-bottom:12px}
+.hp-k{font-family:var(--mono);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:#94a3b8}
+.hp-val{font-family:var(--mono);font-size:2rem;font-weight:600;color:#fff;line-height:1;margin:4px 0 3px}.hp-sub{font-size:.66rem;color:#9fb0c4}
+.console-tenders{display:flex;flex-direction:column;gap:7px}
+.ct-row{display:flex;align-items:center;gap:9px;font-size:.72rem;color:#cbd5e1;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:7px 9px}
+.ct-row.locked{opacity:.55}
+.ct-l{font-family:var(--mono);font-size:.58rem;font-weight:700;padding:2px 6px;border-radius:5px;flex:none}
+.ct-l.ok{background:rgba(52,211,153,.16);color:#34d399}.ct-l.lk{background:rgba(148,163,184,.16);color:#94a3b8}
+.ct-t{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ct-v{font-family:var(--mono);color:#fff;font-weight:600}
+@media(max-width:960px){.console{margin:18px auto 0}}
 
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet"><script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
@@ -396,6 +395,7 @@ footer{background:var(--navy);color:#9fb0c4;padding:64px 0 34px}
         <a href="onboarding.html" class="btn btn-primary btn-xl">Claim Your Free Trial</a>
         <a href="#features" class="btn btn-white btn-xl">See How It Works</a>
       </div>
+      <div class="hero-roi"><i class="ph-bold ph-arrows-clockwise"></i> Replaces <b>R40,000/yr</b> in consultant fees · pays for itself in week one</div>
       <div class="hero-badges">
         <span class="trust-badge"><i class="ph-bold ph-lock-simple"></i> POPIA Compliant</span><span class="trust-badge"><i class="ph-bold ph-shield-check"></i> ISO 27001</span>
         <span class="trust-badge">Hosted in SA · AWS Cape Town</span><span class="trust-badge">99.8% Uptime SLA</span>
@@ -403,17 +403,20 @@ footer{background:var(--navy);color:#9fb0c4;padding:64px 0 34px}
       <div class="hero-social"><div class="hero-stars">★★★★★</div><div class="hero-trust-text">Trusted by 500+ South African businesses · No credit card required</div></div>
     </div>
     <div class="hero-visual">
-      <div class="hero-photo"><img src="photo1.jpg" alt="South African compliance executive using ComplyEasy"></div>
-      <div class="hero-float-chip"><i class="ph-bold ph-trophy"></i> R18.2M tenders unlocked</div>
-      <div class="hero-preview">
-        <div class="hp-top">
-          <div><div class="hp-k">Your B-BBEE Level</div><div class="hp-level">4 <span class="hp-trend"><i class="ph-bold ph-trend-up"></i> +6.5 to L3</span></div></div>
-          <div class="hp-live"><span class="dot"></span> LIVE</div>
+      <div class="console">
+        <div class="console-bar"><span class="dots"><i></i><i></i><i></i></span><span class="console-title">ComplyEasy · Live Scorecard</span><span class="hp-live"><span class="dot"></span>LIVE</span></div>
+        <div class="console-body">
+          <div class="console-gauge">
+            <div class="gauge" style="--p:63"><div class="gauge-center"><div class="g-lvl">4</div><div class="g-k">LEVEL</div></div></div>
+            <div class="gauge-meta"><div class="hp-trend"><i class="ph-bold ph-trend-up"></i> +6.5 to Level 3</div><div class="g-pts">68.5 / 109 PTS</div></div>
+          </div>
+          <div class="hp-money"><div class="hp-k">Tenders you qualify for today</div><div class="hp-val">R18.2M</div><div class="hp-sub">+R2.4M unlocks at Level 3</div></div>
+          <div class="console-tenders">
+            <div class="ct-row"><span class="ct-l ok">L4</span><span class="ct-t">Rand Water · Civil works</span><span class="ct-v">R980k</span></div>
+            <div class="ct-row"><span class="ct-l ok">L4</span><span class="ct-t">Eskom · Steel fabrication</span><span class="ct-v">R2.1M</span></div>
+            <div class="ct-row locked"><span class="ct-l lk">L3</span><span class="ct-t">Transnet · Structural works</span><span class="ct-v">R1.8M</span></div>
+          </div>
         </div>
-        <div class="hp-money"><div class="hp-k">Tenders you qualify for today</div><div class="hp-val">R18.2M</div><div class="hp-sub">+R2.4M unlocks at Level 3</div></div>
-        <div class="hp-stats"><div><div class="n">47</div><div class="l">Matched</div></div><div><div class="n">3</div><div class="l">Closing/wk</div></div><div><div class="n">47d</div><div class="l">Cert valid</div></div></div>
-        <div class="hp-bar"><div class="hp-bar-fill" style="width:63%"></div></div>
-        <div class="hp-barlabel">68.5 / 109 PTS · ON TRACK TO LEVEL 3</div>
       </div>
     </div>
   </div></div>
