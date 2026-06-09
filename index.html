@@ -314,29 +314,37 @@ footer{background:var(--navy);color:#9fb0c4;padding:64px 0 34px}
 .tl-icon i{color:#16a34a;font-size:1.05rem}.tpc-value i,.tc-label i,.hero-float-chip i{font-size:14px}
 .hero-roi{display:inline-flex;align-items:center;gap:8px;font-size:.84rem;font-weight:600;color:var(--ink2);background:#fff;border:1px solid var(--line-2);border-radius:9px;padding:9px 13px;margin-bottom:22px}
 .hero-roi i{color:var(--accent);font-size:16px}.hero-roi b{color:var(--ink)}
-/* hero: Photo 1 + WHITE+blue score card */
+/* ===== upgraded brand lockup ===== */
+.nav-logo{font-family:var(--font-d)!important;font-weight:800;font-size:1.34rem;letter-spacing:-.02em;color:var(--ink);align-items:center}
+.nav-logo .logo-mark{width:34px;height:34px}.nav-logo span{color:var(--accent)}
+.footer-brand .fb-logo{font-family:var(--font-d);font-weight:800;font-size:1.34rem;color:#fff;align-items:center}
+.footer-brand .fb-logo .logo-mark{width:30px;height:30px}.footer-brand .fb-logo span{color:#60a5fa}
+/* ===== footer fix (no random right block) ===== */
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;color:#9fb0c4;font-size:.82rem}
+.foot-legal{display:flex;gap:18px}.foot-legal a{color:#9fb0c4}.foot-legal a:hover{color:#fff}
+.footer-disclaimer{margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,.08);font-size:.72rem;line-height:1.6;color:#7d8ca0}
+.footer-disclaimer a{color:#9fb0c4;text-decoration:underline}
+/* ===== hero: Photo 1 + SMALLER animated readable WHITE+blue card ===== */
 .hero-visual{position:relative}
-.hero-photo{border-radius:18px;overflow:hidden;aspect-ratio:4/5;max-width:420px;margin-left:auto;box-shadow:0 24px 60px rgba(17,38,70,.18);border:1px solid var(--line)}
+.hero-photo{border-radius:18px;overflow:hidden;aspect-ratio:4/5;max-width:430px;margin-left:auto;box-shadow:0 24px 60px rgba(17,38,70,.18);border:1px solid var(--line)}
 .hero-photo img{width:100%;height:100%;object-fit:cover;display:block}
-.hero-float-chip{position:absolute;top:16px;right:-12px;background:var(--navy);color:#fff;font-weight:800;font-size:13px;padding:11px 15px;border-radius:12px;box-shadow:0 14px 32px rgba(17,38,70,.32);z-index:3;display:inline-flex;align-items:center;gap:7px}
-.hero-card{position:absolute;left:-26px;bottom:24px;width:330px;max-width:90%;background:#fff;border:1px solid var(--line-2);border-radius:14px;box-shadow:0 26px 64px rgba(17,38,70,.18);padding:17px;color:var(--ink);z-index:2}
-.hc-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px}
-.hp-k{font-family:var(--mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3)}
-.hc-level{font-family:var(--mono);font-size:1.7rem;font-weight:600;color:var(--ink);line-height:1;display:flex;align-items:center;gap:8px;margin-top:3px}
-.hc-trend{font-family:var(--font-b);font-size:.58rem;font-weight:700;color:var(--accent);background:var(--accent-light);border:1px solid #cdd9f6;border-radius:20px;padding:3px 8px;display:inline-flex;align-items:center;gap:4px}
-.hc-live{font-family:var(--mono);font-size:.54rem;letter-spacing:.08em;color:var(--ink3);display:flex;align-items:center;gap:6px}
-.hc-live .dot{width:7px;height:7px;border-radius:50%;background:#16a34a;animation:hp-pulse 2s infinite}
+.hero-float-chip{position:absolute;top:16px;right:-12px;background:var(--navy);color:#fff;font-weight:800;font-size:12.5px;padding:10px 14px;border-radius:11px;box-shadow:0 14px 32px rgba(17,38,70,.32);z-index:3;display:inline-flex;align-items:center;gap:7px}
+.hero-card{position:absolute;left:-22px;bottom:18px;width:262px;max-width:80%;background:#fff;border:1px solid var(--line-2);border-radius:14px;box-shadow:0 24px 60px rgba(17,38,70,.22);padding:15px 16px;color:var(--ink);z-index:2;animation:cardIn .8s var(--ease) both}
+@keyframes cardIn{from{opacity:0;transform:translateY(20px) scale(.96)}to{opacity:1;transform:none}}
+.hc-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:11px}
+.hp-k{font-family:var(--mono);font-size:.62rem;letter-spacing:.09em;text-transform:uppercase;color:var(--ink2)}
+.hc-level{font-family:var(--mono);font-size:1.7rem;font-weight:700;color:var(--ink);line-height:1;display:flex;align-items:center;gap:8px;margin-top:5px}
+.hc-trend{font-family:var(--font-b);font-size:.6rem;font-weight:700;color:var(--accent);background:var(--accent-light);border:1px solid #cdd9f6;border-radius:20px;padding:3px 8px;display:inline-flex;align-items:center;gap:4px}
+.hc-live{font-family:var(--mono);font-size:.58rem;letter-spacing:.08em;color:var(--ink2);display:flex;align-items:center;gap:6px}
+.hc-live .dot{width:8px;height:8px;border-radius:50%;background:#16a34a;animation:hp-pulse 2s infinite}
 @keyframes hp-pulse{0%{box-shadow:0 0 0 0 rgba(22,163,74,.5)}70%{box-shadow:0 0 0 7px rgba(22,163,74,0)}100%{box-shadow:0 0 0 0 rgba(22,163,74,0)}}
-.hc-money{background:var(--accent-light);border:1px solid #cdd9f6;border-radius:11px;padding:12px 14px;margin-bottom:11px}
-.hc-val{font-family:var(--mono);font-size:1.85rem;font-weight:600;color:var(--accent);line-height:1;margin:4px 0 3px}.hc-sub{font-size:.64rem;color:var(--ink3)}
-.hc-tenders{display:flex;flex-direction:column;gap:7px;margin-bottom:11px}
-.ct-row{display:flex;align-items:center;gap:9px;font-size:.7rem;color:var(--ink2);background:var(--bg-soft);border:1px solid var(--line);border-radius:8px;padding:7px 9px}
-.ct-row.locked{opacity:.62}
-.ct-l{font-family:var(--mono);font-size:.56rem;font-weight:700;padding:2px 6px;border-radius:5px;flex:none}
-.ct-l.ok{background:#dcfce7;color:#16a34a}.ct-l.lk{background:#eef2f7;color:var(--ink3)}
-.ct-t{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ct-v{font-family:var(--mono);color:var(--ink);font-weight:600}
-.hc-bar{height:6px;background:#eaeef4;border-radius:4px;overflow:hidden}.hc-bar-fill{height:100%;background:linear-gradient(90deg,#2f5fe0,#60a5fa);border-radius:4px}
-.hc-barlabel{font-family:var(--mono);font-size:.54rem;letter-spacing:.04em;color:var(--ink3);margin-top:7px}
+.hc-money{background:var(--accent-light);border:1px solid #cdd9f6;border-radius:10px;padding:11px 13px;margin-bottom:11px}
+.hc-val{font-family:var(--mono);font-size:2rem;font-weight:700;color:var(--accent);line-height:1;margin-top:4px}
+.hc-bar{height:7px;background:#e8edf5;border-radius:5px;overflow:hidden}
+.hc-bar-fill{height:100%;background:linear-gradient(90deg,#2f5fe0,#60a5fa);border-radius:5px;width:0;transition:width 1.2s var(--ease) .35s;position:relative}
+.hc-bar-fill::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent);transform:translateX(-100%);animation:shimmer 2.6s 1.2s infinite}
+@keyframes shimmer{100%{transform:translateX(100%)}}
+.hc-barlabel{font-family:var(--mono);font-size:.58rem;letter-spacing:.03em;color:var(--ink2);margin-top:8px}
 @media(max-width:960px){.hero-photo{max-width:none;margin:0}.hero-card{position:static;width:100%;max-width:none;margin-top:16px}.hero-float-chip{top:10px;right:10px}}
 
 </style>
@@ -348,7 +356,7 @@ footer{background:var(--navy);color:#9fb0c4;padding:64px 0 34px}
 <nav>
   <div class="container">
     <div class="nav-inner">
-      <div class="nav-logo"><svg class="logo-mark" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="36" height="36" rx="8" fill="#112646"/><path d="M10.5 18.4l4.6 4.6L25.5 12.6" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="10.5" y="25.5" width="15" height="2.4" rx="1.2" fill="#2f5fe0"/></svg>Comply<span>Easy</span></div>
+      <div class="nav-logo"><svg class="logo-mark" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="36" height="36" rx="9" fill="#112646"/><path d="M8.5 18.6 L14.5 24.6 L26 12.2" stroke="#fff" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M21.4 12.2 L26 12.2 L26 16.8" stroke="#2f5fe0" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/></svg>Comply<span>Easy</span></div>
       <div class="nav-links">
         <a href="#features">Features</a>
         <a href="#tenders">Tender Intelligence</a>
@@ -399,16 +407,11 @@ footer{background:var(--navy);color:#9fb0c4;padding:64px 0 34px}
     </div>
     <div class="hero-visual">
       <div class="hero-photo"><img src="photo1.jpg" alt="South African compliance executive using ComplyEasy"></div>
-      <div class="hero-float-chip"><i class="ph-bold ph-trophy"></i> R18.2M tenders unlocked</div>
+      <div class="hero-float-chip"><i class="ph-bold ph-trophy"></i> R18.2M unlocked</div>
       <div class="hero-card">
-        <div class="hc-top"><div><div class="hp-k">Your B-BBEE Level</div><div class="hc-level">4 <span class="hc-trend"><i class="ph-bold ph-trend-up"></i> +6.5 to L3</span></div></div><div class="hc-live"><span class="dot"></span>LIVE</div></div>
-        <div class="hc-money"><div class="hp-k">Tenders you qualify for today</div><div class="hc-val">R18.2M</div><div class="hc-sub">+R2.4M unlocks at Level 3</div></div>
-        <div class="hc-tenders">
-          <div class="ct-row"><span class="ct-l ok">L4</span><span class="ct-t">Rand Water · Civil works</span><span class="ct-v">R980k</span></div>
-          <div class="ct-row"><span class="ct-l ok">L4</span><span class="ct-t">Eskom · Steel fabrication</span><span class="ct-v">R2.1M</span></div>
-          <div class="ct-row locked"><span class="ct-l lk">L3</span><span class="ct-t">Transnet · Structural</span><span class="ct-v">R1.8M</span></div>
-        </div>
-        <div class="hc-bar"><div class="hc-bar-fill" style="width:63%"></div></div>
+        <div class="hc-top"><div><div class="hp-k">B-BBEE Level</div><div class="hc-level"><span data-count="4">0</span><span class="hc-trend"><i class="ph-bold ph-trend-up"></i> +6.5 to L3</span></div></div><div class="hc-live"><span class="dot"></span>LIVE</div></div>
+        <div class="hc-money"><div class="hp-k">Tenders you qualify for today</div><div class="hc-val" data-money="18.2">R0.0M</div></div>
+        <div class="hc-bar"><div class="hc-bar-fill" data-w="63"></div></div>
         <div class="hc-barlabel">68.5 / 109 PTS · ON TRACK TO LEVEL 3</div>
       </div>
     </div>
@@ -1019,7 +1022,7 @@ footer{background:var(--navy);color:#9fb0c4;padding:64px 0 34px}
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="fb-logo"><svg class="logo-mark" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="36" height="36" rx="8" fill="#112646"/><path d="M10.5 18.4l4.6 4.6L25.5 12.6" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="10.5" y="25.5" width="15" height="2.4" rx="1.2" fill="#2f5fe0"/></svg>ComplyEasy</div>
+        <div class="fb-logo"><svg class="logo-mark" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="36" height="36" rx="9" fill="#112646"/><path d="M8.5 18.6 L14.5 24.6 L26 12.2" stroke="#fff" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M21.4 12.2 L26 12.2 L26 16.8" stroke="#2f5fe0" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/></svg>Comply<span>Easy</span></div>
         <p class="mt-8">South Africa's only all-in-one B-BBEE compliance management platform with live tender intelligence. Built for South African businesses, in South African languages, hosted in South Africa.</p>
         <div class="footer-badges mt-16">
           <span class="fb-badge"><i class="ph-bold ph-lock-simple"></i> POPIA Compliant</span>
@@ -1055,10 +1058,8 @@ footer{background:var(--navy);color:#9fb0c4;padding:64px 0 34px}
         <a href="#">Terms of Service</a>
       </div>
     </div>
-    <div class="footer-bottom">
-      <div>© 2026 ComplyEasy (Pty) Ltd · Registered in South Africa · VAT No. 4900XXXXXX</div>
-      <div style="color:#64748b;font-size:0.75rem;max-width:480px;text-align:right">Tender data sourced from National Treasury eTenders OCDS API (Creative Commons BY 4.0). Always verify tender specifications on <a href="https://www.etenders.gov.za" style="color:#2f5fe0">etenders.gov.za</a> before submitting bids. ComplyEasy is not a SANAS-accredited verification agency.</div>
-    </div>
+    <div class="footer-bottom"><div>&copy; 2026 ComplyEasy (Pty) Ltd · Registered in South Africa · VAT 4900XXXXXX</div><div class="foot-legal"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Security</a></div></div>
+    <div class="footer-disclaimer">Tender data sourced from the National Treasury eTenders OCDS API (Creative Commons BY 4.0). Always verify specifications on <a href="https://www.etenders.gov.za">etenders.gov.za</a> before bidding. ComplyEasy is not a SANAS-accredited verification agency.</div>
   </div>
 </footer>
 
@@ -1132,6 +1133,9 @@ var ro=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isInt
 t.forEach(function(el,i){el.classList.add('reveal');el.style.transitionDelay=((i%3)*0.05)+'s';ro.observe(el);});
 var links=[].slice.call(document.querySelectorAll('.nav-links a'));var map={};links.forEach(function(a){var h=a.getAttribute('href');if(h&&h[0]=='#')map[h.slice(1)]=a;});
 Object.keys(map).map(function(id){return document.getElementById(id);}).filter(Boolean).forEach(function(sec){new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(l){l.classList.remove('active');});if(map[en.target.id])map[en.target.id].classList.add('active');}});},{rootMargin:'-45% 0px -50% 0px'}).observe(sec);});
+// animated score card
+function av(el,to,dur,fmt){var st=performance.now();(function f(t){var p=Math.min(1,(t-st)/dur);var v=to*(1-Math.pow(1-p,3));el.textContent=fmt(v);if(p<1)requestAnimationFrame(f);})(st);}
+setTimeout(function(){var l=document.querySelector('[data-count]');if(l)av(l,4,900,function(v){return Math.round(v);});var m=document.querySelector('[data-money]');if(m)av(m,18.2,1200,function(v){return 'R'+v.toFixed(1)+'M';});var b=document.querySelector('.hc-bar-fill[data-w]');if(b)b.style.width=b.getAttribute('data-w')+'%';},450);
 })();</script>
 </body>
 </html>
