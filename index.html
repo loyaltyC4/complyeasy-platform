@@ -349,6 +349,20 @@ footer{background:var(--navy);color:#9fb0c4;padding:64px 0 34px}
 .hc-trow .ct-t{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.hc-trow .ct-v{font-family:var(--mono);color:var(--ink);font-weight:600}
 @media(max-width:960px){.hero-photo{max-width:none;margin:0}.hero-card{position:static;width:100%;max-width:none;margin-top:16px}.hero-float-chip{top:10px;right:10px}}
 
+/* ===== 21st.dev-style announcement pill ===== */
+.hero-eyebrow{font-family:var(--mono)!important;text-transform:none!important;letter-spacing:0!important;border-radius:999px!important;border:1px solid transparent!important;background:linear-gradient(#fff,#fff) padding-box,linear-gradient(120deg,#bcccef,#eef2fb) border-box!important;color:var(--ink2)!important;padding:5px 14px 5px 6px!important;display:inline-flex;align-items:center;gap:9px;font-size:.73rem;box-shadow:0 1px 2px rgba(17,38,70,.06),0 10px 24px rgba(17,38,70,.06)}
+.hero-eyebrow .eb-badge{display:inline-flex;align-items:center;gap:5px;background:var(--navy);color:#fff;border-radius:999px;padding:3px 9px;font-size:.6rem;font-weight:700;letter-spacing:.05em}
+.hero-eyebrow .eb-dot{width:6px;height:6px;border-radius:50%;background:#34d399;animation:hp-pulse 2s infinite}
+.hero-eyebrow b{color:var(--ink);font-weight:700}
+/* ===== renovated stats strip (silicon-refined) ===== */
+.stats-bar{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:30px 0}
+.stats-inner{display:flex;align-items:stretch;justify-content:space-between;flex-wrap:wrap;gap:0}
+.stat-item{flex:1;min-width:150px;text-align:center;padding:6px 18px;position:relative}
+.stat-item+.stat-item::before{content:"";position:absolute;left:0;top:12%;height:76%;width:1px;background:var(--line)}
+.stat-num{font-family:var(--mono)!important;font-size:2rem;font-weight:600;color:var(--ink);letter-spacing:-.02em;line-height:1}
+.stat-label{font-family:var(--mono)!important;font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);margin-top:6px}
+@media(max-width:760px){.stat-item+.stat-item::before{display:none}.stat-item{min-width:40%}}
+
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet"><script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
 </head>
@@ -387,7 +401,7 @@ footer{background:var(--navy);color:#9fb0c4;padding:64px 0 34px}
 <section class="hero" id="hero">
   <div class="container"><div class="hero-inner">
     <div class="hero-copy">
-      <div class="hero-eyebrow"><i class="ph-bold ph-broadcast"></i> Powered by National Treasury eTenders · updated daily</div>
+      <div class="hero-eyebrow"><span class="eb-badge"><span class="eb-dot"></span>LIVE</span> Powered by National Treasury eTenders · <b>updated daily</b></div>
       <div class="lang-en"><h1>Stop Losing Tenders.<br><span class="highlight">Start Winning Them.</span></h1><p class="hero-sub">South Africa's only platform combining live B-BBEE compliance management, Employment Equity reporting, POPIA consent, and real-time government tender discovery — all in one place. Know your score. Find your tenders. Win more contracts.</p></div>
       <div class="lang-zu"><h1>Yeka Ukulahlekelwa<br><span class="highlight">Amathenda. Qala Ukuwanqoba.</span></h1><p class="hero-sub">Inkundla yaseNingizimu Afrika kuphela ehlanganisa ukulawulwa kokulandela i-B-BBEE, ukubika kweNkamiso Yokuqashwa, imvume ye-POPIA, nokuhlolwa kwamathenda kahulumeni ngobunyani — konke endaweni eyodwa.</p></div>
       <div class="lang-xh"><h1>Yeka Ukulahlekelwa<br><span class="highlight">Ziitender. Qala Ukuzinqoba.</span></h1><p class="hero-sub">Iqonga laseNtshona Afrika kuphela elidibanisa ulawulo lokulandela i-B-BBEE, ingxelo ye-Equity Yokuqashwa, imvume ye-POPIA, kunye nokuphengulula iitender zikarhulumente ngexesha lokwenyani.</p></div>
@@ -431,11 +445,11 @@ footer{background:var(--navy);color:#9fb0c4;padding:64px 0 34px}
 <div class="stats-bar">
   <div class="container">
     <div class="stats-inner">
-      <div class="stat-item"><div class="stat-num">500+</div><div class="stat-label">SA Businesses</div></div>
-      <div class="stat-item"><div class="stat-num">R2.8B</div><div class="stat-label">Tender Value Tracked</div></div>
-      <div class="stat-item"><div class="stat-num">4,200+</div><div class="stat-label">Live Tenders Daily</div></div>
+      <div class="stat-item"><div class="stat-num">500+</div><div class="stat-label">Businesses compliant</div></div>
+      <div class="stat-item"><div class="stat-num">R2.8B</div><div class="stat-label">In tenders tracked</div></div>
+      <div class="stat-item"><div class="stat-num">4,200+</div><div class="stat-label">Live tenders, daily</div></div>
       <div class="stat-item"><div class="stat-num">99.8%</div><div class="stat-label">Uptime SLA</div></div>
-      <div class="stat-item"><div class="stat-num">12</div><div class="stat-label">SA Languages Supported</div></div>
+      <div class="stat-item"><div class="stat-num">12</div><div class="stat-label">Official SA languages</div></div>
     </div>
   </div>
 </div>
