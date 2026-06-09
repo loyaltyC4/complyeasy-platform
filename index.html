@@ -30,20 +30,20 @@
 <style>
 /* ===================== ComplyEasy — Light 1: Crisp Institutional White ===================== */
 :root{
-  --bg:#ffffff;--bg-soft:#f6f8fa;--bg-tint:#eef5f1;--panel:#ffffff;
-  --ink:#0d1b2b;--ink2:#43536b;--ink3:#7a8aa0;
+  --bg:#ffffff;--bg-soft:#f6f8fa;--bg-tint:#eef2fb;--panel:#ffffff;
+  --ink:#112646;--ink2:#43536b;--ink3:#7a8aa0;
   --line:#e7edf2;--line-2:#dde6ec;
-  --accent:#0e7a52;--accent2:#12936a;--accent-light:#e7f5ee;--accent-bg:#e7f5ee;
-  --green:#0e7a52;--green-light:#e7f5ee;
+  --accent:#2f5fe0;--accent2:#12936a;--accent-light:#eef2fb;--accent-bg:#eef2fb;
+  --green:#2f5fe0;--green-light:#eef2fb;
   --amber:#b45309;--amber-light:#fdf3e3;--gold:#b45309;--gold-light:#fdf3e3;
-  --red:#dc2626;--navy:#0d1b2b;
+  --red:#dc2626;--navy:#112646;
   --radius:14px;--radius-lg:20px;
   --shadow-sm:0 1px 2px rgba(13,27,43,.05);
   --shadow:0 8px 30px rgba(13,27,43,.08);
   --shadow-lg:0 24px 60px rgba(13,27,43,.14);
   --ease:cubic-bezier(.16,1,.3,1);
-  --font-d:"Clash Display","General Sans",system-ui,sans-serif;
-  --font-b:"General Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  --font-d:"Montserrat","General Sans",system-ui,sans-serif;
+  --font-b:"Open Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:84px}
@@ -82,8 +82,8 @@ section{padding:92px 0;position:relative}
 /* BUTTONS */
 .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:10px;font-family:var(--font-b);font-size:1rem;font-weight:700;cursor:pointer;border:1.5px solid transparent;transition:transform .2s var(--ease),background .2s,color .2s,border-color .2s,box-shadow .2s;text-decoration:none;white-space:nowrap}
 .btn-xl{padding:16px 32px;font-size:1.05rem;border-radius:12px}
-.btn-primary{background:var(--accent);color:#fff;box-shadow:0 6px 18px rgba(14,122,82,.22)}
-.btn-primary:hover{background:#0c6344;transform:translateY(-2px);box-shadow:0 12px 28px rgba(14,122,82,.30)}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 6px 18px rgba(47,95,224,.22)}
+.btn-primary:hover{background:#244fc0;transform:translateY(-2px);box-shadow:0 12px 28px rgba(47,95,224,.30)}
 .btn-gold{background:var(--gold);color:#fff}.btn-gold:hover{background:#92400e;transform:translateY(-2px)}
 .btn-outline{background:transparent;color:var(--accent);border-color:var(--accent)}.btn-outline:hover{background:var(--accent-light)}
 .btn-white{background:#fff;color:var(--ink);border-color:var(--line-2)}.btn-white:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
@@ -115,13 +115,13 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 6px 24px rgba(13,27,43
 .nav-cta{padding:9px 18px;font-size:.875rem;border-radius:9px}
 
 /* HERO */
-.hero{background:radial-gradient(120% 90% at 85% 0%,#eef5f1 0%,#ffffff 46%);padding:96px 0 92px;position:relative;overflow:hidden}
-.hero::after{content:"";position:absolute;top:-120px;right:-80px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(14,122,82,.07),transparent 70%);pointer-events:none}
+.hero{background:radial-gradient(120% 90% at 85% 0%,#eef2fb 0%,#ffffff 46%);padding:96px 0 92px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;top:-120px;right:-80px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(47,95,224,.07),transparent 70%);pointer-events:none}
 .hero-inner{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;position:relative;z-index:2}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--accent-light);border:1px solid #bfe6d2;border-radius:30px;padding:7px 15px;font-size:.8rem;font-weight:700;color:var(--accent);margin-bottom:22px}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--accent-light);border:1px solid #cdd9f6;border-radius:30px;padding:7px 15px;font-size:.8rem;font-weight:700;color:var(--accent);margin-bottom:22px}
 .hero h1{margin-bottom:20px}
 .hero h1 .highlight{position:relative;color:var(--accent);white-space:nowrap}
-.hero h1 .highlight::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:10px;background:rgba(14,122,82,.14);border-radius:4px;z-index:-1}
+.hero h1 .highlight::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:10px;background:rgba(47,95,224,.14);border-radius:4px;z-index:-1}
 .hero-sub{font-size:1.12rem;color:var(--ink2);margin-bottom:30px;max-width:520px;line-height:1.7}
 .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:22px}
 .hero-badges{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
@@ -183,7 +183,7 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 6px 24px rgba(13,27,43
 .features-section{background:#fff}
 .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
 .feature-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;transition:transform .3s var(--ease),box-shadow .3s,border-color .3s}
-.feature-card:hover{border-color:#bfe6d2;box-shadow:var(--shadow);transform:translateY(-3px)}
+.feature-card:hover{border-color:#cdd9f6;box-shadow:var(--shadow);transform:translateY(-3px)}
 .feature-icon{font-size:1.6rem;margin-bottom:12px}
 .feature-card h4{font-size:1.02rem;font-weight:700;margin-bottom:6px;color:var(--ink)}.feature-card p{font-size:.875rem;color:var(--ink2);line-height:1.6}
 .feature-badge{display:inline-block;margin-top:12px;font-size:.7rem;font-weight:700;padding:3px 9px;border-radius:6px;background:var(--accent-light);color:var(--accent)}
@@ -215,7 +215,7 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 6px 24px rgba(13,27,43
 .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
 .pricing-card{background:#fff;border:1.5px solid var(--line);border-radius:var(--radius-lg);padding:32px;position:relative;transition:transform .3s var(--ease),box-shadow .3s}
 .pricing-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-5px)}
-.pricing-card.popular{border-color:var(--accent);box-shadow:0 0 0 4px rgba(14,122,82,.08)}
+.pricing-card.popular{border-color:var(--accent);box-shadow:0 0 0 4px rgba(47,95,224,.08)}
 .popular-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--accent);color:#fff;font-size:.74rem;font-weight:800;padding:5px 16px;border-radius:20px;white-space:nowrap}
 .plan-name{font-size:.82rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--ink3);margin-bottom:8px}
 .plan-price{font-family:var(--font-d);font-size:2.8rem;font-weight:700;color:var(--ink);line-height:1}.plan-price span{font-size:1rem;font-weight:500;color:var(--ink3);font-family:var(--font-b)}
@@ -225,7 +225,7 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 6px 24px rgba(13,27,43
 .plan-features li{font-size:.875rem;color:var(--ink2);padding:8px 0;display:flex;align-items:flex-start;gap:10px;border-bottom:1px solid var(--bg-soft)}.plan-features li:last-child{border-bottom:none}
 .plan-features li .check{color:var(--accent);font-weight:800;flex-shrink:0}.plan-features li .cross{color:#cbd5e1;flex-shrink:0}
 .plan-cta{width:100%;padding:14px;border-radius:10px;font-size:1rem;font-weight:700;cursor:pointer;border:1.5px solid var(--accent);background:transparent;color:var(--accent);transition:all .2s}
-.plan-cta:hover{background:var(--accent);color:#fff}.popular .plan-cta{background:var(--accent);color:#fff}.popular .plan-cta:hover{background:#0c6344}
+.plan-cta:hover{background:var(--accent);color:#fff}.popular .plan-cta{background:var(--accent);color:#fff}.popular .plan-cta:hover{background:#244fc0}
 
 /* TESTIMONIALS */
 .testimonials-section{background:#fff}
@@ -255,13 +255,13 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 6px 24px rgba(13,27,43
 .faq-a strong{color:var(--ink)}.faq-a a{color:var(--accent);font-weight:600}
 
 /* FINAL CTA (emerald band) */
-.cta-section{background:linear-gradient(135deg,#0e7a52,#0a5c3e);color:#fff;text-align:center}
+.cta-section{background:linear-gradient(135deg,#2f5fe0,#0b1830);color:#fff;text-align:center}
 .cta-section h2{color:#fff;max-width:620px;margin:0 auto 18px}
 .cta-section p{color:#cdeedd;max-width:500px;margin:0 auto 34px;font-size:1.05rem}
 .cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
-.cta-section .btn-primary{background:#fff;color:#0c6344}.cta-section .btn-primary:hover{background:#eafaf2}
+.cta-section .btn-primary{background:#fff;color:#244fc0}.cta-section .btn-primary:hover{background:#eafaf2}
 .cta-section .btn-ghost,.cta-section .btn-white{background:transparent;color:#fff;border-color:rgba(255,255,255,.5)}.cta-section .btn-ghost:hover,.cta-section .btn-white:hover{border-color:#fff;background:rgba(255,255,255,.08);color:#fff}
-.cta-note{font-size:.85rem;color:#bfe6d2;margin-top:16px}
+.cta-note{font-size:.85rem;color:#cdd9f6;margin-top:16px}
 
 /* FOOTER (ink navy) */
 footer{background:var(--navy);color:#9fb0c4;padding:64px 0 34px}
@@ -294,8 +294,53 @@ footer{background:var(--navy);color:#9fb0c4;padding:64px 0 34px}
 }
 @media(max-width:600px){section{padding:60px 0}.hero{padding:72px 0}.stats-inner{flex-direction:column;gap:18px}.logo-strip{gap:26px}.footer-grid{grid-template-columns:1fr}}
 
+/* ===== Aitenders-2 industrial-corporate sleek ===== */
+:root{--radius:10px;--radius-lg:14px;--mono:"IBM Plex Mono",ui-monospace,monospace}
+.btn{border-radius:9px}.btn-xl{border-radius:10px}
+.btn-primary{background:var(--navy)!important;border-color:var(--navy)!important;color:#fff!important;box-shadow:0 6px 18px rgba(17,38,70,.18)!important}
+.btn-primary:hover{background:#1c3a63!important}.nav-cta.btn-primary{background:var(--navy)!important}
+.plan-cta{border-color:var(--navy)!important;color:var(--navy)!important}
+.popular .plan-cta,.plan-cta:hover{background:var(--navy)!important;border-color:var(--navy)!important;color:#fff!important}
+.popular .plan-cta:hover{background:#1c3a63!important}
+.pricing-card.popular{border-color:var(--navy)!important;box-shadow:0 0 0 3px rgba(17,38,70,.08)!important}.popular-badge{background:var(--navy)!important}
+.cta-section{background:linear-gradient(135deg,#112646,#0b1830)!important}.cta-section .btn-primary{background:#fff!important;color:#112646!important}
+.hero-eyebrow{background:var(--accent-light)!important;border-color:#cdd9f6!important;color:var(--accent)!important}.hero h1 .highlight{color:var(--accent)!important}
+.section-eyebrow,.pain-eyebrow,.hero-eyebrow,.plan-name,.stat-label,.trust-label,.lang-speakers,.feature-badge{font-family:var(--mono)!important;letter-spacing:.04em}
+.stat-num,.plan-price{font-family:var(--mono)!important;letter-spacing:-.02em}
+.feature-icon{display:inline-flex;align-items:center;justify-content:center;width:50px;height:50px;border-radius:12px;background:var(--accent-light);color:var(--accent);margin-bottom:16px}
+.feature-icon i{font-size:1.45rem}.feature-card{border-top:2px solid transparent}.feature-card:hover{border-top-color:var(--accent)}
+.pillar-icon i{font-size:1.7rem;color:var(--accent)}.pillar-icon.green-bg i{color:#0e9f6e}.pillar-icon.gold-bg i{color:var(--gold)}
+.trust-badge i{color:var(--accent);font-size:15px}.pain-card h4 i{color:var(--red);margin-right:7px}
+.tl-icon i{color:#16a34a;font-size:1.05rem}.tpc-value i,.tc-label i,.hero-float-chip i{font-size:14px}
+.hero-roi{display:inline-flex;align-items:center;gap:8px;font-size:.84rem;font-weight:600;color:var(--ink2);background:#fff;border:1px solid var(--line-2);border-radius:9px;padding:9px 13px;margin-bottom:22px}
+.hero-roi i{color:var(--accent);font-size:16px}.hero-roi b{color:var(--ink)}
+/* hero: Photo 1 + WHITE+blue score card */
+.hero-visual{position:relative}
+.hero-photo{border-radius:18px;overflow:hidden;aspect-ratio:4/5;max-width:420px;margin-left:auto;box-shadow:0 24px 60px rgba(17,38,70,.18);border:1px solid var(--line)}
+.hero-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-float-chip{position:absolute;top:16px;right:-12px;background:var(--navy);color:#fff;font-weight:800;font-size:13px;padding:11px 15px;border-radius:12px;box-shadow:0 14px 32px rgba(17,38,70,.32);z-index:3;display:inline-flex;align-items:center;gap:7px}
+.hero-card{position:absolute;left:-26px;bottom:24px;width:330px;max-width:90%;background:#fff;border:1px solid var(--line-2);border-radius:14px;box-shadow:0 26px 64px rgba(17,38,70,.18);padding:17px;color:var(--ink);z-index:2}
+.hc-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px}
+.hp-k{font-family:var(--mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3)}
+.hc-level{font-family:var(--mono);font-size:1.7rem;font-weight:600;color:var(--ink);line-height:1;display:flex;align-items:center;gap:8px;margin-top:3px}
+.hc-trend{font-family:var(--font-b);font-size:.58rem;font-weight:700;color:var(--accent);background:var(--accent-light);border:1px solid #cdd9f6;border-radius:20px;padding:3px 8px;display:inline-flex;align-items:center;gap:4px}
+.hc-live{font-family:var(--mono);font-size:.54rem;letter-spacing:.08em;color:var(--ink3);display:flex;align-items:center;gap:6px}
+.hc-live .dot{width:7px;height:7px;border-radius:50%;background:#16a34a;animation:hp-pulse 2s infinite}
+@keyframes hp-pulse{0%{box-shadow:0 0 0 0 rgba(22,163,74,.5)}70%{box-shadow:0 0 0 7px rgba(22,163,74,0)}100%{box-shadow:0 0 0 0 rgba(22,163,74,0)}}
+.hc-money{background:var(--accent-light);border:1px solid #cdd9f6;border-radius:11px;padding:12px 14px;margin-bottom:11px}
+.hc-val{font-family:var(--mono);font-size:1.85rem;font-weight:600;color:var(--accent);line-height:1;margin:4px 0 3px}.hc-sub{font-size:.64rem;color:var(--ink3)}
+.hc-tenders{display:flex;flex-direction:column;gap:7px;margin-bottom:11px}
+.ct-row{display:flex;align-items:center;gap:9px;font-size:.7rem;color:var(--ink2);background:var(--bg-soft);border:1px solid var(--line);border-radius:8px;padding:7px 9px}
+.ct-row.locked{opacity:.62}
+.ct-l{font-family:var(--mono);font-size:.56rem;font-weight:700;padding:2px 6px;border-radius:5px;flex:none}
+.ct-l.ok{background:#dcfce7;color:#16a34a}.ct-l.lk{background:#eef2f7;color:var(--ink3)}
+.ct-t{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ct-v{font-family:var(--mono);color:var(--ink);font-weight:600}
+.hc-bar{height:6px;background:#eaeef4;border-radius:4px;overflow:hidden}.hc-bar-fill{height:100%;background:linear-gradient(90deg,#2f5fe0,#60a5fa);border-radius:4px}
+.hc-barlabel{font-family:var(--mono);font-size:.54rem;letter-spacing:.04em;color:var(--ink3);margin-top:7px}
+@media(max-width:960px){.hero-photo{max-width:none;margin:0}.hero-card{position:static;width:100%;max-width:none;margin-top:16px}.hero-float-chip{top:10px;right:10px}}
+
 </style>
-<link rel="preconnect" href="https://api.fontshare.com"><link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet"><script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
 </head>
 <body>
 
@@ -303,7 +348,7 @@ footer{background:var(--navy);color:#9fb0c4;padding:64px 0 34px}
 <nav>
   <div class="container">
     <div class="nav-inner">
-      <div class="nav-logo"><svg class="logo-mark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="9" fill="#0e7a52"/><path d="M9.5 16.5l4.2 4.2L22.7 11.4" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Comply<span>Easy</span></div>
+      <div class="nav-logo"><svg class="logo-mark" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="36" height="36" rx="8" fill="#112646"/><path d="M10.5 18.4l4.6 4.6L25.5 12.6" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="10.5" y="25.5" width="15" height="2.4" rx="1.2" fill="#2f5fe0"/></svg>Comply<span>Easy</span></div>
       <div class="nav-links">
         <a href="#features">Features</a>
         <a href="#tenders">Tender Intelligence</a>
@@ -313,7 +358,7 @@ footer{background:var(--navy);color:#9fb0c4;padding:64px 0 34px}
       </div>
       <div class="nav-right">
         <select class="lang-select" onchange="switchLang(this.value)">
-          <option value="en">🇿🇦 English</option>
+          <option value="en">English</option>
           <option value="zu">isiZulu</option>
           <option value="xh">isiXhosa</option>
           <option value="af">Afrikaans</option>
@@ -330,56 +375,44 @@ footer{background:var(--navy);color:#9fb0c4;padding:64px 0 34px}
 
 <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
 <section class="hero" id="hero">
-  <div class="container">
-    <div class="hero-inner">
-      <div class="hero-copy">
-        <div class="hero-eyebrow">🇿🇦 South Africa's #1 Compliance + Tender Platform</div>
-        <div class="lang-en"><h1>Stop Losing Tenders.<br><span class="highlight">Start Winning Them.</span></h1><p class="hero-sub">South Africa's only platform combining live B-BBEE compliance management, Employment Equity reporting, POPIA consent, and real-time government tender discovery — all in one place. Know your score. Find your tenders. Win more contracts.</p></div>
-        <div class="lang-zu"><h1>Yeka Ukulahlekelwa<br><span class="highlight">Amathenda. Qala Ukuwanqoba.</span></h1><p class="hero-sub">Inkundla yaseNingizimu Afrika kuphela ehlanganisa ukulawulwa kokulandela i-B-BBEE, ukubika kweNkamiso Yokuqashwa, imvume ye-POPIA, nokuhlolwa kwamathenda kahulumeni ngobunyani — konke endaweni eyodwa.</p></div>
-        <div class="lang-xh"><h1>Yeka Ukulahlekelwa<br><span class="highlight">Ziitender. Qala Ukuzinqoba.</span></h1><p class="hero-sub">Iqonga laseNtshona Afrika kuphela elidibanisa ulawulo lokulandela i-B-BBEE, ingxelo ye-Equity Yokuqashwa, imvume ye-POPIA, kunye nokuphengulula iitender zikarhulumente ngexesha lokwenyani.</p></div>
-        <div class="lang-af"><h1>Hou Op Om Tenders<br><span class="highlight">Te Verloor. Begin Om Te Wen.</span></h1><p class="hero-sub">Suid-Afrika se enigste platform wat lewende B-BBEE-nakoming, Diensgelykheid-rapportering, POPIA-toestemming en intydse regeringstender-ontdekking kombineer — alles op een plek.</p></div>
-        <div class="lang-st"><h1>Emisa Ho Lahlehelwa<br><span class="highlight">ke Ditender. Qala Ho Di Hlola.</span></h1><p class="hero-sub">Podio e le nngwe feela Afrika Borwa e kopanyang taolo ea ho latela melao ea B-BBEE, molapo oa Tekanyetso ea Mesebetsi, tumeliso ea POPIA le ho batla ditender tsa mmuso nako ea nnete.</p></div>
-        <div class="lang-tn"><h1>Emisa Go Latlhegelwa<br><span class="highlight">ke Ditender. Simolola Go Di Fenya.</span></h1><p class="hero-sub">Setheo se le sengwe fela mo Afrika Borwa se go kopanya taolo ya go latela melao ya B-BBEE, tlalegang ya Tekano ya Tiro, tumelelo ya POPIA le go batla ditender tsa puso nako ya nnete.</p></div>
-        <div class="lang-nso"><h1>Emisa Go Lahlegelwa<br><span class="highlight">ke Ditender. Thoma Go Di Hlola.</span></h1><p class="hero-sub">Podio e tee fela Afrika Borwa ye e kopanyang taolo ya go latela molao wa B-BBEE, peegelo ya Tekano ya Mošomo, tumelelo ya POPIA le go nyaka ditender tša mmušo nako ya nnete.</p></div>
-        <div class="hero-ctas">
-          <a href="onboarding.html" class="btn btn-primary btn-xl">Claim Your Free Trial</a>
-          <a href="#features" class="btn btn-white btn-xl">See How It Works</a>
-        </div>
-        <div class="hero-badges">
-          <span class="trust-badge">🔒 POPIA Compliant</span>
-          <span class="trust-badge">🛡️ ISO 27001</span>
-          <span class="trust-badge">🇿🇦 Hosted in SA · AWS Cape Town</span>
-          <span class="trust-badge">✓ 99.8% Uptime SLA</span>
-        </div>
-        <div class="hero-social">
-          <div class="hero-stars">★★★★★</div>
-          <div class="hero-trust-text">Trusted by 500+ South African businesses · No credit card required</div>
-        </div>
+  <div class="container"><div class="hero-inner">
+    <div class="hero-copy">
+      <div class="hero-eyebrow">South Africa's #1 Compliance + Tender Platform</div>
+      <div class="lang-en"><h1>Stop Losing Tenders.<br><span class="highlight">Start Winning Them.</span></h1><p class="hero-sub">South Africa's only platform combining live B-BBEE compliance management, Employment Equity reporting, POPIA consent, and real-time government tender discovery — all in one place. Know your score. Find your tenders. Win more contracts.</p></div>
+      <div class="lang-zu"><h1>Yeka Ukulahlekelwa<br><span class="highlight">Amathenda. Qala Ukuwanqoba.</span></h1><p class="hero-sub">Inkundla yaseNingizimu Afrika kuphela ehlanganisa ukulawulwa kokulandela i-B-BBEE, ukubika kweNkamiso Yokuqashwa, imvume ye-POPIA, nokuhlolwa kwamathenda kahulumeni ngobunyani — konke endaweni eyodwa.</p></div>
+      <div class="lang-xh"><h1>Yeka Ukulahlekelwa<br><span class="highlight">Ziitender. Qala Ukuzinqoba.</span></h1><p class="hero-sub">Iqonga laseNtshona Afrika kuphela elidibanisa ulawulo lokulandela i-B-BBEE, ingxelo ye-Equity Yokuqashwa, imvume ye-POPIA, kunye nokuphengulula iitender zikarhulumente ngexesha lokwenyani.</p></div>
+      <div class="lang-af"><h1>Hou Op Om Tenders<br><span class="highlight">Te Verloor. Begin Om Te Wen.</span></h1><p class="hero-sub">Suid-Afrika se enigste platform wat lewende B-BBEE-nakoming, Diensgelykheid-rapportering, POPIA-toestemming en intydse regeringstender-ontdekking kombineer — alles op een plek.</p></div>
+      <div class="lang-st"><h1>Emisa Ho Lahlehelwa<br><span class="highlight">ke Ditender. Qala Ho Di Hlola.</span></h1><p class="hero-sub">Podio e le nngwe feela Afrika Borwa e kopanyang taolo ea ho latela melao ea B-BBEE, molapo oa Tekanyetso ea Mesebetsi, tumeliso ea POPIA le ho batla ditender tsa mmuso nako ea nnete.</p></div>
+      <div class="lang-tn"><h1>Emisa Go Latlhegelwa<br><span class="highlight">ke Ditender. Simolola Go Di Fenya.</span></h1><p class="hero-sub">Setheo se le sengwe fela mo Afrika Borwa se go kopanya taolo ya go latela melao ya B-BBEE, tlalegang ya Tekano ya Tiro, tumelelo ya POPIA le go batla ditender tsa puso nako ya nnete.</p></div>
+      <div class="lang-nso"><h1>Emisa Go Lahlegelwa<br><span class="highlight">ke Ditender. Thoma Go Di Hlola.</span></h1><p class="hero-sub">Podio e tee fela Afrika Borwa ye e kopanyang taolo ya go latela molao wa B-BBEE, peegelo ya Tekano ya Mošomo, tumelelo ya POPIA le go nyaka ditender tša mmušo nako ya nnete.</p></div>
+
+      <div class="hero-ctas">
+        <a href="onboarding.html" class="btn btn-primary btn-xl">Claim Your Free Trial</a>
+        <a href="#features" class="btn btn-white btn-xl">See How It Works</a>
       </div>
-      <div class="hero-visual">
-        <div class="hero-photo"><img src="founder.jpg" alt="South African business owner using ComplyEasy"></div>
-        <div class="hero-float-chip">🏆 R18.2M tenders unlocked</div>
-        <div class="hero-preview">
-          <div class="preview-header">
-            <div class="preview-level"><div class="lv-num">4</div><div class="lv-label">B-BBEE Level</div></div>
-            <div style="flex:1;padding:0 12px">
-              <div style="font-size:.6rem;color:#94a3b8;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px">Score Breakdown</div>
-              <div class="preview-bar-row"><span class="preview-bar-label">Ownership</span><div class="preview-bar"><div class="preview-bar-fill" style="width:72%;background:#34d399"></div></div><span class="preview-bar-pts">18/25</span></div>
-              <div class="preview-bar-row"><span class="preview-bar-label">Management</span><div class="preview-bar"><div class="preview-bar-fill" style="width:63%;background:#34d399"></div></div><span class="preview-bar-pts">12/19</span></div>
-              <div class="preview-bar-row"><span class="preview-bar-label">Skills Dev</span><div class="preview-bar"><div class="preview-bar-fill" style="width:60%;background:#fbbf24"></div></div><span class="preview-bar-pts">12/20</span></div>
-              <div class="preview-bar-row"><span class="preview-bar-label">ESD</span><div class="preview-bar"><div class="preview-bar-fill" style="width:55%;background:#f59e0b"></div></div><span class="preview-bar-pts">22/40</span></div>
-            </div>
-            <div class="preview-score"><div class="sc-num">68.5</div><div class="sc-label">/ 109 pts</div></div>
-          </div>
-          <div class="tender-chip">
-            <div class="tc-label">🏆 Your Tender Opportunity</div>
-            <div class="tc-value">R18.2M</div>
-            <div class="tc-sub">Open tenders you qualify for today · +R2.4M unlocks at Level 3</div>
-          </div>
+      <div class="hero-roi"><i class="ph-bold ph-arrows-clockwise"></i> Replaces <b>R40,000/yr</b> in consultant fees · pays for itself in week one</div>
+      <div class="hero-badges">
+        <span class="trust-badge"><i class="ph-bold ph-lock-simple"></i> POPIA Compliant</span><span class="trust-badge"><i class="ph-bold ph-shield-check"></i> ISO 27001</span>
+        <span class="trust-badge">Hosted in SA · AWS Cape Town</span><span class="trust-badge">99.8% Uptime SLA</span>
+      </div>
+      <div class="hero-social"><div class="hero-stars">★★★★★</div><div class="hero-trust-text">Trusted by 500+ South African businesses · No credit card required</div></div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-photo"><img src="photo1.jpg" alt="South African compliance executive using ComplyEasy"></div>
+      <div class="hero-float-chip"><i class="ph-bold ph-trophy"></i> R18.2M tenders unlocked</div>
+      <div class="hero-card">
+        <div class="hc-top"><div><div class="hp-k">Your B-BBEE Level</div><div class="hc-level">4 <span class="hc-trend"><i class="ph-bold ph-trend-up"></i> +6.5 to L3</span></div></div><div class="hc-live"><span class="dot"></span>LIVE</div></div>
+        <div class="hc-money"><div class="hp-k">Tenders you qualify for today</div><div class="hc-val">R18.2M</div><div class="hc-sub">+R2.4M unlocks at Level 3</div></div>
+        <div class="hc-tenders">
+          <div class="ct-row"><span class="ct-l ok">L4</span><span class="ct-t">Rand Water · Civil works</span><span class="ct-v">R980k</span></div>
+          <div class="ct-row"><span class="ct-l ok">L4</span><span class="ct-t">Eskom · Steel fabrication</span><span class="ct-v">R2.1M</span></div>
+          <div class="ct-row locked"><span class="ct-l lk">L3</span><span class="ct-t">Transnet · Structural</span><span class="ct-v">R1.8M</span></div>
         </div>
+        <div class="hc-bar"><div class="hc-bar-fill" style="width:63%"></div></div>
+        <div class="hc-barlabel">68.5 / 109 PTS · ON TRACK TO LEVEL 3</div>
       </div>
     </div>
-  </div>
+  </div></div>
 </section>
 
 <!-- STATS BAR -->
@@ -418,32 +451,32 @@ footer{background:var(--navy);color:#9fb0c4;padding:64px 0 34px}
     <p class="mt-12 text-lg" style="max-width:640px">Every year, thousands of South African QSEs and Generic enterprises lose government tenders, corporate contracts, and procurement opportunities — not because they lack capability, but because their compliance is being managed in spreadsheets, once a year, by an expensive consultant.</p>
     <div class="pain-grid mt-32">
       <div class="pain-card">
-        <h4>🚫 "We lost the tender — our certificate had expired"</h4>
+        <h4><i class="ph-bold ph-prohibit"></i> "We lost the tender — our certificate had expired"</h4>
         <p>B-BBEE certificates are valid for exactly 12 months. Without automated expiry tracking, businesses discover their certificate has lapsed when they've already submitted a bid — and are disqualified. This happens to thousands of companies every year.</p>
         <div class="pain-stat">R1.8M average tender lost per disqualification</div>
       </div>
       <div class="pain-card">
-        <h4>💸 "Our consultant charges R25,000 a year and we still don't understand our score"</h4>
+        <h4><i class="ph-bold ph-money"></i> "Our consultant charges R25,000 a year and we still don't understand our score"</h4>
         <p>Most South African businesses pay B-BBEE consultants R15,000–R80,000 per year for an annual scorecard that's out of date the moment it's produced. Between annual cycles, they fly blind. No live score. No early warnings. No improvement plan.</p>
         <div class="pain-stat">R40,000 average annual consultant cost per business</div>
       </div>
       <div class="pain-card">
-        <h4>📋 "We didn't know our Skills Development sub-minimum was at risk"</h4>
+        <h4><i class="ph-bold ph-clipboard-text"></i> "We didn't know our Skills Development sub-minimum was at risk"</h4>
         <p>Missing a sub-minimum threshold means forfeiting ALL points in that element — not just the shortfall. A company spending 1.3% of learneable payroll instead of 1.5% can drop from Level 4 to Level 6 overnight. Without continuous monitoring, you won't know until it's too late.</p>
         <div class="pain-stat">20 points forfeited if sub-minimum missed</div>
       </div>
       <div class="pain-card">
-        <h4>🔒 "We can't access the R3M Eskom tender — we're one level too low"</h4>
+        <h4><i class="ph-bold ph-lock-simple"></i> "We can't access the R3M Eskom tender — we're one level too low"</h4>
         <p>In 2026, pre-qualification criteria require minimum B-BBEE Level 1, 2, or 3 just to enter a bid on the highest-value government and SOE tenders. Without knowing which tenders your current level unlocks — and what it takes to reach the next level — you're leaving millions on the table.</p>
         <div class="pain-stat">R2.4M average tenders locked per level difference</div>
       </div>
       <div class="pain-card">
-        <h4>⚠️ "We didn't know POPIA required signed consent for race data"</h4>
+        <h4><i class="ph-bold ph-warning"></i> "We didn't know POPIA required signed consent for race data"</h4>
         <p>Race, gender, and disability data collected for B-BBEE reporting is classified as "special personal information" under POPIA. Processing it without explicit signed consent from each employee is a criminal offence with fines up to R10 million. Most businesses have no idea.</p>
         <div class="pain-stat">Up to R10M POPIA fine for non-compliance</div>
       </div>
       <div class="pain-card">
-        <h4>📑 "We missed the EE report deadline and got a R1.5M fine"</h4>
+        <h4><i class="ph-bold ph-files"></i> "We missed the EE report deadline and got a R1.5M fine"</h4>
         <p>The Employment Equity Act Amendment Act (2025) introduced tighter deadlines, increased inspections, and higher fines. The EE2 report must be submitted by 1 October each year. Non-submission attracts fines starting at R1.5M for a first offence — and enforcement is intensifying in 2026.</p>
         <div class="pain-stat">R1.5M fine for first EE non-submission offence</div>
       </div>
@@ -461,7 +494,7 @@ footer{background:var(--navy);color:#9fb0c4;padding:64px 0 34px}
     </div>
     <div class="pillar-grid">
       <div class="pillar">
-        <div class="pillar-icon accent-bg">⚖️</div>
+        <div class="pillar-icon accent-bg"><i class="ph-bold ph-scales"></i></div>
         <h3>Live B-BBEE Compliance</h3>
         <p>Your scorecard calculated in real-time, every day. Know exactly where you stand across all 5 elements — and what to do to improve your level before it costs you a contract.</p>
         <ul class="pillar-features mt-16">
@@ -474,7 +507,7 @@ footer{background:var(--navy);color:#9fb0c4;padding:64px 0 34px}
         </ul>
       </div>
       <div class="pillar">
-        <div class="pillar-icon green-bg">📋</div>
+        <div class="pillar-icon green-bg"><i class="ph-bold ph-clipboard-text"></i></div>
         <h3>Full Regulatory Compliance</h3>
         <p>B-BBEE is just one of the compliance obligations that can sink your business. We cover Employment Equity, POPIA, and Skills Development — all feeding from the same data you've already captured.</p>
         <ul class="pillar-features mt-16">
@@ -487,7 +520,7 @@ footer{background:var(--navy);color:#9fb0c4;padding:64px 0 34px}
         </ul>
       </div>
       <div class="pillar">
-        <div class="pillar-icon gold-bg">🏆</div>
+        <div class="pillar-icon gold-bg"><i class="ph-bold ph-trophy"></i></div>
         <h3>Tender Intelligence</h3>
         <p>4,200+ live government tenders, updated daily from the National Treasury eTenders API. Filtered by YOUR B-BBEE level. Showing you what you can bid on today — and what you'd unlock by improving your score.</p>
         <ul class="pillar-features mt-16">
@@ -513,91 +546,91 @@ footer{background:var(--navy);color:#9fb0c4;padding:64px 0 34px}
     </div>
     <div class="feature-grid">
       <div class="feature-card card-feature accent">
-        <div class="feature-icon">📊</div>
+        <div class="feature-icon"><i class="ph-bold ph-chart-bar"></i></div>
         <h4>Live B-BBEE Scorecard</h4>
         <p>Real-time score calculation across all 5 elements (or 6 for Generic). Updates every time you add data. Always know your current level — not just at verification time.</p>
         <span class="feature-badge">Core Feature</span>
       </div>
       <div class="feature-card card-feature accent">
-        <div class="feature-icon">🧮</div>
+        <div class="feature-icon"><i class="ph-bold ph-calculator"></i></div>
         <h4>What-If Score Simulator</h4>
         <p>Adjust ESD spend, learnerships, procurement %, and management demographics with sliders. See your projected level and ROI in real time. Build your improvement plan before spending a rand.</p>
         <span class="feature-badge">Growth Tool</span>
       </div>
       <div class="feature-card card-feature accent">
-        <div class="feature-icon">🏢</div>
+        <div class="feature-icon"><i class="ph-bold ph-buildings"></i></div>
         <h4>Ownership Module</h4>
         <p>Digital shareholder register with race, gender, ID numbers, and voting rights. Automatic Modified Flow-Through calculation for trusts and holding companies. Signed ownership declarations via DocuSeal.</p>
         <span class="feature-badge">Legal Protection</span>
       </div>
       <div class="feature-card card-feature green">
-        <div class="feature-icon">👥</div>
+        <div class="feature-icon"><i class="ph-bold ph-users-three"></i></div>
         <h4>Management Control Dashboard</h4>
         <p>Workforce demographics by management level. EAP (Economically Active Population) comparison against your sector. Payroll integration for automatic updates. Gap analysis showing exactly what to change.</p>
         <span class="feature-badge">Included</span>
       </div>
       <div class="feature-card card-feature green">
-        <div class="feature-icon">🎓</div>
+        <div class="feature-icon"><i class="ph-bold ph-graduation-cap"></i></div>
         <h4>Skills Development Tracker</h4>
         <p>Training spend as % of learneable payroll. Sub-minimum threshold monitoring with red alerts. Learnership, apprenticeship, and bursary register. One-click WSP/ATR export for SETA submission.</p>
         <span class="feature-badge">Saves 8hrs/year</span>
       </div>
       <div class="feature-card card-feature green">
-        <div class="feature-icon">🤝</div>
+        <div class="feature-icon"><i class="ph-bold ph-handshake"></i></div>
         <h4>ESD & Supplier Portal</h4>
         <p>Supplier database with certificate expiry tracking. Automated expiry alerts at 60 and 30 days. Supplier self-service portal — suppliers upload their own certificates. ESD project tracking with milestone reports.</p>
         <span class="feature-badge">Highest Impact</span>
       </div>
       <div class="feature-card card-feature gold">
-        <div class="feature-icon">🌍</div>
+        <div class="feature-icon"><i class="ph-bold ph-globe-hemisphere-west"></i></div>
         <h4>SED / CSI Module</h4>
         <p>CSI beneficiary register with NPO verification. Automated confirmation letter generation via DocuSeal. Proof of payment management. Spend as % of NPAT calculation.</p>
         <span class="feature-badge">Included</span>
       </div>
       <div class="feature-card card-feature gold">
-        <div class="feature-icon">🏆</div>
+        <div class="feature-icon"><i class="ph-bold ph-trophy"></i></div>
         <h4>Tender Intelligence (4,200+ Daily)</h4>
         <p>Live government tenders from National Treasury eTenders OCDS API. Filtered by YOUR current B-BBEE level. Shows locked tenders and what level you need. Deadline alerts for saved tenders. Updated daily.</p>
         <span class="feature-badge">Only in SA</span>
       </div>
       <div class="feature-card card-feature gold">
-        <div class="feature-icon">📦</div>
+        <div class="feature-icon"><i class="ph-bold ph-package"></i></div>
         <h4>Verification Pack Generator</h4>
         <p>One click generates a complete evidence bundle your SANAS-accredited verifier can start work from immediately. Reduces verification prep from 10 hours to 10 minutes. Includes all signed declarations, invoices, and certificates.</p>
         <span class="feature-badge">Saves R8,000+</span>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">🔐</div>
+        <div class="feature-icon"><i class="ph-bold ph-lock-key"></i></div>
         <h4>POPIA Compliance Module</h4>
         <p>Automated consent collection for race/gender/disability data via DocuSeal. Processing records register. Data subject request management. Breach response workflow. Information Officer dashboard.</p>
         <span class="feature-badge">Legal Requirement</span>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">👔</div>
+        <div class="feature-icon"><i class="ph-bold ph-briefcase"></i></div>
         <h4>Employment Equity (EE) Module</h4>
         <p>EE2 form builder pre-populated from your workforce data. 2026 sectoral numerical targets included. Auto-populate from Skills Development data. Ready to submit to the Department of Labour.</p>
         <span class="feature-badge">New in 2026</span>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">🗄️</div>
+        <div class="feature-icon"><i class="ph-bold ph-vault"></i></div>
         <h4>Encrypted Document Vault</h4>
         <p>Secure file storage on AWS af-south-1 (Cape Town) — data never leaves South Africa. Document expiry tracking. All docs tagged to scorecard elements. Evidence always organised for verification.</p>
         <span class="feature-badge">POPIA Compliant</span>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">📥</div>
+        <div class="feature-icon"><i class="ph-bold ph-download-simple"></i></div>
         <h4>Payroll Integration</h4>
         <p>Direct integrations with SimplePay, Sage Payroll, and PaySpace. Auto-import workforce demographics, learneable payroll, and training records. Never re-enter data you've already captured in your HR system.</p>
         <span class="feature-badge">Saves Hours</span>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">✍️</div>
+        <div class="feature-icon"><i class="ph-bold ph-signature"></i></div>
         <h4>Document Signing (DocuSeal)</h4>
         <p>Legally binding digital signatures for ownership declarations, POPIA consent forms, Data Processing Agreements, and SED confirmation letters. Signed documents stored automatically in your vault.</p>
         <span class="feature-badge">Built-in</span>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">📊</div>
+        <div class="feature-icon"><i class="ph-bold ph-chart-bar"></i></div>
         <h4>Automated Reports</h4>
         <p>B-BBEE Scorecard PDF, Supplier Spend Report, EE Report, Skills Dev / WSP Export for SETA, POPIA Compliance Report, Executive Board Summary, and Tender Eligibility Report. One click, fully formatted.</p>
         <span class="feature-badge">Saves Days</span>
@@ -615,11 +648,11 @@ footer{background:var(--navy);color:#9fb0c4;padding:64px 0 34px}
         <h2 style="color:#fff">The only compliance platform that shows you the <span style="color:#fbbf24">tenders you're leaving on the table</span></h2>
         <p class="mt-16" style="color:#cbd5e1;font-size:1.05rem;max-width:480px">Every competitor in the tender space — TenderSearch, EasyTenders, SA-Tenders — shows you tenders without knowing your B-BBEE level. We're the only platform where your compliance score and your tender discovery are connected.</p>
         <ul class="tender-list">
-          <li><span class="tl-icon">✅</span> See 4,200+ daily tenders filtered by YOUR current B-BBEE level — no irrelevant results</li>
-          <li><span class="tl-icon">🔒</span> See locked tenders showing exactly what level you need and what it costs to reach it</li>
-          <li><span class="tl-icon">💰</span> ROI calculator: "Spend R112,600 to reach Level 3, unlock R2.4M in new tenders — 21× return"</li>
-          <li><span class="tl-icon">🔔</span> Deadline alerts when saved tenders are closing or when your expiring certificate would disqualify you</li>
-          <li><span class="tl-icon">📡</span> Powered by National Treasury eTenders OCDS API — updated daily, Creative Commons licensed, legally compliant</li>
+          <li><span class="tl-icon"><i class="ph-bold ph-check-circle"></i></span> See 4,200+ daily tenders filtered by YOUR current B-BBEE level — no irrelevant results</li>
+          <li><span class="tl-icon"><i class="ph-bold ph-lock-simple"></i></span> See locked tenders showing exactly what level you need and what it costs to reach it</li>
+          <li><span class="tl-icon"><i class="ph-bold ph-currency-circle-dollar"></i></span> ROI calculator: "Spend R112,600 to reach Level 3, unlock R2.4M in new tenders — 21× return"</li>
+          <li><span class="tl-icon"><i class="ph-bold ph-bell"></i></span> Deadline alerts when saved tenders are closing or when your expiring certificate would disqualify you</li>
+          <li><span class="tl-icon"><i class="ph-bold ph-broadcast"></i></span> Powered by National Treasury eTenders OCDS API — updated daily, Creative Commons licensed, legally compliant</li>
         </ul>
         <a href="#pricing" class="btn btn-gold mt-24">Access Tender Intelligence →</a>
       </div>
@@ -652,7 +685,7 @@ footer{background:var(--navy);color:#9fb0c4;padding:64px 0 34px}
             <div class="tpc-title">Structural Steel Works — Transnet Port Elizabeth</div>
             <div class="tpc-value">R1.8M</div>
           </div>
-          <div class="tpc-lock">🔒 Requires Level 3 · You need +7.5 pts · Cost to unlock: ~R112,600</div>
+          <div class="tpc-lock"><i class="ph-bold ph-lock-simple"></i> Requires Level 3 · You need +7.5 pts · Cost to unlock: ~R112,600</div>
         </div>
         <div class="tender-prev-card locked">
           <div class="tpc-header">
@@ -660,7 +693,7 @@ footer{background:var(--navy);color:#9fb0c4;padding:64px 0 34px}
             <div class="tpc-title">Municipal Engineering Services — Ekurhuleni Metro</div>
             <div class="tpc-value">R620k</div>
           </div>
-          <div class="tpc-lock">🔒 Requires Level 3 · Simulate how to reach Level 3 →</div>
+          <div class="tpc-lock"><i class="ph-bold ph-lock-simple"></i> Requires Level 3 · Simulate how to reach Level 3 →</div>
         </div>
         <div style="text-align:center;padding:14px;font-size:0.75rem;color:#64748b">+ 4,196 more tenders updated daily · Source: National Treasury eTenders OCDS API</div>
       </div>
@@ -711,7 +744,7 @@ footer{background:var(--navy);color:#9fb0c4;padding:64px 0 34px}
 
       <!-- GROWTH (POPULAR) -->
       <div class="pricing-card popular">
-        <div class="popular-badge">⭐ Most Popular</div>
+        <div class="popular-badge"><i class="ph-bold ph-star"></i> Most Popular</div>
         <div class="plan-name">Growth</div>
         <div class="plan-price"><span id="p2">R1,499</span><span>/mo</span></div>
         <div class="plan-annual" id="p2-annual"></div>
@@ -759,7 +792,7 @@ footer{background:var(--navy);color:#9fb0c4;padding:64px 0 34px}
     </div>
 
     <!-- ENTERPRISE ROW -->
-    <div class="card mt-24" style="background:linear-gradient(135deg,#f0f1ff,#fff);border-color:#c7d2fe">
+    <div class="card mt-24" style="background:linear-gradient(135deg,#f0f1ff,#fff);border-color:#cdd9f6">
       <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px">
         <div>
           <div class="plan-name">Enterprise</div>
@@ -788,7 +821,7 @@ footer{background:var(--navy);color:#9fb0c4;padding:64px 0 34px}
         <div class="testimonial-stars">★★★★★</div>
         <blockquote>"We lost a R2.4M Transnet tender because our B-BBEE certificate had expired by 3 weeks. We signed up for ComplyEasy the next day. We've never missed a deadline since — and we found 4 new tenders we didn't even know we qualified for."</blockquote>
         <div class="testimonial-author">
-          <div class="author-avatar" style="background:#0e7a52">SM</div>
+          <div class="author-avatar" style="background:#2f5fe0">SM</div>
           <div>
             <div class="author-name">Sipho Mthembu</div>
             <div class="author-role">CEO, Mthembu Construction (Pty) Ltd · Johannesburg</div>
@@ -825,7 +858,7 @@ footer{background:var(--navy);color:#9fb0c4;padding:64px 0 34px}
 <section class="languages-section" id="languages">
   <div class="container">
     <div class="text-center">
-      <div class="pill pill-green mb-16">🇿🇦 Siyakhuluma Zonke Izilimi — We Speak All Languages</div>
+      <div class="pill pill-green mb-16">Siyakhuluma Zonke Izilimi — We Speak All Languages</div>
       <h2>Built for every South African — in every language</h2>
       <p class="mt-12" style="max-width:560px;margin-left:auto;margin-right:auto;color:var(--ink2)">ComplyEasy supports all 12 official languages of South Africa. Every business owner, regardless of their home language, can navigate the platform, understand their compliance status, and access tender opportunities in the language they're most comfortable with.</p>
     </div>
@@ -970,7 +1003,7 @@ footer{background:var(--navy);color:#9fb0c4;padding:64px 0 34px}
 <!-- FINAL CTA -->
 <section class="cta-section" id="cta">
   <div class="container">
-    <div class="pill pill-accent mb-24" style="background:rgba(255,255,255,0.15);color:#c7d2fe;margin:0 auto 24px;display:inline-flex">🚀 Start Today — Free for 14 Days</div>
+    <div class="pill pill-accent mb-24" style="background:rgba(255,255,255,0.15);color:#cdd9f6;margin:0 auto 24px;display:inline-flex"><i class="ph-bold ph-rocket-launch"></i> Start Today — Free for 14 Days</div>
     <h2>Your next tender is waiting. Is your B-BBEE level ready for it?</h2>
     <p>Join 500+ South African businesses that have replaced annual consultants, spreadsheets, and missed deadlines with a platform that keeps them compliant and winning — every day of the year.</p>
     <div class="cta-btns">
@@ -986,12 +1019,12 @@ footer{background:var(--navy);color:#9fb0c4;padding:64px 0 34px}
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="fb-logo"><svg class="logo-mark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="9" fill="#0e7a52"/><path d="M9.5 16.5l4.2 4.2L22.7 11.4" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>ComplyEasy</div>
+        <div class="fb-logo"><svg class="logo-mark" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="36" height="36" rx="8" fill="#112646"/><path d="M10.5 18.4l4.6 4.6L25.5 12.6" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="10.5" y="25.5" width="15" height="2.4" rx="1.2" fill="#2f5fe0"/></svg>ComplyEasy</div>
         <p class="mt-8">South Africa's only all-in-one B-BBEE compliance management platform with live tender intelligence. Built for South African businesses, in South African languages, hosted in South Africa.</p>
         <div class="footer-badges mt-16">
-          <span class="fb-badge">🔒 POPIA Compliant</span>
-          <span class="fb-badge">🇿🇦 AWS Cape Town</span>
-          <span class="fb-badge">⚖️ B-BBEE Aligned</span>
+          <span class="fb-badge"><i class="ph-bold ph-lock-simple"></i> POPIA Compliant</span>
+          <span class="fb-badge">AWS Cape Town</span>
+          <span class="fb-badge"><i class="ph-bold ph-scales"></i> B-BBEE Aligned</span>
         </div>
       </div>
       <div class="footer-col">
@@ -1024,7 +1057,7 @@ footer{background:var(--navy);color:#9fb0c4;padding:64px 0 34px}
     </div>
     <div class="footer-bottom">
       <div>© 2026 ComplyEasy (Pty) Ltd · Registered in South Africa · VAT No. 4900XXXXXX</div>
-      <div style="color:#64748b;font-size:0.75rem;max-width:480px;text-align:right">Tender data sourced from National Treasury eTenders OCDS API (Creative Commons BY 4.0). Always verify tender specifications on <a href="https://www.etenders.gov.za" style="color:#0e7a52">etenders.gov.za</a> before submitting bids. ComplyEasy is not a SANAS-accredited verification agency.</div>
+      <div style="color:#64748b;font-size:0.75rem;max-width:480px;text-align:right">Tender data sourced from National Treasury eTenders OCDS API (Creative Commons BY 4.0). Always verify tender specifications on <a href="https://www.etenders.gov.za" style="color:#2f5fe0">etenders.gov.za</a> before submitting bids. ComplyEasy is not a SANAS-accredited verification agency.</div>
     </div>
   </div>
 </footer>
@@ -1092,21 +1125,13 @@ faqScript.type = 'application/ld+json';
 faqScript.textContent = JSON.stringify(faqSchema);
 document.head.appendChild(faqScript);
 </script>
-<script>
-(function(){
-  var nav=document.querySelector('nav');
-  var sent=document.createElement('div');sent.style.cssText='position:absolute;top:0;left:0;height:1px;width:1px';
-  document.body.prepend(sent);
-  new IntersectionObserver(function(e){nav.classList.toggle('scrolled',!e[0].isIntersecting);},{rootMargin:'-6px 0px 0px 0px'}).observe(sent);
-  var t=document.querySelectorAll('.pillar,.feature-card,.pain-card,.pricing-card,.testimonial,.lang-card,.tender-prev-card,section .section-eyebrow,section h2,.tender-list li');
-  var ro=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');ro.unobserve(en.target);}});},{threshold:.12});
-  t.forEach(function(el,i){el.classList.add('reveal');el.style.transitionDelay=((i%3)*0.06)+'s';ro.observe(el);});
-  var links=[].slice.call(document.querySelectorAll('.nav-links a'));var map={};
-  links.forEach(function(a){var h=a.getAttribute('href');if(h&&h[0]=='#')map[h.slice(1)]=a;});
-  var secs=Object.keys(map).map(function(id){return document.getElementById(id);}).filter(Boolean);
-  var so=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(l){l.classList.remove('active');});if(map[en.target.id])map[en.target.id].classList.add('active');}});},{rootMargin:'-45% 0px -50% 0px'});
-  secs.forEach(function(s){so.observe(s);});
-})();
-</script>
+<script>(function(){var nav=document.querySelector('nav');var s=document.createElement('div');s.style.cssText='position:absolute;top:0;left:0;height:1px;width:1px';document.body.prepend(s);
+new IntersectionObserver(function(e){nav.classList.toggle('scrolled',!e[0].isIntersecting);},{rootMargin:'-6px 0px 0px 0px'}).observe(s);
+var t=document.querySelectorAll('.pillar,.feature-card,.pain-card,.pricing-card,.testimonial,.lang-card,.tender-prev-card,section .section-eyebrow,section h2,.tender-list li');
+var ro=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');ro.unobserve(en.target);}});},{threshold:.12});
+t.forEach(function(el,i){el.classList.add('reveal');el.style.transitionDelay=((i%3)*0.05)+'s';ro.observe(el);});
+var links=[].slice.call(document.querySelectorAll('.nav-links a'));var map={};links.forEach(function(a){var h=a.getAttribute('href');if(h&&h[0]=='#')map[h.slice(1)]=a;});
+Object.keys(map).map(function(id){return document.getElementById(id);}).filter(Boolean).forEach(function(sec){new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(l){l.classList.remove('active');});if(map[en.target.id])map[en.target.id].classList.add('active');}});},{rootMargin:'-45% 0px -50% 0px'}).observe(sec);});
+})();</script>
 </body>
 </html>
