@@ -73,21 +73,47 @@ nav.shrunk .nav-in{height:54px}
 .btn-ghost:hover{border-color:var(--ink);background:var(--surface)}
 
 /* ---------- HERO ---------- */
-.hero{padding:96px 0 72px;position:relative;overflow:hidden}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);background:var(--surface);border:1px solid var(--hair);padding:7px 14px;border-radius:99px;margin-bottom:28px}
-.hero-eyebrow .pulse{width:7px;height:7px;border-radius:50%;background:var(--acc-bright)}
-h1{font-family:var(--display);font-weight:700;font-size:clamp(46px,6.4vw,88px);line-height:1.02;letter-spacing:-.035em;max-width:14ch;color:var(--ink)}
-h1 em{font-style:italic;font-weight:500;color:var(--acc);position:relative;white-space:nowrap;font-family:var(--display)}
-h1 em::after{content:'';position:absolute;left:2%;right:2%;bottom:.04em;height:.08em;background:var(--acc-bright);border-radius:2px;opacity:.7}
-.hero-sub{font-size:19px;line-height:1.55;color:var(--ink-2);max-width:48ch;margin:26px 0 36px;font-weight:400}
-.hero-grid{display:grid;grid-template-columns:1.62fr .86fr;gap:54px;align-items:center}
-
-.searchwrap{position:relative;max-width:720px}
-.searchbox{background:#fff;border:1.5px solid var(--hair-strong);border-radius:16px;padding:8px 8px 8px 22px;display:flex;align-items:center;gap:12px;box-shadow:0 1px 2px rgba(11,13,16,.03),0 24px 50px -22px rgba(11,13,16,.22);transition:border-color .2s,box-shadow .2s}
-.searchbox:focus-within{border-color:var(--ink);box-shadow:0 1px 2px rgba(11,13,16,.03),0 22px 50px -22px rgba(11,13,16,.28)}
-.searchbox .ph{font-size:23px;color:var(--muted);flex-shrink:0}
-.searchbox input{flex:1;border:none;outline:none;background:transparent;font-family:var(--sans);font-size:17.5px;font-weight:500;color:var(--ink);padding:18px 0;min-width:0}
+/* ---------- HERO — MOUNTAIN PARALLAX ---------- */
+.hero{position:relative;width:100%;height:calc(100vh - 68px);min-height:640px;max-height:900px;overflow:hidden;background:linear-gradient(to bottom,#06101e 0%,#0a1a3d 18%,#123568 36%,#1a5090 52%,#3d80b8 66%,#7ab4d8 78%,#c5dff0 88%,#eaf5fc 100%)}
+.parallax-layer{position:absolute;bottom:0;left:0;width:200%;height:100%;background-repeat:repeat-x;background-position:0 100%;animation-name:parallax_scroll;animation-timing-function:linear;animation-iteration-count:infinite}
+.layer-6{background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/24650/6.png);animation-duration:120s;background-size:auto 222px;z-index:1}
+.layer-5{background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/24650/5.png);animation-duration:95s;background-size:auto 311px;z-index:1}
+.layer-4{background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/24650/4.png);animation-duration:75s;background-size:auto 468px;z-index:1}
+.layer-3{background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/24650/3.png);animation-duration:55s;background-size:auto 158px;z-index:3}
+.layer-2{background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/24650/2.png);animation-duration:30s;background-size:auto 145px;z-index:4}
+.layer-1{background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/24650/1.png);animation-duration:20s;background-size:auto 136px;z-index:5}
+.bike-rider{position:absolute;left:0;z-index:6;height:75px;width:160px;animation:bike-ride linear infinite}
+.rider-1{bottom:108px;animation-duration:10s}
+.rider-2{bottom:124px;animation-duration:15s;animation-delay:-6s}
+@keyframes bike-ride{from{transform:translateX(-200px)}to{transform:translateX(calc(100vw + 200px))}}
+.bike-img{position:absolute;bottom:0;left:0;width:100%;height:75px;background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/24650/bike.png);background-size:auto 75px;background-repeat:no-repeat;background-position:left bottom}
+.flag-pole{position:absolute;bottom:50px;left:14px;width:2px;height:90px;background:linear-gradient(to bottom,#b8a898,#6a5a4a);z-index:3;border-radius:1px}
+.sa-flag{position:absolute;top:0;left:3px;width:34px;height:22px;transform-origin:left center;animation:flag-wave 1.2s ease-in-out infinite;filter:drop-shadow(0 2px 4px rgba(0,0,0,.5))}
+@keyframes flag-wave{0%,100%{transform:skewX(0deg)}35%{transform:skewX(-3deg)}65%{transform:skewX(3deg)}}
+@keyframes parallax_scroll{0%{background-position:2765px 100%}100%{background-position:550px 100%}}
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(6,14,38,.62) 0%,rgba(6,14,38,.28) 52%,transparent 75%);z-index:6;pointer-events:none}
+.hero-fade{position:absolute;bottom:0;left:0;right:0;height:90px;background:linear-gradient(to top,var(--bg) 0%,transparent 100%);z-index:20;pointer-events:none}
+.hero-content{position:absolute;top:0;left:0;right:0;z-index:10;display:flex;flex-direction:column;align-items:center;text-align:center;padding:58px 24px 0}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.88);background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.22);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding:6px 14px 6px 9px;border-radius:99px;margin-bottom:24px;animation:fade-up .55s cubic-bezier(.16,1,.3,1) .05s both}
+.hero-eyebrow .pulse{width:7px;height:7px;border-radius:50%;background:#4ADE80;flex-shrink:0}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(38px,5.6vw,68px);line-height:1.03;letter-spacing:-.04em;max-width:22ch;color:#fff;text-shadow:0 2px 24px rgba(0,0,0,.35);margin-bottom:18px;animation:fade-up .65s cubic-bezier(.16,1,.3,1) .12s both}
+h1 em{font-style:normal;font-weight:700;color:transparent;background:linear-gradient(128deg,#7DD3FC 0%,#fff 100%);-webkit-background-clip:text;background-clip:text;position:relative}
+h1 em::after{content:'';position:absolute;left:2px;right:2px;bottom:-5px;height:3px;border-radius:3px;background:linear-gradient(90deg,#7DD3FC,#BFDBFE);opacity:.45}
+.hero-sub{font-size:17px;line-height:1.65;color:rgba(255,255,255,.8);max-width:50ch;margin:0 auto 20px;text-shadow:0 1px 10px rgba(0,0,0,.2);animation:fade-up .65s cubic-bezier(.16,1,.3,1) .20s both}
+.hero-stats{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;margin:0 auto 26px;animation:fade-up .65s cubic-bezier(.16,1,.3,1) .28s both}
+.hero-stat{display:flex;align-items:baseline;gap:5px;padding:0 18px}
+.hero-stat+.hero-stat{border-left:1px solid rgba(255,255,255,.18)}
+.hero-stat-num{font-size:13.5px;font-weight:800;color:#fff;letter-spacing:-.02em}
+.hero-stat-lbl{font-size:13px;font-weight:500;color:rgba(255,255,255,.58)}
+.searchwrap{position:relative;max-width:640px;width:100%;margin:0 auto 16px;animation:fade-up .65s cubic-bezier(.16,1,.3,1) .36s both}
+.searchbox{background:#fff;border:1.5px solid rgba(255,255,255,.96);border-radius:999px;padding:7px 7px 7px 22px;display:flex;align-items:center;gap:8px;box-shadow:0 4px 24px rgba(0,0,0,.32),0 1px 4px rgba(0,0,0,.16);transition:box-shadow .3s}
+.searchbox:focus-within{box-shadow:0 4px 24px rgba(0,0,0,.32),0 0 0 4px rgba(59,130,246,.30)}
+.searchbox .ph{font-size:20px;color:var(--acc);flex-shrink:0}
+.searchbox input{flex:1;border:none;outline:none;background:transparent;font-family:var(--sans);font-size:15px;font-weight:500;color:var(--ink);padding:10px 0;min-width:0}
 .searchbox input::placeholder{color:var(--muted-soft);font-weight:400}
+#heroGo{background:linear-gradient(160deg,#4F94FF 0%,#2563EB 55%,#1D4ED8 100%);color:#fff;padding:10px 8px 10px 18px;font-size:13.5px;border-radius:999px;box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 2px 10px rgba(37,99,235,.40);border:none;display:inline-flex;align-items:center;gap:9px;font-family:var(--sans);font-weight:700;white-space:nowrap;cursor:pointer;transition:filter .2s,transform .18s}
+#heroGo:hover{filter:brightness(1.06);transform:translateY(-1px)}
+.go-arrow{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.17);display:inline-flex;align-items:center;justify-content:center}
 .sugs{position:absolute;top:calc(100% + 8px);left:0;right:0;background:#fff;border:1px solid var(--hair-strong);border-radius:14px;box-shadow:0 24px 56px -16px rgba(11,13,16,.18);overflow:hidden;display:none;z-index:20}
 .sugs.open{display:block}
 .sug-row{display:flex;align-items:center;gap:12px;padding:13px 18px;font-size:14px;font-weight:500;color:var(--ink);cursor:pointer;border-top:1px solid var(--hair)}
@@ -96,12 +122,14 @@ h1 em::after{content:'';position:absolute;left:2%;right:2%;bottom:.04em;height:.
 .sug-row span b{color:var(--acc);font-weight:600}
 .sug-row .where{margin-left:auto;font-family:var(--mono);font-size:10.5px;color:var(--muted)}
 .sug-row:hover,.sug-row.sel{background:var(--acc-tint)}
-.quick-pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
-.qp{font-size:13px;font-weight:500;padding:8px 14px;border-radius:99px;border:1px solid var(--hair-strong);background:#fff;color:var(--ink-2);transition:all .2s}
-.qp:hover{border-color:var(--acc);color:var(--acc);background:var(--acc-tint)}
-.hero-live{margin-top:28px;font-family:var(--mono);font-size:11.5px;color:var(--muted);display:flex;align-items:center;gap:10px;letter-spacing:.04em}
-.pulse{width:8px;height:8px;border-radius:50%;background:var(--acc-bright);animation:pulse 2.2s infinite}
-@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(47,111,176,.45)}55%{box-shadow:0 0 0 7px rgba(47,111,176,0)}}
+.quick-pills{display:flex;gap:6px;flex-wrap:wrap;margin:0 auto 14px;justify-content:center;animation:fade-up .65s cubic-bezier(.16,1,.3,1) .44s both}
+.qp{font-size:13px;font-weight:600;padding:6px 14px 6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.25);background:#fff;color:#1a2a4a;transition:all .22s;display:inline-flex;align-items:center;gap:6px;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+.qp::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--acc-bright);flex-shrink:0}
+.qp:hover{background:#fff;color:#0e1d3a;transform:translateY(-1px);box-shadow:0 4px 16px rgba(0,0,0,.12)}
+.hero-live{margin:0 auto;font-family:var(--mono);font-size:12px;color:rgba(255,255,255,.48);display:flex;align-items:center;gap:7px;letter-spacing:.04em;animation:fade-up .65s cubic-bezier(.16,1,.3,1) .50s both}
+.pulse{width:8px;height:8px;border-radius:50%;background:#60A5FA;animation:live-pulse 2.2s ease-in-out infinite}
+@keyframes live-pulse{0%,100%{box-shadow:0 0 0 0 rgba(96,165,250,.55)}50%{box-shadow:0 0 0 6px rgba(96,165,250,0)}}
+@keyframes fade-up{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 
 /* hero aside: spec-sheet promise */
 .promise{justify-self:end;max-width:340px;border:1px solid var(--hair);border-radius:16px;padding:22px 24px;background:var(--surface);position:relative}
@@ -436,44 +464,68 @@ body{background:var(--bg)}
 </nav>
 
 <!-- HERO -->
-<header class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <div class="hero-eyebrow"><span class="pulse"></span>Live · National Treasury eTenders</div>
-      <h1>Government tenders you can <em>actually win.</em></h1>
-      <p class="hero-sub">Every national, provincial and municipal tender in South Africa &mdash; matched to your business and checked against your compliance.</p>
+<header class="hero" aria-label="Mountain landscape hero">
 
-      <div class="searchwrap">
-        <div class="searchbox">
-          <i class="ph ph-magnifying-glass"></i>
-          <input id="heroSearch" type="text" autocomplete="off" spellcheck="false" placeholder="">
-          <button class="btn btn-acc" id="heroGo">Search free</button>
-        </div>
-        <div class="sugs" id="sugs"></div>
-      </div>
-      <div class="quick-pills" id="quickPills">
-        <button class="qp" data-q="cleaning">Cleaning</button>
-        <button class="qp" data-q="security">Security</button>
-        <button class="qp" data-q="construction">Construction</button>
-        <button class="qp" data-q="ICT">ICT</button>
-        <button class="qp" data-q="cleaning Gauteng">Cleaning in Gauteng</button>
-        <button class="qp" data-q="catering KwaZulu-Natal">Catering in KZN</button>
-      </div>
-      <div class="hero-live"><span class="pulse"></span><span id="heroLive">Syncing with National Treasury eTenders...</span></div>
-    </div>
+  <div class="parallax-layer layer-6" aria-hidden="true"></div>
+  <div class="parallax-layer layer-5" aria-hidden="true"></div>
+  <div class="parallax-layer layer-4" aria-hidden="true"></div>
 
-    <div class="zamap rv" id="zamap" aria-hidden="true">
-      <div class="zamap-head">
-        <span class="zamap-live"><span class="pulse"></span>Live coverage</span>
-        <span class="zamap-count"><b id="zaTotal">0</b> on the wire</span>
-      </div>
-      <div class="zamap-stage">
-        <svg id="zaSvg" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Live map of South African tenders by province"></svg>
-        <div class="zamap-labels" id="zaLabels"></div>
-      </div>
-      <div class="zamap-foot">9 / 9 provinces &middot; synced 07:00 &middot; National Treasury OCDS</div>
+  <div class="bike-rider rider-1" aria-hidden="true">
+    <div class="bike-img"></div>
+    <div class="flag-pole">
+      <svg class="sa-flag" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 20">
+        <rect width="30" height="7" fill="#DE3831"/><rect y="13" width="30" height="7" fill="#002395"/><rect y="7" width="30" height="6" fill="#007A4D"/>
+        <polygon points="0,0 4,0 17,10 4,10 0,5" fill="white"/><polygon points="0,20 4,20 17,10 4,10 0,15" fill="white"/>
+        <polygon points="0,0 2,0 13,10 2,10 0,7" fill="#FFB612"/><polygon points="0,20 2,20 13,10 2,10 0,13" fill="#FFB612"/>
+        <polygon points="0,0 0,20 10,10" fill="#000"/>
+      </svg>
     </div>
   </div>
+  <div class="bike-rider rider-2" aria-hidden="true">
+    <div class="bike-img"></div>
+    <div class="flag-pole">
+      <svg class="sa-flag" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 20">
+        <rect width="30" height="7" fill="#DE3831"/><rect y="13" width="30" height="7" fill="#002395"/><rect y="7" width="30" height="6" fill="#007A4D"/>
+        <polygon points="0,0 4,0 17,10 4,10 0,5" fill="white"/><polygon points="0,20 4,20 17,10 4,10 0,15" fill="white"/>
+        <polygon points="0,0 2,0 13,10 2,10 0,7" fill="#FFB612"/><polygon points="0,20 2,20 13,10 2,10 0,13" fill="#FFB612"/>
+        <polygon points="0,0 0,20 10,10" fill="#000"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="parallax-layer layer-3" aria-hidden="true"></div>
+  <div class="parallax-layer layer-2" aria-hidden="true"></div>
+  <div class="parallax-layer layer-1" aria-hidden="true"></div>
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="hero-fade" aria-hidden="true"></div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow"><span class="pulse"></span>Live &middot; National Treasury eTenders</div>
+    <h1>Government tenders you can <em>actually win.</em></h1>
+    <p class="hero-sub">Every national, provincial and municipal tender in South Africa — matched to your business and checked against your compliance.</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><span class="hero-stat-num" id="statCount">1,700+</span><span class="hero-stat-lbl">live tenders</span></div>
+      <div class="hero-stat"><span class="hero-stat-num">R2.4bn+</span><span class="hero-stat-lbl">in active contracts</span></div>
+      <div class="hero-stat"><span class="hero-stat-num">9/9</span><span class="hero-stat-lbl">provinces covered</span></div>
+    </div>
+    <div class="searchwrap">
+      <div class="searchbox">
+        <i class="ph ph-magnifying-glass"></i>
+        <input id="heroSearch" type="text" autocomplete="off" spellcheck="false" placeholder="Search tenders, departments, provinces...">
+        <button id="heroGo">Search free <span class="go-arrow"><i class="ph ph-arrow-right" style="font-size:13px"></i></span></button>
+      </div>
+      <div class="sugs" id="sugs"></div>
+    </div>
+    <div class="quick-pills" id="quickPills">
+      <button class="qp" data-q="cleaning">Cleaning</button>
+      <button class="qp" data-q="security">Security</button>
+      <button class="qp" data-q="construction">Construction</button>
+      <button class="qp" data-q="ICT">ICT</button>
+      <button class="qp" data-q="catering">Catering</button>
+    </div>
+    <div class="hero-live"><span class="pulse"></span><span id="heroLive">Syncing with National Treasury eTenders...</span><span style="opacity:.3">&middot;</span><span>free to search, no signup</span></div>
+  </div>
+
 </header>
 
 <div class="stats rv">
